@@ -34,12 +34,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.listBoxPurok = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelSelectedBarangay = new System.Windows.Forms.Label();
+            this.labelSelectedPurok = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.listBoxCluster = new System.Windows.Forms.ListBox();
             this.btnAddBarangay = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnEditPurok = new System.Windows.Forms.Button();
+            this.btnAddPurok = new System.Windows.Forms.Button();
+            this.btnAddCluster = new System.Windows.Forms.Button();
+            this.btnEditCluster = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -61,13 +65,16 @@
             // 
             // listBoxBarangay
             // 
+            this.listBoxBarangay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.listBoxBarangay.DisplayMember = "barangay_name";
             this.listBoxBarangay.FormattingEnabled = true;
             this.listBoxBarangay.ItemHeight = 16;
             this.listBoxBarangay.Location = new System.Drawing.Point(22, 100);
             this.listBoxBarangay.Name = "listBoxBarangay";
-            this.listBoxBarangay.Size = new System.Drawing.Size(301, 244);
+            this.listBoxBarangay.Size = new System.Drawing.Size(301, 308);
             this.listBoxBarangay.TabIndex = 2;
+            this.listBoxBarangay.SelectedIndexChanged += new System.EventHandler(this.listBoxBarangay_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -81,7 +88,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(326, 80);
+            this.label3.Location = new System.Drawing.Point(357, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 17);
             this.label3.TabIndex = 5;
@@ -89,37 +96,38 @@
             // 
             // listBoxPurok
             // 
+            this.listBoxPurok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.listBoxPurok.FormattingEnabled = true;
             this.listBoxPurok.ItemHeight = 16;
-            this.listBoxPurok.Location = new System.Drawing.Point(329, 100);
+            this.listBoxPurok.Location = new System.Drawing.Point(360, 100);
             this.listBoxPurok.Name = "listBoxPurok";
-            this.listBoxPurok.Size = new System.Drawing.Size(307, 244);
+            this.listBoxPurok.Size = new System.Drawing.Size(307, 308);
             this.listBoxPurok.TabIndex = 4;
             // 
-            // label4
+            // labelSelectedBarangay
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(499, 80);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "[Select Barangay]";
+            this.labelSelectedBarangay.AutoSize = true;
+            this.labelSelectedBarangay.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSelectedBarangay.Location = new System.Drawing.Point(530, 80);
+            this.labelSelectedBarangay.Name = "labelSelectedBarangay";
+            this.labelSelectedBarangay.Size = new System.Drawing.Size(137, 17);
+            this.labelSelectedBarangay.TabIndex = 6;
+            this.labelSelectedBarangay.Text = "[Select Barangay]";
             // 
-            // label5
+            // labelSelectedPurok
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(795, 80);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 17);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "[Select Purok]";
+            this.labelSelectedPurok.AutoSize = true;
+            this.labelSelectedPurok.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSelectedPurok.Location = new System.Drawing.Point(858, 80);
+            this.labelSelectedPurok.Name = "labelSelectedPurok";
+            this.labelSelectedPurok.Size = new System.Drawing.Size(110, 17);
+            this.labelSelectedPurok.TabIndex = 9;
+            this.labelSelectedPurok.Text = "[Select Purok]";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(639, 80);
+            this.label6.Location = new System.Drawing.Point(702, 80);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(150, 17);
             this.label6.TabIndex = 8;
@@ -127,16 +135,19 @@
             // 
             // listBoxCluster
             // 
+            this.listBoxCluster.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxCluster.FormattingEnabled = true;
             this.listBoxCluster.ItemHeight = 16;
-            this.listBoxCluster.Location = new System.Drawing.Point(642, 100);
+            this.listBoxCluster.Location = new System.Drawing.Point(705, 100);
             this.listBoxCluster.Name = "listBoxCluster";
-            this.listBoxCluster.Size = new System.Drawing.Size(307, 244);
+            this.listBoxCluster.Size = new System.Drawing.Size(307, 308);
             this.listBoxCluster.TabIndex = 7;
             // 
             // btnAddBarangay
             // 
-            this.btnAddBarangay.Location = new System.Drawing.Point(22, 350);
+            this.btnAddBarangay.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAddBarangay.Location = new System.Drawing.Point(22, 417);
             this.btnAddBarangay.Name = "btnAddBarangay";
             this.btnAddBarangay.Size = new System.Drawing.Size(115, 28);
             this.btnAddBarangay.TabIndex = 10;
@@ -146,7 +157,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(143, 350);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.Location = new System.Drawing.Point(143, 417);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 28);
             this.button1.TabIndex = 11;
@@ -154,17 +166,62 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnEditPurok
+            // 
+            this.btnEditPurok.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnEditPurok.Location = new System.Drawing.Point(481, 417);
+            this.btnEditPurok.Name = "btnEditPurok";
+            this.btnEditPurok.Size = new System.Drawing.Size(115, 28);
+            this.btnEditPurok.TabIndex = 13;
+            this.btnEditPurok.Text = "Edit Purok";
+            this.btnEditPurok.UseVisualStyleBackColor = true;
+            // 
+            // btnAddPurok
+            // 
+            this.btnAddPurok.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAddPurok.Location = new System.Drawing.Point(360, 417);
+            this.btnAddPurok.Name = "btnAddPurok";
+            this.btnAddPurok.Size = new System.Drawing.Size(115, 28);
+            this.btnAddPurok.TabIndex = 12;
+            this.btnAddPurok.Text = "Add Purok";
+            this.btnAddPurok.UseVisualStyleBackColor = true;
+            this.btnAddPurok.Click += new System.EventHandler(this.btnAddPurok_Click);
+            // 
+            // btnAddCluster
+            // 
+            this.btnAddCluster.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAddCluster.Location = new System.Drawing.Point(674, 417);
+            this.btnAddCluster.Name = "btnAddCluster";
+            this.btnAddCluster.Size = new System.Drawing.Size(115, 28);
+            this.btnAddCluster.TabIndex = 14;
+            this.btnAddCluster.Text = "Add Purok";
+            this.btnAddCluster.UseVisualStyleBackColor = true;
+            // 
+            // btnEditCluster
+            // 
+            this.btnEditCluster.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnEditCluster.Location = new System.Drawing.Point(795, 417);
+            this.btnEditCluster.Name = "btnEditCluster";
+            this.btnEditCluster.Size = new System.Drawing.Size(115, 28);
+            this.btnEditCluster.TabIndex = 15;
+            this.btnEditCluster.Text = "Edit Purok";
+            this.btnEditCluster.UseVisualStyleBackColor = true;
+            // 
             // TownConfiguration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 540);
+            this.ClientSize = new System.Drawing.Size(1045, 460);
+            this.Controls.Add(this.btnEditCluster);
+            this.Controls.Add(this.btnAddCluster);
+            this.Controls.Add(this.btnEditPurok);
+            this.Controls.Add(this.btnAddPurok);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAddBarangay);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelSelectedPurok);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.listBoxCluster);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelSelectedBarangay);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listBoxPurok);
             this.Controls.Add(this.label2);
@@ -187,11 +244,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBoxPurok;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelSelectedBarangay;
+        private System.Windows.Forms.Label labelSelectedPurok;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox listBoxCluster;
         private System.Windows.Forms.Button btnAddBarangay;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEditPurok;
+        private System.Windows.Forms.Button btnAddPurok;
+        private System.Windows.Forms.Button btnAddCluster;
+        private System.Windows.Forms.Button btnEditCluster;
     }
 }

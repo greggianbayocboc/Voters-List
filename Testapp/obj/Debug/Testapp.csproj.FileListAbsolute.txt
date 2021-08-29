@@ -31,8 +31,6 @@ C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\Testapp.exe
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\Testapp.pdb
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\mscorlib.dll
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\System.Net.Http.dll
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\System.Net.Http.xml
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\normidna.nlp
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\normnfc.nlp
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\normnfd.nlp
@@ -45,3 +43,4 @@ C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.csproj.GenerateResource.Cache
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.exe
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.pdb
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.csprojResolveAssemblyReference.cache

@@ -78,7 +78,23 @@ namespace Testapp
             con.Close();
             return Mapper.GetItem<T>(dt.Rows[0]);
         }
-        
 
+        public T Save()
+        {
+            OleDbCommand cmd = con.CreateCommand();
+            con.Open();
+            cmd.CommandText = "Select * from " + typeof(T).Name;
+
+            string query = @"INSERT INTO tblProducts (ProductName,
+                            CategoryDescription, UnitPrice)
+                            VALUES ('Support Renewal', 'Multi-User', 99);";
+            cmd.Connection = con;
+            OleDbDataReader d = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(d);
+            con.Close();
+            return Mapper.GetItem<T>(dt.Rows[0]);
+        }
+        
     }
 }

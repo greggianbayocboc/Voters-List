@@ -20,6 +20,7 @@ namespace Testapp.Helpers
             }
             return data;
         }
+
         public static T GetItem<T>(DataRow dr)
         {
             Type temp = typeof(T);
@@ -36,6 +37,16 @@ namespace Testapp.Helpers
                 }
             }
             return obj;
-        } 
+        }
+
+        public static List<string> GetProperties<T>() {
+            Type temp = typeof(T);
+            List<string> props = new List<string>();
+            foreach (PropertyInfo pro in temp.GetProperties())
+            {
+                props.Add(pro.Name);
+            }
+            return props;
+        }
     }
 }

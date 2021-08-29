@@ -26,5 +26,10 @@ namespace Testapp
             textBoxBarangayName.Text = barangay.BarangayName;
             textBoxCoordinator.Text = barangay.Coordinator;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

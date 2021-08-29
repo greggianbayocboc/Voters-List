@@ -70,6 +70,12 @@
     <Compile Include="BarangayForm.Designer.cs">
       <DependentUpon>BarangayForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PurokForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurokForm.Designer.cs">
+      <DependentUpon>PurokForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseConnect.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -95,6 +101,9 @@
     </Compile>
     <EmbeddedResource Include="BarangayForm.resx">
       <DependentUpon>BarangayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurokForm.resx">
+      <DependentUpon>PurokForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

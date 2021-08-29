@@ -25,7 +25,7 @@ namespace Testapp
         {
 
             initializeData();
-
+            
         }
 
 
@@ -55,6 +55,31 @@ namespace Testapp
             frm.barangay = listBoxBarangay.SelectedItem as Barangay;
             frm.Text = "Edit Barangay";
             frm.ShowDialog();
+        }
+
+        private void listBoxBarangay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxBarangay.SelectedItem!=null)
+            {
+                labelSelectedBarangay.Text = (listBoxBarangay.SelectedItem as Barangay).BarangayName;
+            }
+        }
+
+        private void testLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddPurok_Click(object sender, EventArgs e)
+        {
+            if (listBoxBarangay.SelectedItem != null)
+            {
+                PurokForm frm = new PurokForm();
+                frm.barangay = listBoxBarangay.SelectedItem as Barangay;
+                frm.purok = new Purok();
+                frm.Text = "Add Purok";
+                frm.ShowDialog();
+            }
         }
     }
 }
