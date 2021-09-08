@@ -2,11 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Testapp.Helpers;
 
 namespace Testapp.Models
 {
-    public class Barangay
+    public class Barangay : Model
     {
+ 
+        int id;
+
+        public int ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
         private string barangayName;
 
         public string BarangayName
@@ -23,9 +33,20 @@ namespace Testapp.Models
         }
         public List<Purok> Puroks;
 
-        public Barangay() 
-        { 
+        public Barangay()
+        {
 
+        }
+
+        public Barangay(bool _saveable)
+        {
+            this.isSaveable = _saveable;
+            this.barangayName = "NOT SET";
+        }
+
+        public Barangay(string name)
+        {
+            this.barangayName = name;
         }
 
         public Barangay(string _barangay_name, string _coordinator)

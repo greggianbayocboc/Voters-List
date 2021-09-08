@@ -1,46 +1,22 @@
-c:\users\mati\documents\visual studio 2015\Projects\Testapp\Testapp\bin\Debug\Testapp.exe.config
-c:\users\mati\documents\visual studio 2015\Projects\Testapp\Testapp\bin\Debug\Testapp.exe
-c:\users\mati\documents\visual studio 2015\Projects\Testapp\Testapp\bin\Debug\Testapp.pdb
-c:\users\mati\documents\visual studio 2015\Projects\Testapp\Testapp\obj\Debug\Testapp.csprojResolveAssemblyReference.cache
-c:\users\mati\documents\visual studio 2015\Projects\Testapp\Testapp\obj\Debug\Testapp.Form1.resources
-c:\users\mati\documents\visual studio 2015\Projects\Testapp\Testapp\obj\Debug\Testapp.Properties.Resources.resources
-c:\users\mati\documents\visual studio 2015\Projects\Testapp\Testapp\obj\Debug\Testapp.csproj.GenerateResource.Cache
-c:\users\mati\documents\visual studio 2015\Projects\Testapp\Testapp\obj\Debug\Testapp.exe
-c:\users\mati\documents\visual studio 2015\Projects\Testapp\Testapp\obj\Debug\Testapp.pdb
-c:\users\mati\documents\visual studio 2015\Projects\Testapp\Testapp\bin\Debug\testapp.accdb
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\bin\Debug\testapp.accdb
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\bin\Debug\Testapp.exe.config
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\bin\Debug\Testapp.exe
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\bin\Debug\Testapp.pdb
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\bin\Debug\mscorlib.dll
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\bin\Debug\System.Net.Http.dll
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\bin\Debug\System.Net.Http.xml
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\bin\Debug\normidna.nlp
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\bin\Debug\normnfc.nlp
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\bin\Debug\normnfd.nlp
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\bin\Debug\normnfkc.nlp
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\bin\Debug\normnfkd.nlp
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\obj\Debug\Testapp.Form1.resources
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\obj\Debug\Testapp.Properties.Resources.resources
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\obj\Debug\Testapp.csproj.GenerateResource.Cache
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\obj\Debug\Testapp.exe
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\obj\Debug\Testapp.pdb
-C:\Users\Precious\Downloads\Testapp\Testapp\Testapp\obj\Debug\Testapp.csprojResolveAssemblyReference.cache
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\testapp.accdb
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\Testapp.exe.config
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\Testapp.exe
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\Testapp.pdb
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\mscorlib.dll
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\normidna.nlp
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\normnfc.nlp
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\normnfd.nlp
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\normnfkc.nlp
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\normnfkd.nlp
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\VotersList.exe.config
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\VotersList.exe.manifest
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\VotersList.application
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\VotersList.exe
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\VotersList.pdb
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.BarangayForm.resources
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.Form1.resources
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.Properties.Resources.resources
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.ClusterForm.resources
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.Forms.MainForm.resources
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\gregg.Forms.VoterForm.resources
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.PurokForm.resources
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\gregg.Properties.Resources.resources
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.TownConfiguration.resources
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.Voters_List.resources
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.csproj.GenerateResource.Cache
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.exe
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.pdb
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\VotersList.exe.licenses
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\VotersList.exe.manifest
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\VotersList.application
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\VotersList.exe
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\VotersList.pdb
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.csprojResolveAssemblyReference.cache
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\gregg.PopupControl.CustomSelect.resources

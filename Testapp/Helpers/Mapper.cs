@@ -31,7 +31,11 @@ namespace Testapp.Helpers
                 foreach (PropertyInfo pro in temp.GetProperties())
                 {
                     if (pro.Name == column.ColumnName)
-                        pro.SetValue(obj, dr[column.ColumnName], null);
+                    {
+                        if (dr[column.ColumnName] != DBNull.Value)
+                            pro.SetValue(obj, dr[column.ColumnName], null);
+                    }
+                        
                     else
                         continue;
                 }
@@ -39,14 +43,6 @@ namespace Testapp.Helpers
             return obj;
         }
 
-        public static List<string> GetProperties<T>() {
-            Type temp = typeof(T);
-            List<string> props = new List<string>();
-            foreach (PropertyInfo pro in temp.GetProperties())
-            {
-                props.Add(pro.Name);
-            }
-            return props;
-        }
+
     }
 }
