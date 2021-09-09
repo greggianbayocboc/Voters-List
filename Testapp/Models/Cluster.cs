@@ -8,13 +8,6 @@ namespace Testapp.Models
 {
     public class Cluster : Model
     {
-        int id = -1;
-
-        public int ID
-        {
-            get { return id; }
-            set { id = value; }
-        }
 
         int purok;
 

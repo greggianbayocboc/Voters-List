@@ -8,13 +8,6 @@ namespace Testapp.Models
 {
     public class Purok : Model
     {
-        int id = -1;
-
-        public int ID
-        {
-            get { return id; }
-            set { id = value; }
-        }
 
         string purokName;
 

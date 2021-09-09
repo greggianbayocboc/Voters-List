@@ -18,5 +18,5 @@ C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\VotersList.application
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\VotersList.exe
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\VotersList.pdb
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.csprojResolveAssemblyReference.cache
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\gregg.PopupControl.CustomSelect.resources
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.csprojResolveAssemblyReference.cache

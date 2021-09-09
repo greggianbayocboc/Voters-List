@@ -9,13 +9,6 @@ namespace Testapp.Models
     public class Barangay : Model
     {
  
-        int id;
-
-        public int ID
-        {
-            get { return id; }
-            set { id = value; }
-        }
 
         private string barangayName;
 
