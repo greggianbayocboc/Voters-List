@@ -34,6 +34,8 @@ namespace Testapp.Helpers
                     {
                         if (dr[column.ColumnName] != DBNull.Value)
                             pro.SetValue(obj, dr[column.ColumnName], null);
+                        else
+                            pro.SetValue(obj, null, null);
                     }
                         
                     else
