@@ -75,6 +75,7 @@
     <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -193,6 +194,24 @@
     <Compile Include="Forms\VotersPrintForm.Designer.cs">
       <DependentUpon>VotersPrintForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CandidateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CandidateForm.Designer.cs">
+      <DependentUpon>CandidateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PartyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PartyForm.Designer.cs">
+      <DependentUpon>PartyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SurveyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SurveyList.Designer.cs">
+      <DependentUpon>SurveyList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="Helpers\DatabaseConnect.cs" />
     <Compile Include="Helpers\Mapper.cs" />
@@ -237,6 +256,8 @@
     <Compile Include="Repository\PersonDtoRepository.cs" />
     <Compile Include="Repository\PersonRepository.cs" />
     <Compile Include="Repository\PurokRepository.cs" />
+    <Compile Include="Repository\CandidateRepository.cs" />
+    <Compile Include="Repository\PartyRepository.cs" />
     <Compile Include="Repository\TownRepository.cs" />
     <Compile Include="Forms\TownConfiguration.cs">
       <SubType>Form</SubType>
@@ -253,6 +274,9 @@
     <EmbeddedResource Include="Forms\BarangayForm.resx">
       <DependentUpon>BarangayForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CandidateForm.resx">
+      <DependentUpon>CandidateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClusterForm.resx">
       <DependentUpon>ClusterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,8 +292,14 @@
     <EmbeddedResource Include="Forms\MainRibbonForm.resx">
       <DependentUpon>MainRibbonForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PartyForm.resx">
+      <DependentUpon>PartyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SurveyList.resx">
+      <DependentUpon>SurveyList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
@@ -316,9 +346,15 @@
     <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Testapp.Models.Barangay.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.Candidate.datasource" />
     <None Include="Properties\DataSources\Testapp.Models.Cluster.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.LeaderPrintoutDto.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.Party.datasource" />
     <None Include="Properties\DataSources\Testapp.Models.Person.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.PersonDto.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.Position.datasource" />
     <None Include="Properties\DataSources\Testapp.Models.Purok.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.Town.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
