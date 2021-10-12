@@ -117,14 +117,14 @@ namespace gregg.Forms
             int i;
             for (i = 0; i < MdiChildren.Length; i++)
             {
-                if (MdiChildren[i].GetType().Name == "SurveyList")
+                if (MdiChildren[i].GetType().Name == "VoterAssessmentForm")
                 {
                     MdiChildren[i].Activate();
                     MdiChildren[i].Refresh();
                     return;
                 }
             }
-            SurveyList xf = new SurveyList();
+            VoterAssessmentForm xf = new VoterAssessmentForm();
             xf.MdiParent = this;
             xf.Show();
         }

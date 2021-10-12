@@ -92,6 +92,7 @@
     <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -110,6 +111,7 @@
     <Reference Include="PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -212,15 +214,25 @@
     <Compile Include="Forms\SurveyList.Designer.cs">
       <DependentUpon>SurveyList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\VoterAssessmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VoterAssessmentForm.Designer.cs">
+      <DependentUpon>VoterAssessmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AssessmentOption.cs" />
     <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="Helpers\DatabaseConnect.cs" />
     <Compile Include="Helpers\Mapper.cs" />
     <Compile Include="Helpers\Model.cs" />
     <Compile Include="Models\Barangay.cs" />
+    <Compile Include="Models\SurveyItem.cs" />
+    <Compile Include="Models\Survey.cs" />
     <Compile Include="Models\Party.cs" />
     <Compile Include="Models\Position.cs" />
     <Compile Include="Models\Cluster.cs" />
     <Compile Include="Models\Candidate.cs" />
+    <Compile Include="Models\VoterAssessment.cs" />
     <Compile Include="Models\Town.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Purok.cs" />
@@ -258,6 +270,9 @@
     <Compile Include="Repository\PurokRepository.cs" />
     <Compile Include="Repository\CandidateRepository.cs" />
     <Compile Include="Repository\PartyRepository.cs" />
+    <Compile Include="Repository\SurveyItemRepository.cs" />
+    <Compile Include="Repository\SurveyRepository.cs" />
+    <Compile Include="Repository\VoterAssessmentRepository.cs" />
     <Compile Include="Repository\TownRepository.cs" />
     <Compile Include="Forms\TownConfiguration.cs">
       <SubType>Form</SubType>
@@ -270,6 +285,11 @@
     </Compile>
     <Compile Include="Forms\Voters List.Designer.cs">
       <DependentUpon>Voters List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="testappDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testappDataSet.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\BarangayForm.resx">
       <DependentUpon>BarangayForm.cs</DependentUpon>
@@ -303,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VoterAssessmentForm.resx">
+      <DependentUpon>VoterAssessmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VoterForm.resx">
       <DependentUpon>VoterForm.cs</DependentUpon>
@@ -354,7 +377,10 @@
     <None Include="Properties\DataSources\Testapp.Models.PersonDto.datasource" />
     <None Include="Properties\DataSources\Testapp.Models.Position.datasource" />
     <None Include="Properties\DataSources\Testapp.Models.Purok.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.Survey.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.SurveyItem.datasource" />
     <None Include="Properties\DataSources\Testapp.Models.Town.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.VoterAssessment.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -364,6 +390,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="testappDataSet.xsc">
+      <DependentUpon>testappDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="testappDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>testappDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="testappDataSet.xss">
+      <DependentUpon>testappDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Testapp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -372,6 +409,9 @@
     <None Include="Resources\excel.png" />
     <None Include="Resources\city-map.png" />
     <None Include="Resources\gregg.png" />
+    <Content Include="testapp - Copy.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="testapp.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

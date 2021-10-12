@@ -1795,14 +1795,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VotersList.exe" size="645104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VotersList.exe" size="680944">
       <assemblyIdentity name="VotersList" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>W6fumvmNsd7ltFBIOS/OyYGXWFZ8HvTZ4hiEw7kcRbs=</dsig:DigestValue>
+        <dsig:DigestValue>rbfcyS6cURikjrhZxavhlXuAO5tr9tfn2Cfxyd3a154=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1815,22 +1815,31 @@
       <dsig:DigestValue>rdZzkf7PGXzwk3hL01hzvbrvUVDr1YMxca3UG4/1ntE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="testapp.accdb" size="860160">
+  <file name="testapp - Copy.accdb" size="1482752">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>2iB9MPLNsh/fDteggA+eOnyCgvf4LZq5U+wNlbz3hQY=</dsig:DigestValue>
+      <dsig:DigestValue>WsmIOCyxoyK2B3g+uB2HbMRCl5fpPetnFw9yS7SLX14=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="VotersList.exe.config" size="1927">
+  <file name="testapp.accdb" size="1835008">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>aanEwPMlFOWrCC8wKQCrucDb9lYniOhMMya0qEvaUlA=</dsig:DigestValue>
+      <dsig:DigestValue>5BArA9ChqUFpR3z27eepOr8KweXg292PQhMbFUId3qg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="VotersList.exe.config" size="2484">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/cMKw9jt9ax/SArUvLI5sO2km1Pc2NUY52JtWl3r8pM=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

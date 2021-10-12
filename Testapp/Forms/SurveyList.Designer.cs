@@ -28,44 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.surveyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.surveyItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.surveyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surveyItemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridControl1
+            // surveyBindingSource
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 62);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(559, 275);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.surveyBindingSource.DataSource = typeof(Testapp.Models.Survey);
             // 
-            // gridView1
+            // surveyItemBindingSource
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.surveyItemBindingSource.DataSource = typeof(Testapp.Models.SurveyItem);
             // 
             // SurveyList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 595);
-            this.Controls.Add(this.gridControl1);
+            this.ClientSize = new System.Drawing.Size(1157, 595);
             this.Name = "SurveyList";
             this.Text = "Survey";
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.Load += new System.EventHandler(this.SurveyList_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.surveyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surveyItemBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.BindingSource surveyBindingSource;
+        private System.Windows.Forms.BindingSource surveyItemBindingSource;
     }
 }

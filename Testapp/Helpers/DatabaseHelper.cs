@@ -1,4 +1,5 @@
-﻿using System;
+﻿using gregg.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -38,6 +39,10 @@ namespace Testapp.Helpers
                             props.Add("'" + pro.GetValue(o).ToString() + "'");
                         }
                         else if (pro.GetValue(o).GetType() == typeof(int))
+                        {
+                            props.Add(pro.GetValue(o).ToString());
+                        }
+                        else if (pro.GetValue(o).GetType() == typeof(AssessmentOption))
                         {
                             props.Add(pro.GetValue(o).ToString());
                         }

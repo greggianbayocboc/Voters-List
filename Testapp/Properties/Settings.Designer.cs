@@ -22,5 +22,16 @@ namespace gregg.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\testapp.accdb;Persi" +
+            "st Security Info=True")]
+        public string testappConnectionString {
+            get {
+                return ((string)(this["testappConnectionString"]));
+            }
+        }
     }
 }
