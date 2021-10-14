@@ -10,12 +10,12 @@ namespace gregg.Helpers
     public enum AssessmentOption : int
     {
         [Display(Name = "ATO")]
-        ATO = 0,
+        ATO = 2,
         [Display(Name = "DILE ATO")]
-        DILE_ATO = 1,
+        DILE_ATO = -2,
         [Display(Name = "DUHA-DUHA")]
-        DUHA_DUHA = 2,
+        DUHA_DUHA = 0,
         [Display(Name = "INC")]
-        INC = 3
+        INC = 0
     }
 }

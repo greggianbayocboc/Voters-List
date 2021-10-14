@@ -44,7 +44,7 @@ namespace Testapp.Helpers
                         }
                         else if (pro.GetValue(o).GetType() == typeof(AssessmentOption))
                         {
-                            props.Add(pro.GetValue(o).ToString());
+                            props.Add("'" + pro.GetValue(o).ToString() + "'");
                         }
                         else
                             props.Add("'" + pro.GetValue(o).ToString() + "'");

@@ -194,7 +194,7 @@ namespace Testapp
         {
             if (PendingQueryList.Count>0)
             {
-                    con.Open();
+                con.Open();
                     OleDbTransaction transaction = con.BeginTransaction();
                     foreach (string statement in PendingQueryList)
                     {
@@ -204,6 +204,8 @@ namespace Testapp
                         }
                     }
                     transaction.Commit();
+
+                con.Close();
             }
             else
             {

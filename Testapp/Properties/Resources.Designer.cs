@@ -93,6 +93,16 @@ namespace gregg.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngaaa_com_25424 {
+            get {
+                object obj = ResourceManager.GetObject("pngaaa.com-25424", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap voters {
             get {
                 object obj = ResourceManager.GetObject("voters", resourceCulture);

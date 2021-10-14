@@ -18,17 +18,16 @@ namespace gregg.Forms
 {
     public partial class VoterAssessmentForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-
+        string lastSearchString = "";
         PersonRepository personRepository = new PersonRepository();
         VoterAssessmentRepository voterAssessmentRepository = new VoterAssessmentRepository();
         public VoterAssessmentForm()
         {
             InitializeComponent();
-
-           
         }
         void bbiPrintPreview_ItemClick(object sender, ItemClickEventArgs e)
         {
+            gridControl1.ShowPrintPreview();
         }
 
         private void bandedGridView1_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
@@ -38,19 +37,185 @@ namespace gregg.Forms
 
         private void bbiRefresh_ItemClick(object sender, ItemClickEventArgs e)
         {
-            List<Person> voters = personRepository.getAll();
-            foreach (Person voter in voters)
+            //List<Person> voters = personRepository.getAll();
+            //foreach (Person voter in voters)
+            //{
+            //    VoterAssessment vt = new VoterAssessment();
+            //    vt.Voter = voter.ID;
+            //    vt.VoterName = voter.Fullname;
+            //    vt.Mayor = "ATO";
+            //    vt.Vice = "DILE ATO";
+            //    voterAssessmentRepository.SaveAsTransaction(vt);
+            //}
+            //voterAssessmentRepository.CommitTransaction();
+            reloadData(lastSearchString);
+        }
+
+        private void barEditItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void repositoryItemCheckedComboBoxEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+            this.hideAllColumns();
+            CheckedComboBoxEdit combo = (CheckedComboBoxEdit)sender;
+            List<string> selections = combo.Text.Replace(", ",",").Split(',').ToList<string>();
+
+            if (selections.Contains("COUNCILORS"))
             {
-                VoterAssessment vt = new VoterAssessment();
-                vt.Voter = voter.ID;
-                vt.VoterName = voter.Fullname;
-                vt.Mayor = AssessmentOption.ATO;
-                vt.Vice = AssessmentOption.DILE_ATO;
 
-                voterAssessmentRepository.SaveAsTransaction(vt);
+                columnCouncilor8.Visible = true;
+                columnCouncilor7.Visible = true;
+                columnCouncilor6.Visible = true;
+                columnCouncilor5.Visible = true;
+                columnCouncilor4.Visible = true;
+                columnCouncilor3.Visible = true;
+                columnCouncilor2.Visible = true;
+                columnCouncilor1.Visible = true;
             }
-            voterAssessmentRepository.CommitTransaction();
+            else
+            {
+                columnCouncilor1.Visible = false;
+                columnCouncilor2.Visible = false;
+                columnCouncilor3.Visible = false;
+                columnCouncilor4.Visible = false;
+                columnCouncilor5.Visible = false;
+                columnCouncilor6.Visible = false;
+                columnCouncilor7.Visible = false;
+                columnCouncilor8.Visible = false;
+            }
 
+            if (selections.Contains("VICE-MAYOR"))
+            {
+                columnVice.Visible = true;
+            }
+            else
+            {
+                columnVice.Visible = false;
+            }
+
+            if (selections.Contains("MAYOR"))
+            {
+                columnMayor.Visible = true;
+            }
+            else
+            {
+                columnMayor.Visible = false;
+            }
+            
+            
+        }
+
+        void hideAllColumns()
+        {
+            columnMayor.Visible = false;
+            columnVice.Visible = false;
+            columnCouncilor1.Visible = false;
+            columnCouncilor2.Visible = false;
+            columnCouncilor3.Visible = false;
+            columnCouncilor4.Visible = false;
+            columnCouncilor5.Visible = false;
+            columnCouncilor6.Visible = false;
+            columnCouncilor7.Visible = false;
+            columnCouncilor8.Visible = false;
+        }
+
+        void reloadData(string whereclause) {
+            if(whereclause==string.Empty)
+                gridControl1.DataSource = personRepository.getAll();
+            else
+                gridControl1.DataSource = personRepository.getAll(whereclause);
+
+            bsiRecordsCount.Caption ="Records : "+ gridView1.RowCount;
+        }
+
+        private void VoterAssessmentForm_Load(object sender, EventArgs e)
+        {
+            hideAllColumns();
+            reloadData("");
+        }
+
+        void updateAssessment(VoterAssessment va, string value)
+        {
+            
+        }
+
+        private void repositoryItemRadioGroup1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                RadioGroup rg = ((RadioGroup)sender);
+                string selected = rg.EditValue.ToString();
+                Person va = (Person)gridView1.GetFocusedRow();
+                switch (gridView1.FocusedColumn.FieldName)
+                {
+                    case "Mayor":
+                        va.Mayor = selected;
+                        break;
+                    case "Vice":
+                        va.Vice = selected;
+                        break;
+                    case "Councilor1":
+                        va.Councilor1 = selected;
+                        break;
+                    case "Councilor2":
+                        va.Councilor3 = selected;
+                        break;
+                    case "Councilor3":
+                        va.Councilor4 = selected;
+                        break;
+                    case "Councilor4":
+                        va.Councilor4 = selected;
+                        break;
+                    case "Councilor5":
+                        va.Councilor5 = selected;
+                        break;
+                    case "Councilor6":
+                        va.Councilor6 = selected;
+                        break;
+                    case "Councilor7":
+                        va.Councilor7 = selected;
+                        break;
+                    case "Councilor8":
+                        va.Councilor8 = selected;
+                        break;
+                    default:
+                        break;
+                }
+                personRepository.Save(va);
+            }
+            catch (Exception ex)
+            { }
+            
+        }
+
+        private void barEditItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void repositoryItemTextEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+            
+           // gridControl1.DataSource = voterAssessmentRepository.getAll();
+        }
+
+        private void repositoryItemTextEdit1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                TextEdit txtedit = (TextEdit)sender;
+                string where = "WHERE VoteFullname like '%" + txtedit.Text.ToUpper() + "%'";
+                lastSearchString = where;
+                reloadData(where);
+            }
+        }
+
+        private void repositoryItemTextEdit1_EditValueChanged_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -10,63 +10,42 @@ namespace Testapp.Models
     {
        
         string firstname;
-
-        public string Firstname
-        {
-            get { return firstname; }
-            set { firstname = value; }
-        }
         string lastname;
-
-        public string Lastname
-        {
-            get { return lastname; }
-            set { lastname = value; }
-        }
         string fullname;
-
-        public string Fullname
-        {
-            get { return fullname; }
-            set { fullname = value; }
-        }
         string precinct;
-
         string address;
-
-        public string Address
-        {
-            get { return address; }
-            set { address = value; }
-        }
-
-        public string Precinct
-        {
-            get { return precinct; }
-            set { precinct = value; }
-        }
         int barangay;
-
-        public int Barangay
-        {
-            get { return barangay; }
-            set { barangay = value; }
-        }
+        int cluster;
         int purok;
 
-        public int Purok
-        {
-            get { return purok; }
-            set { purok = value; }
-        }
-        int cluster;
+        string mayor = "INC";
+        string vice = "INC";
+        string councilor1 = "INC";
+        string councilor2 = "INC";
+        string councilor3 = "INC";
+        string councilor4 = "INC";
+        string councilor5 = "INC";
+        string councilor6 = "INC";
+        string councilor7 = "INC";
+        string councilor8 = "INC";
 
-        public int Cluster
-        {
-            get { return cluster; }
-            set { cluster = value; }
-        }
-
-
+        public string Firstname { get => firstname; set => firstname = value; }
+        public string Lastname { get => lastname; set => lastname = value; }
+        public string Fullname { get => fullname; set => fullname = value; }
+        public string Precinct { get => precinct; set => precinct = value; }
+        public string Address { get => address; set => address = value; }
+        public int Barangay { get => barangay; set => barangay = value; }
+        public int Cluster { get => cluster; set => cluster = value; }
+        public int Purok { get => purok; set => purok = value; }
+        public string Mayor { get => mayor; set => mayor = value; }
+        public string Vice { get => vice; set => vice = value; }
+        public string Councilor1 { get => councilor1; set => councilor1 = value; }
+        public string Councilor2 { get => councilor2; set => councilor2 = value; }
+        public string Councilor3 { get => councilor3; set => councilor3 = value; }
+        public string Councilor4 { get => councilor4; set => councilor4 = value; }
+        public string Councilor5 { get => councilor5; set => councilor5 = value; }
+        public string Councilor6 { get => councilor6; set => councilor6 = value; }
+        public string Councilor7 { get => councilor7; set => councilor7 = value; }
+        public string Councilor8 { get => councilor8; set => councilor8 = value; }
     }
 }

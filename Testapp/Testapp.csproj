@@ -409,6 +409,7 @@
     <None Include="Resources\excel.png" />
     <None Include="Resources\city-map.png" />
     <None Include="Resources\gregg.png" />
+    <None Include="Resources\pngaaa.com-25424.png" />
     <Content Include="testapp - Copy.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
