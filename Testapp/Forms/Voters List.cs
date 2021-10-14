@@ -1,4 +1,7 @@
-﻿using gregg.PopupControl;
+﻿using DevExpress.XtraReports.UI;
+using gregg.PopupControl;
+using gregg.Reports;
+using gregg.Repository;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -511,6 +514,103 @@ namespace Testapp
                 applyFilter();
                 gridView1.RefreshData();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
+            BlankReport initialReport = new BlankReport();
+            initialReport.CreateDocument();
+            List<LeaderPrintoutDto> dtos = leaderPrintoutDtoRepository.getGroupedReport(generateWhereClauseForLeaders());
+            int count = 0;
+            foreach (LeaderPrintoutDto dto in dtos)
+            {
+                LeaderPrintoutReportMayor rpt = new LeaderPrintoutReportMayor();
+                rpt.Parameters["barangay"].Value = dto.Barangay;
+                rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
+                rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
+                rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
+                List<Person> list = leaderPrintoutDtoRepository.getVoters(dto.BarangayID, dto.PurokID, dto.ClusterID);
+                rpt.Parameters["count"].Value = list.Count;
+                count += list.Count;
+                rpt.DataSource = list;
+                rpt.CreateDocument();
+
+
+
+                initialReport.ModifyDocument(x => {
+                    x.AddPages(rpt.Pages);
+                });
+            }
+            ReportPrintTool tool = new ReportPrintTool(initialReport);
+            tool.PreviewForm.MdiParent = this.MdiParent;
+            tool.ShowPreview();
+        }
+
+        string generateWhereClauseForLeaders() {
+            string filter = string.Empty;
+            if (comboBrgy.SelectedValue != null && (int)comboBrgy.SelectedValue != -1)
+            {
+                filter += "Barangay.ID = " + comboBrgy.SelectedValue;
+            }
+            if (comboPurok.SelectedValue != null && (int)comboPurok.SelectedValue != -1)
+            {
+                if (filter != string.Empty)
+                {
+                    filter += " AND Purok.ID = " + comboPurok.SelectedValue;
+                }
+                else
+                {
+                    filter += "Purok.ID = " + comboPurok.SelectedValue;
+                }
+            }
+            if (comboCluster.SelectedValue != null && (int)comboCluster.SelectedValue != -1)
+            {
+                if (filter != string.Empty)
+                {
+                    filter += " AND Cluster.ID = " + comboCluster.SelectedValue;
+                }
+                else
+                {
+                    filter += "Cluster.ID = " + comboCluster.SelectedValue;
+                }
+            }
+            if (filter != string.Empty)
+            {
+                filter = "WHERE " + filter;
+            }
+            return filter;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
+            BlankReport initialReport = new BlankReport();
+            initialReport.CreateDocument();
+            List<LeaderPrintoutDto> dtos = leaderPrintoutDtoRepository.getGroupedReport(generateWhereClauseForLeaders());
+            int count = 0;
+            foreach (LeaderPrintoutDto dto in dtos)
+            {
+                LeaderPrintoutReportViceMayor rpt = new LeaderPrintoutReportViceMayor();
+                rpt.Parameters["barangay"].Value = dto.Barangay;
+                rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
+                rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
+                rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
+                List<Person> list = leaderPrintoutDtoRepository.getVoters(dto.BarangayID, dto.PurokID, dto.ClusterID);
+                rpt.Parameters["count"].Value = list.Count;
+                count += list.Count;
+                rpt.DataSource = list;
+                rpt.CreateDocument();
+
+
+
+                initialReport.ModifyDocument(x => {
+                    x.AddPages(rpt.Pages);
+                });
+            }
+            ReportPrintTool tool = new ReportPrintTool(initialReport);
+            tool.PreviewForm.MdiParent = this.MdiParent;
+            tool.ShowPreview();
         }
     }
 }

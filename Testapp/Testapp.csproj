@@ -250,11 +250,17 @@
     <Compile Include="Reports\BlankReport.Designer.cs">
       <DependentUpon>BlankReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\LeaderPrintoutReport.cs">
+    <Compile Include="Reports\LeaderPrintoutReportViceMayor.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\LeaderPrintoutReport.Designer.cs">
-      <DependentUpon>LeaderPrintoutReport.cs</DependentUpon>
+    <Compile Include="Reports\LeaderPrintoutReportViceMayor.Designer.cs">
+      <DependentUpon>LeaderPrintoutReportViceMayor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportMayor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportMayor.Designer.cs">
+      <DependentUpon>LeaderPrintoutReportMayor.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\VoterEnvelopeLabelReport.cs">
       <SubType>Component</SubType>
@@ -359,8 +365,11 @@
     <EmbeddedResource Include="Reports\BlankReport.resx">
       <DependentUpon>BlankReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\LeaderPrintoutReport.resx">
-      <DependentUpon>LeaderPrintoutReport.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\LeaderPrintoutReportViceMayor.resx">
+      <DependentUpon>LeaderPrintoutReportViceMayor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LeaderPrintoutReportMayor.resx">
+      <DependentUpon>LeaderPrintoutReportMayor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\VoterEnvelopeLabelReport.resx">
       <DependentUpon>VoterEnvelopeLabelReport.cs</DependentUpon>

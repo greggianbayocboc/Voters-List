@@ -13,15 +13,17 @@ namespace gregg.Repository
     public class LeaderPrintoutDtoRepository : DatabaseConnect<LeaderPrintoutDto>
     {
 
-       
 
         public List<LeaderPrintoutDto> getGroupedReport() {
+            return getGroupedReport("");
+        }
+        public List<LeaderPrintoutDto> getGroupedReport(string where) {
             string query1 = @"SELECT        Barangay.BarangayName AS Barangay, Barangay.ID AS BarangayID, Cluster.Leader AS ClusterLeader, COUNT(*) AS Count_, Barangay.Coordinator AS BarangayCoordinator, Purok.Leader AS PurokLeader,Purok.PurokName, Cluster.ID AS ClusterID,
                           Purok.ID AS PurokID
 FROM            (((Person LEFT OUTER JOIN
                          Barangay ON Barangay.ID = Person.Barangay) LEFT OUTER JOIN
                          Purok ON Purok.ID = Person.Purok) LEFT OUTER JOIN
-                         Cluster ON Cluster.ID = Person.Cluster)
+                         Cluster ON Cluster.ID = Person.Cluster) " + where +@" 
 GROUP BY Barangay.BarangayName, Barangay.ID, Cluster.Leader, Purok.PurokName, Barangay.Coordinator, Purok.Leader, Cluster.ID, Purok.ID";
             return this.getListCustomQuery(query1);
         }

@@ -74,6 +74,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.totalVotersValue = new System.Windows.Forms.ToolStripStatusLabel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -123,7 +125,7 @@
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.DataSource = this.bindingSourcePerson;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 270);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 199);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
@@ -253,7 +255,7 @@
             // 
             // btnAddVoter
             // 
-            this.btnAddVoter.Location = new System.Drawing.Point(7, 96);
+            this.btnAddVoter.Location = new System.Drawing.Point(6, 541);
             this.btnAddVoter.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddVoter.Name = "btnAddVoter";
             this.btnAddVoter.Size = new System.Drawing.Size(79, 20);
@@ -264,7 +266,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(90, 96);
+            this.button2.Location = new System.Drawing.Point(89, 541);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 20);
@@ -362,10 +364,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl1.ContextMenuStrip = this.contextMenuStrip1;
             this.gridControl1.DataSource = this.bindingSourcePerson;
-            this.gridControl1.Location = new System.Drawing.Point(7, 121);
+            this.gridControl1.Location = new System.Drawing.Point(6, 50);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(855, 433);
+            this.gridControl1.Size = new System.Drawing.Size(855, 487);
             this.gridControl1.TabIndex = 11;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -377,7 +379,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(726, 97);
+            this.button1.Location = new System.Drawing.Point(491, 24);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(72, 20);
@@ -389,7 +391,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(225, 79);
+            this.label1.Location = new System.Drawing.Point(2, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
@@ -403,7 +405,7 @@
             this.comboBrgy.DataSource = this.bindingSourceFilterBarangay;
             this.comboBrgy.DisplayMember = "BarangayName";
             this.comboBrgy.FormattingEnabled = true;
-            this.comboBrgy.Location = new System.Drawing.Point(228, 97);
+            this.comboBrgy.Location = new System.Drawing.Point(5, 24);
             this.comboBrgy.Margin = new System.Windows.Forms.Padding(2);
             this.comboBrgy.Name = "comboBrgy";
             this.comboBrgy.Size = new System.Drawing.Size(146, 21);
@@ -419,7 +421,7 @@
             this.comboCluster.DataSource = this.bindingSourceFilterCluster;
             this.comboCluster.DisplayMember = "Leader";
             this.comboCluster.FormattingEnabled = true;
-            this.comboCluster.Location = new System.Drawing.Point(564, 97);
+            this.comboCluster.Location = new System.Drawing.Point(341, 24);
             this.comboCluster.Margin = new System.Windows.Forms.Padding(2);
             this.comboCluster.Name = "comboCluster";
             this.comboCluster.Size = new System.Drawing.Size(146, 21);
@@ -429,7 +431,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(401, 79);
+            this.label2.Location = new System.Drawing.Point(178, 6);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
@@ -439,7 +441,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(561, 79);
+            this.label3.Location = new System.Drawing.Point(338, 6);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
@@ -453,7 +455,7 @@
             this.comboPurok.DataSource = this.bindingSourceFilterPurok;
             this.comboPurok.DisplayMember = "PurokName";
             this.comboPurok.FormattingEnabled = true;
-            this.comboPurok.Location = new System.Drawing.Point(402, 97);
+            this.comboPurok.Location = new System.Drawing.Point(179, 24);
             this.comboPurok.Margin = new System.Windows.Forms.Padding(2);
             this.comboPurok.Name = "comboPurok";
             this.comboPurok.Size = new System.Drawing.Size(146, 21);
@@ -485,11 +487,35 @@
             this.totalVotersValue.Size = new System.Drawing.Size(16, 17);
             this.totalVotersValue.Text = "...";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(567, 24);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(98, 20);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Test Print Mayor";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(669, 24);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(123, 20);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Test Print Vice Mayor";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Voters_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 585);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
@@ -572,5 +598,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel totalVotersValue;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

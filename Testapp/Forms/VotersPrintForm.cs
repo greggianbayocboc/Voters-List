@@ -46,7 +46,7 @@ namespace gregg.Forms
             int count = 0;
             foreach (LeaderPrintoutDto dto in dtos)
             {
-                LeaderPrintoutReport rpt = new LeaderPrintoutReport();
+                LeaderPrintoutReportMayor rpt = new LeaderPrintoutReportMayor();
                 rpt.Parameters["barangay"].Value = dto.Barangay;
                 rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
                 rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
@@ -65,7 +65,8 @@ namespace gregg.Forms
             }
 
             ReportPrintTool tool = new ReportPrintTool(initialReport);
-            tool.ShowPreviewDialog();
+            tool.PreviewForm.MdiParent = this.MdiParent;
+            tool.ShowPreview();
         }
     }
 }

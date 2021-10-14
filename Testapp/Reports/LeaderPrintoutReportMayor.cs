@@ -6,9 +6,9 @@ using DevExpress.XtraReports.UI;
 
 namespace gregg.Reports
 {
-    public partial class LeaderPrintoutReport : DevExpress.XtraReports.UI.XtraReport
+    public partial class LeaderPrintoutReportMayor : DevExpress.XtraReports.UI.XtraReport
     {
-        public LeaderPrintoutReport()
+        public LeaderPrintoutReportMayor()
         {
             InitializeComponent();
         }

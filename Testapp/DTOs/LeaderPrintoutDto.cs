@@ -21,13 +21,13 @@ namespace Testapp.Models
 
         public string Barangay { get => barangay; set => barangay = value; }
         public string BarangayCoordinator { get => barangayCoordinator; set => barangayCoordinator = value; }
-        public string PurokLeader { get => purokLeader!=null? purokLeader: "NOT ASSIGNED" ; set => purokLeader = value; }
-        public string ClusterLeader { get => clusterLeader != null?clusterLeader: "NOT ASSIGNED"; set => clusterLeader = value; }
+        public string PurokLeader { get => purokLeader!=null? purokLeader: "NO LEADER" ; set => purokLeader = value; }
+        public string ClusterLeader { get => clusterLeader != null?clusterLeader: "NO LEADER"; set => clusterLeader = value; }
         public List<Person> Voters { get => voters; set => voters = value; }
         public int BarangayID { get => barangayID; set => barangayID = value; }
         public int PurokID { get => purokID; set => purokID = value; }
         public int ClusterID { get => clusterID; set => clusterID = value; }
         public int Count_ { get => count_; set => count_ = value; }
-        public string PurokName { get => purokName!=null || purokName!= string.Empty?purokName:"NO PUROK ASSIGNED"; set => purokName = value; }
+        public string PurokName { get => purokName!=null || purokName!= string.Empty?purokName:"NO PUROK"; set => purokName = value; }
     }
 }
