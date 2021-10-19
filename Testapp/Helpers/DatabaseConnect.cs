@@ -206,6 +206,7 @@ namespace Testapp
                     transaction.Commit();
 
                 con.Close();
+                PendingQueryList = new List<string>();
             }
             else
             {

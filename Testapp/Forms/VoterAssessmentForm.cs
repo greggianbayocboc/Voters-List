@@ -207,7 +207,7 @@ namespace gregg.Forms
             if (e.KeyCode == Keys.Enter)
             {
                 TextEdit txtedit = (TextEdit)sender;
-                string where = "WHERE VoteFullname like '%" + txtedit.Text.ToUpper() + "%'";
+                string where = "WHERE Fullname like '%" + txtedit.Text.ToUpper() + "%'";
                 lastSearchString = where;
                 reloadData(where);
             }
@@ -216,6 +216,155 @@ namespace gregg.Forms
         private void repositoryItemTextEdit1_EditValueChanged_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int x = 1;
+            List<Person> voters = personRepository.getAll();
+            foreach (Person person in voters)
+            {
+                switch (x) {
+                    case 1:
+                        person.Councilor1 = "ATO";
+                        person.Councilor2 = "ATO";
+                        person.Councilor3 = "ATO";
+                        person.Councilor4 = "ATO";
+                        person.Councilor5 = "ATO";
+                        person.Councilor6 = "ATO";
+                        person.Councilor7 = "ATO";
+                        person.Councilor8 = "ATO";
+                        person.Mayor = "ATO";
+                        person.Vice = "ATO";
+                        break;
+                    case 2:
+                        person.Councilor1 = "DILE ATO";
+                        person.Councilor2 = "ATO";
+                        person.Councilor3 = "ATO";
+                        person.Councilor4 = "ATO";
+                        person.Councilor5 = "ATO";
+                        person.Councilor6 = "ATO";
+                        person.Councilor7 = "ATO";
+                        person.Councilor8 = "ATO";
+                        person.Mayor = "ATO";
+                        person.Vice = "ATO";
+                        break;
+                    case 3:
+                        person.Councilor1 = "DILE ATO";
+                        person.Councilor2 = "DILE ATO";
+                        person.Councilor3 = "ATO";
+                        person.Councilor4 = "ATO";
+                        person.Councilor5 = "ATO";
+                        person.Councilor6 = "ATO";
+                        person.Councilor7 = "ATO";
+                        person.Councilor8 = "ATO";
+                        person.Mayor = "ATO";
+                        person.Vice = "ATO";
+                        break;
+                    case 4:
+                        person.Councilor1 = "DILE ATO";
+                        person.Councilor2 = "DILE ATO";
+                        person.Councilor3 = "DILE ATO";
+                        person.Councilor4 = "ATO";
+                        person.Councilor5 = "ATO";
+                        person.Councilor6 = "ATO";
+                        person.Councilor7 = "ATO";
+                        person.Councilor8 = "ATO";
+                        person.Mayor = "ATO";
+                        person.Vice = "ATO";
+                        break;
+                    case 5:
+                        person.Councilor1 = "DILE ATO";
+                        person.Councilor2 = "DILE ATO";
+                        person.Councilor3 = "DILE ATO";
+                        person.Councilor4 = "DILE ATO";
+                        person.Councilor5 = "ATO";
+                        person.Councilor6 = "ATO";
+                        person.Councilor7 = "ATO";
+                        person.Councilor8 = "ATO";
+                        person.Mayor = "ATO";
+                        person.Vice = "ATO";
+                        break;
+                    case 6:
+                        person.Councilor1 = "DILE ATO";
+                        person.Councilor2 = "DILE ATO";
+                        person.Councilor3 = "DILE ATO";
+                        person.Councilor4 = "DILE ATO";
+                        person.Councilor5 = "DILE ATO";
+                        person.Councilor6 = "ATO";
+                        person.Councilor7 = "ATO";
+                        person.Councilor8 = "ATO";
+                        person.Mayor = "ATO";
+                        person.Vice = "ATO";
+                        break;
+                    case 7:
+                        person.Councilor1 = "DILE ATO";
+                        person.Councilor2 = "DILE ATO";
+                        person.Councilor3 = "DILE ATO";
+                        person.Councilor4 = "DILE ATO";
+                        person.Councilor5 = "DILE ATO";
+                        person.Councilor6 = "DILE ATO";
+                        person.Councilor7 = "ATO";
+                        person.Councilor8 = "ATO";
+                        person.Mayor = "ATO";
+                        person.Vice = "ATO";
+                        break;
+                    case 8:
+                        person.Councilor1 = "DILE ATO";
+                        person.Councilor2 = "DILE ATO";
+                        person.Councilor3 = "DILE ATO";
+                        person.Councilor4 = "DILE ATO";
+                        person.Councilor5 = "DILE ATO";
+                        person.Councilor6 = "DILE ATO";
+                        person.Councilor7 = "DILE ATO";
+                        person.Councilor8 = "ATO";
+                        person.Mayor = "ATO";
+                        person.Vice = "ATO";
+                        break;
+                    case 9:
+                        person.Councilor1 = "DILE ATO";
+                        person.Councilor2 = "DILE ATO";
+                        person.Councilor3 = "DILE ATO";
+                        person.Councilor4 = "DILE ATO";
+                        person.Councilor5 = "DILE ATO";
+                        person.Councilor6 = "DILE ATO";
+                        person.Councilor7 = "DILE ATO";
+                        person.Councilor8 = "DILE ATO";
+                        person.Mayor = "ATO";
+                        person.Vice = "ATO";
+                        break;
+                    case 10:
+                        person.Councilor1 = "DILE ATO";
+                        person.Councilor2 = "DILE ATO";
+                        person.Councilor3 = "DILE ATO";
+                        person.Councilor4 = "DILE ATO";
+                        person.Councilor5 = "DILE ATO";
+                        person.Councilor6 = "DILE ATO";
+                        person.Councilor7 = "DILE ATO";
+                        person.Councilor8 = "DILE ATO";
+                        person.Mayor = "DILE ATO";
+                        person.Vice = "ATO";
+                        break;
+                    case 11:
+                        person.Councilor1 = "DILE ATO";
+                        person.Councilor2 = "DILE ATO";
+                        person.Councilor3 = "DILE ATO";
+                        person.Councilor4 = "DILE ATO";
+                        person.Councilor5 = "DILE ATO";
+                        person.Councilor6 = "DILE ATO";
+                        person.Councilor7 = "DILE ATO";
+                        person.Councilor8 = "DILE ATO";
+                        person.Mayor = "DILE ATO";
+                        person.Vice = "DILE ATO";
+                        break;
+                    default:
+                        break;
+
+                }
+                x = (x < 11) ? x + 1 : 1;
+                personRepository.SaveAsTransaction(person);
+            }
+            personRepository.CommitTransaction();
         }
     }
 }

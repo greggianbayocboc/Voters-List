@@ -212,3 +212,9 @@ C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.csprojResolveAssemblyReference.cache
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\gregg.Reports.LeaderPrintoutReportViceMayor.resources
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\gregg.Reports.LeaderPrintoutReportMayor.resources
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\gregg.Reports.LeaderPrintoutReportCouncilor.resources
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\gregg.Forms.PieChartPercentageForm.resources
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\DevExpress.XtraCharts.v18.2.UI.dll
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\DevExpress.XtraCharts.v18.2.UI.xml
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\gregg.Reports.LeaderPrintoutReportStraight.resources
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\gregg.Forms.PieChartByBarangayForm.resources

@@ -1003,6 +1003,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.XtraCharts.v18.2.UI.dll" size="267512">
+      <assemblyIdentity name="DevExpress.XtraCharts.v18.2.UI" version="18.2.6.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>QJKv3rJ780m0LvvFbNbBwP+FLuNtqLJVSWuD4BfkNNk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.XtraCharts.v18.2.Wizard.dll" size="7486712">
       <assemblyIdentity name="DevExpress.XtraCharts.v18.2.Wizard" version="18.2.6.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -1795,14 +1807,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VotersList.exe" size="715248">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VotersList.exe" size="1031664">
       <assemblyIdentity name="VotersList" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YeEMSWm9X4jgnOTMmLBiSGOWgcHiAJy3ADmhH1dyYGc=</dsig:DigestValue>
+        <dsig:DigestValue>7WAgNqbZw9eM30A7B/u6moWCUu2UICcCNihjYQDwa54=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1830,16 +1842,16 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>P04j0RdqxCH+KHKnL/JudiRliaapVwiHCBX54knwd4s=</dsig:DigestValue>
+      <dsig:DigestValue>KwELfSkxFFFMD3A7RTS5CTaWGckTOAMnLfzAFInyRtA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="VotersList.exe.config" size="2524">
+  <file name="VotersList.exe.config" size="2514">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>E4oYClHNkpeZKkiBoD8uDTTOKO05jBeOzrg8+YKVEV8=</dsig:DigestValue>
+      <dsig:DigestValue>HREld4bDZscgsw+Kw1qHPnDmaEFkGkCrmTjfegez45U=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

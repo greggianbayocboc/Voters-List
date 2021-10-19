@@ -163,5 +163,98 @@ namespace gregg.Forms
             tool.PreviewForm.MdiParent = this;
             tool.ShowPreview();
         }
+
+        private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int i;
+            for (i = 0; i < MdiChildren.Length; i++)
+            {
+                if (MdiChildren[i].GetType().Name == "PieChartPercentageForm")
+                {
+                    MdiChildren[i].Activate();
+                    MdiChildren[i].Refresh();
+                    return;
+                }
+            }
+            PieChartPercentageForm xf = new PieChartPercentageForm();
+            xf.MdiParent = this;
+            xf.Show();
+        }
+
+        private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
+            BlankReport initialReport = new BlankReport();
+            initialReport.CreateDocument();
+            List<LeaderPrintoutDto> dtos = leaderPrintoutDtoRepository.getGroupedReport();
+            int count = 0;
+            foreach (LeaderPrintoutDto dto in dtos)
+            {
+                LeaderPrintoutReportStraight rpt = new LeaderPrintoutReportStraight();
+                rpt.Parameters["barangay"].Value = dto.Barangay;
+                rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
+                rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
+                rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
+                List<Person> list = leaderPrintoutDtoRepository.getVotersStraightAssessment(dto.BarangayID, dto.PurokID, dto.ClusterID);
+                rpt.Parameters["count"].Value = list.Count;
+                count += list.Count;
+                rpt.DataSource = list;
+                rpt.CreateDocument();
+
+
+                if(count>0)
+                initialReport.ModifyDocument(x => {
+                    x.AddPages(rpt.Pages);
+                });
+            }
+            ReportPrintTool tool = new ReportPrintTool(initialReport);
+            tool.PreviewForm.MdiParent = this;
+            tool.ShowPreview();
+        }
+
+        private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
+        {
+           
+            int i;
+            for (i = 0; i < MdiChildren.Length; i++)
+            {
+                if (MdiChildren[i].GetType().Name == "PieChartByBarangayForm" && MdiChildren[i].Text == "MAYOR")
+                {
+                    MdiChildren[i].Activate();
+                    MdiChildren[i].Refresh();
+                    return;
+                }
+            }
+            PieChartByBarangayForm form = new PieChartByBarangayForm();
+            form.labelCandidate.Text = "Ongie Bernales-Lim";
+            form.labelPosition.Text = "MAYOR";
+            form.Text = "MAYOR";
+            form.position = "MAYOR";
+            form.candidate = "Ongie Bernales-Lim";
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int i;
+            for (i = 0; i < MdiChildren.Length; i++)
+            {
+                if (MdiChildren[i].GetType().Name == "PieChartByBarangayForm" && MdiChildren[i].Text == "VICE-MAYOR")
+                {
+                    MdiChildren[i].Activate();
+                    MdiChildren[i].Refresh();
+                    return;
+                }
+            }
+            PieChartByBarangayForm form = new PieChartByBarangayForm();
+            form.position = "VICE-MAYOR";
+            form.Text = "VICE-MAYOR";
+            form.candidate = "Myra Fostanes-Colis";
+            form.labelCandidate.Text = "Myra Fostanes-Colis";
+            form.labelPosition.Text = "VICE-MAYOR";
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

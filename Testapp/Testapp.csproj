@@ -88,6 +88,8 @@
     <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -96,6 +98,7 @@
     <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -128,7 +131,9 @@
     <Reference Include="WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\DataPoint.cs" />
     <Compile Include="DTOs\LeaderPrintoutDto.cs" />
+    <Compile Include="DTOs\PieChartData.cs" />
     <Compile Include="DTOs\PersonDto.cs" />
     <Compile Include="Forms\BarangayForm.cs">
       <SubType>Form</SubType>
@@ -165,6 +170,12 @@
     </Compile>
     <Compile Include="Forms\MainRibbonForm.Designer.cs">
       <DependentUpon>MainRibbonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PieChartByBarangayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PieChartByBarangayForm.Designer.cs">
+      <DependentUpon>PieChartByBarangayForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PurokForm.cs">
       <SubType>Form</SubType>
@@ -220,6 +231,12 @@
     <Compile Include="Forms\VoterAssessmentForm.Designer.cs">
       <DependentUpon>VoterAssessmentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PieChartPercentageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PieChartPercentageForm.Designer.cs">
+      <DependentUpon>PieChartPercentageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\AssessmentOption.cs" />
     <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="Helpers\DatabaseConnect.cs" />
@@ -250,6 +267,18 @@
     <Compile Include="Reports\BlankReport.Designer.cs">
       <DependentUpon>BlankReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportCouncilor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportCouncilor.Designer.cs">
+      <DependentUpon>LeaderPrintoutReportCouncilor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportStraight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportStraight.Designer.cs">
+      <DependentUpon>LeaderPrintoutReportStraight.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\LeaderPrintoutReportViceMayor.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -278,6 +307,7 @@
     <Compile Include="Repository\PartyRepository.cs" />
     <Compile Include="Repository\SurveyItemRepository.cs" />
     <Compile Include="Repository\SurveyRepository.cs" />
+    <Compile Include="Repository\PieChartDataRepository.cs" />
     <Compile Include="Repository\VoterAssessmentRepository.cs" />
     <Compile Include="Repository\TownRepository.cs" />
     <Compile Include="Forms\TownConfiguration.cs">
@@ -320,6 +350,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PartyForm.resx">
       <DependentUpon>PartyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PieChartByBarangayForm.resx">
+      <DependentUpon>PieChartByBarangayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PieChartPercentageForm.resx">
+      <DependentUpon>PieChartPercentageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
@@ -364,6 +400,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\BlankReport.resx">
       <DependentUpon>BlankReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LeaderPrintoutReportCouncilor.resx">
+      <DependentUpon>LeaderPrintoutReportCouncilor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LeaderPrintoutReportStraight.resx">
+      <DependentUpon>LeaderPrintoutReportStraight.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\LeaderPrintoutReportViceMayor.resx">
       <DependentUpon>LeaderPrintoutReportViceMayor.cs</DependentUpon>
@@ -419,6 +461,7 @@
     <None Include="Resources\city-map.png" />
     <None Include="Resources\gregg.png" />
     <None Include="Resources\pngaaa.com-25424.png" />
+    <None Include="Resources\mayor.png" />
     <Content Include="testapp - Copy.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

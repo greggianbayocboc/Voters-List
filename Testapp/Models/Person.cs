@@ -17,6 +17,8 @@ namespace Testapp.Models
         int barangay;
         int cluster;
         int purok;
+        int age;
+        string birthdate;
 
         string mayor = "INC";
         string vice = "INC";
@@ -47,5 +49,7 @@ namespace Testapp.Models
         public string Councilor6 { get => councilor6; set => councilor6 = value; }
         public string Councilor7 { get => councilor7; set => councilor7 = value; }
         public string Councilor8 { get => councilor8; set => councilor8 = value; }
+        public int Age { get => age; set => age = value; }
+        public string Birthdate { get => birthdate; set => birthdate = value; }
     }
 }

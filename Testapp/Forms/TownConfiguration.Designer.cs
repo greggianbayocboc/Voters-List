@@ -160,7 +160,7 @@
             // btnAddBarangay
             // 
             this.btnAddBarangay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddBarangay.Location = new System.Drawing.Point(16, 700);
+            this.btnAddBarangay.Location = new System.Drawing.Point(16, 702);
             this.btnAddBarangay.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddBarangay.Name = "btnAddBarangay";
             this.btnAddBarangay.Size = new System.Drawing.Size(86, 23);
@@ -172,7 +172,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(106, 700);
+            this.button1.Location = new System.Drawing.Point(106, 702);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 23);
@@ -184,7 +184,7 @@
             // btnEditPurok
             // 
             this.btnEditPurok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEditPurok.Location = new System.Drawing.Point(412, 701);
+            this.btnEditPurok.Location = new System.Drawing.Point(412, 703);
             this.btnEditPurok.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditPurok.Name = "btnEditPurok";
             this.btnEditPurok.Size = new System.Drawing.Size(86, 23);
@@ -196,7 +196,7 @@
             // btnAddPurok
             // 
             this.btnAddPurok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddPurok.Location = new System.Drawing.Point(321, 701);
+            this.btnAddPurok.Location = new System.Drawing.Point(321, 703);
             this.btnAddPurok.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddPurok.Name = "btnAddPurok";
             this.btnAddPurok.Size = new System.Drawing.Size(86, 23);
@@ -208,7 +208,7 @@
             // btnAddCluster
             // 
             this.btnAddCluster.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddCluster.Location = new System.Drawing.Point(622, 700);
+            this.btnAddCluster.Location = new System.Drawing.Point(622, 702);
             this.btnAddCluster.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddCluster.Name = "btnAddCluster";
             this.btnAddCluster.Size = new System.Drawing.Size(86, 23);
@@ -220,7 +220,7 @@
             // btnEditCluster
             // 
             this.btnEditCluster.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEditCluster.Location = new System.Drawing.Point(713, 700);
+            this.btnEditCluster.Location = new System.Drawing.Point(713, 702);
             this.btnEditCluster.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditCluster.Name = "btnEditCluster";
             this.btnEditCluster.Size = new System.Drawing.Size(86, 23);
@@ -233,7 +233,7 @@
             // 
             this.btnRemoveBarangay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRemoveBarangay.Enabled = false;
-            this.btnRemoveBarangay.Location = new System.Drawing.Point(197, 700);
+            this.btnRemoveBarangay.Location = new System.Drawing.Point(197, 702);
             this.btnRemoveBarangay.Name = "btnRemoveBarangay";
             this.btnRemoveBarangay.Size = new System.Drawing.Size(80, 23);
             this.btnRemoveBarangay.TabIndex = 16;
@@ -245,7 +245,7 @@
             // 
             this.btnRemovePurok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRemovePurok.Enabled = false;
-            this.btnRemovePurok.Location = new System.Drawing.Point(503, 700);
+            this.btnRemovePurok.Location = new System.Drawing.Point(503, 702);
             this.btnRemovePurok.Name = "btnRemovePurok";
             this.btnRemovePurok.Size = new System.Drawing.Size(80, 23);
             this.btnRemovePurok.TabIndex = 17;
@@ -257,7 +257,7 @@
             // 
             this.btnRemoveCluster.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRemoveCluster.Enabled = false;
-            this.btnRemoveCluster.Location = new System.Drawing.Point(804, 700);
+            this.btnRemoveCluster.Location = new System.Drawing.Point(804, 702);
             this.btnRemoveCluster.Name = "btnRemoveCluster";
             this.btnRemoveCluster.Size = new System.Drawing.Size(80, 23);
             this.btnRemoveCluster.TabIndex = 18;
@@ -269,7 +269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 748);
+            this.ClientSize = new System.Drawing.Size(1005, 750);
             this.Controls.Add(this.btnRemoveCluster);
             this.Controls.Add(this.btnRemovePurok);
             this.Controls.Add(this.btnRemoveBarangay);
