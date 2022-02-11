@@ -97,6 +97,7 @@ namespace gregg.Forms
 
         private void MainRibbonForm_Load(object sender, EventArgs e)
         {
+        
         }
 
         private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
@@ -135,33 +136,34 @@ namespace gregg.Forms
 
         private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
-            BlankReport initialReport = new BlankReport();
-            initialReport.CreateDocument();
-            List<LeaderPrintoutDto> dtos = leaderPrintoutDtoRepository.getGroupedReport();
-            int count = 0;
-            foreach (LeaderPrintoutDto dto in dtos)
+            BarangayPurokClusterSelect selectForm = new BarangayPurokClusterSelect();
+            if (selectForm.ShowDialog() == DialogResult.OK)
             {
-                LeaderPrintoutReportMayor rpt = new LeaderPrintoutReportMayor();
-                rpt.Parameters["barangay"].Value = dto.Barangay;
-                rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
-                rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
-                rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
-                List<Person> list = leaderPrintoutDtoRepository.getVoters(dto.BarangayID, dto.PurokID, dto.ClusterID);
-                rpt.Parameters["count"].Value = list.Count;
-                count += list.Count;
-                rpt.DataSource = list;
-                rpt.CreateDocument();
-
-
-
-                initialReport.ModifyDocument(x => {
-                    x.AddPages(rpt.Pages);
-                });
+                LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
+                BlankReport initialReport = new BlankReport();
+                initialReport.CreateDocument();
+                List<LeaderPrintoutDto> dtos = leaderPrintoutDtoRepository.getGroupedReport(generateWhereClauseForLeaders(selectForm.Barangay, selectForm.Purok, selectForm.Cluster));
+                int count = 0;
+                foreach (LeaderPrintoutDto dto in dtos)
+                {
+                    LeaderPrintoutReportMayor rpt = new LeaderPrintoutReportMayor();
+                    rpt.Parameters["barangay"].Value = dto.Barangay;
+                    rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
+                    rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
+                    rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
+                    List<Person> list = leaderPrintoutDtoRepository.getVoters(dto.BarangayID, dto.PurokID, dto.ClusterID);
+                    rpt.Parameters["count"].Value = list.Count;
+                    count += list.Count;
+                    rpt.DataSource = list;
+                    rpt.CreateDocument();
+                    initialReport.ModifyDocument(x => {
+                        x.AddPages(rpt.Pages);
+                    });
+                }
+                ReportPrintTool tool = new ReportPrintTool(initialReport);
+                tool.PreviewForm.MdiParent = this;
+                tool.ShowPreview();
             }
-            ReportPrintTool tool = new ReportPrintTool(initialReport);
-            tool.PreviewForm.MdiParent = this;
-            tool.ShowPreview();
         }
 
         private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
@@ -183,33 +185,72 @@ namespace gregg.Forms
 
         private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
-            BlankReport initialReport = new BlankReport();
-            initialReport.CreateDocument();
-            List<LeaderPrintoutDto> dtos = leaderPrintoutDtoRepository.getGroupedReport();
-            int count = 0;
-            foreach (LeaderPrintoutDto dto in dtos)
-            {
-                LeaderPrintoutReportStraight rpt = new LeaderPrintoutReportStraight();
-                rpt.Parameters["barangay"].Value = dto.Barangay;
-                rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
-                rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
-                rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
-                List<Person> list = leaderPrintoutDtoRepository.getVotersStraightAssessment(dto.BarangayID, dto.PurokID, dto.ClusterID);
-                rpt.Parameters["count"].Value = list.Count;
-                count += list.Count;
-                rpt.DataSource = list;
-                rpt.CreateDocument();
+            BarangayPurokClusterSelect selectForm = new BarangayPurokClusterSelect();
+            if (selectForm.ShowDialog() == DialogResult.OK) {
+                LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
+                BlankReport initialReport = new BlankReport();
+                initialReport.CreateDocument();
+                List<LeaderPrintoutDto> dtos = leaderPrintoutDtoRepository.getGroupedReport(generateWhereClauseForLeaders(selectForm.Barangay, selectForm.Purok, selectForm.Cluster));
+                int count = 0;
+                foreach (LeaderPrintoutDto dto in dtos)
+                {
+                    LeaderPrintoutReportStraight rpt = new LeaderPrintoutReportStraight();
+                    rpt.Parameters["barangay"].Value = dto.Barangay;
+                    rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
+                    rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
+                    rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
+                    List<Person> list = leaderPrintoutDtoRepository.getVotersStraightAssessment(dto.BarangayID, dto.PurokID, dto.ClusterID);
+                    rpt.Parameters["count"].Value = list.Count;
+                    count += list.Count;
+                    rpt.DataSource = list;
+                    rpt.CreateDocument();
 
 
-                if(count>0)
-                initialReport.ModifyDocument(x => {
-                    x.AddPages(rpt.Pages);
-                });
+                    if (count > 0)
+                        initialReport.ModifyDocument(x => {
+                            x.AddPages(rpt.Pages);
+                        });
+                }
+                ReportPrintTool tool = new ReportPrintTool(initialReport);
+                tool.PreviewForm.MdiParent = this;
+                tool.ShowPreview();
             }
-            ReportPrintTool tool = new ReportPrintTool(initialReport);
-            tool.PreviewForm.MdiParent = this;
-            tool.ShowPreview();
+        }
+
+        string generateWhereClauseForLeaders(int? barangayId, int? purokId, int? clusterId)
+        {
+            string filter = string.Empty;
+            if (barangayId != -1)
+            {
+                filter += "Barangay.ID = " + barangayId;
+            }
+            if (purokId != -1)
+            {
+                if (filter != string.Empty)
+                {
+                    filter += " AND Purok.ID = " + purokId;
+                }
+                else
+                {
+                    filter += "Purok.ID = " + purokId;
+                }
+            }
+            if (clusterId != -1)
+            {
+                if (filter != string.Empty)
+                {
+                    filter += " AND Cluster.ID = " + clusterId;
+                }
+                else
+                {
+                    filter += "Cluster.ID = " + clusterId;
+                }
+            }
+            if (filter != string.Empty)
+            {
+                filter = "WHERE " + filter;
+            }
+            return filter;
         }
 
         private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
@@ -255,6 +296,216 @@ namespace gregg.Forms
             form.labelPosition.Text = "VICE-MAYOR";
             form.MdiParent = this;
             form.Show();
+        }
+
+        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            BarangayPurokClusterSelect selectForm = new BarangayPurokClusterSelect();
+            if (selectForm.ShowDialog() == DialogResult.OK)
+            {
+                LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
+                BlankReport initialReport = new BlankReport();
+                initialReport.CreateDocument();
+
+                string whereClause = generateWhereClauseForLeaders(selectForm.Barangay, selectForm.Purok, selectForm.Cluster);
+                if (whereClause == string.Empty)
+                {
+                    whereClause += "WHERE Person.Age < 30";
+                }
+                else
+                {
+                    whereClause += " AND  Person.Age < 30";
+                }
+
+                List<LeaderPrintoutDto> dtos = leaderPrintoutDtoRepository.getGroupedReport(whereClause);
+                int count = 0;
+                foreach (LeaderPrintoutDto dto in dtos)
+                {
+                    LeaderPrintoutReportStraight rpt = new LeaderPrintoutReportStraight();
+                    rpt.Parameters["barangay"].Value = dto.Barangay;
+                    rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
+                    rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
+                    rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
+                    rpt.Parameters["ageRange"].Value = "Below 30";
+                    List<Person> list = leaderPrintoutDtoRepository.getVotersStraightAssessment(dto.BarangayID, dto.PurokID, dto.ClusterID);
+                    rpt.Parameters["count"].Value = list.Count;
+                    count += list.Count;
+                    rpt.DataSource = list;
+                    rpt.CreateDocument();
+
+
+                    if (count > 0)
+                        initialReport.ModifyDocument(x => {
+                            x.AddPages(rpt.Pages);
+                        });
+                }
+                ReportPrintTool tool = new ReportPrintTool(initialReport);
+                tool.PreviewForm.MdiParent = this;
+                tool.ShowPreview();
+            }
+        }
+
+        private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            BarangayPurokClusterSelect selectForm = new BarangayPurokClusterSelect();
+            if (selectForm.ShowDialog() == DialogResult.OK)
+            {
+                LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
+                BlankReport initialReport = new BlankReport();
+                initialReport.CreateDocument();
+                List<LeaderPrintoutDto> dtos = leaderPrintoutDtoRepository.getGroupedReport(generateWhereClauseForLeaders(selectForm.Barangay, selectForm.Purok, selectForm.Cluster));
+                int count = 0;
+                foreach (LeaderPrintoutDto dto in dtos)
+                {
+                    LeaderPrintoutReportViceMayor rpt = new LeaderPrintoutReportViceMayor();
+                    rpt.Parameters["barangay"].Value = dto.Barangay;
+                    rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
+                    rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
+                    rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
+                    List<Person> list = leaderPrintoutDtoRepository.getVoters(dto.BarangayID, dto.PurokID, dto.ClusterID);
+                    rpt.Parameters["count"].Value = list.Count;
+                    count += list.Count;
+                    rpt.DataSource = list;
+                    rpt.CreateDocument();
+                    initialReport.ModifyDocument(x => {
+                        x.AddPages(rpt.Pages);
+                    });
+                }
+                ReportPrintTool tool = new ReportPrintTool(initialReport);
+                tool.PreviewForm.MdiParent = this;
+                tool.ShowPreview();
+            }
+        }
+
+        private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            BarangayPurokClusterSelect selectForm = new BarangayPurokClusterSelect();
+            if (selectForm.ShowDialog() == DialogResult.OK)
+            {
+                LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
+                BlankReport initialReport = new BlankReport();
+                initialReport.CreateDocument();
+                List<LeaderPrintoutDto> dtos = leaderPrintoutDtoRepository.getGroupedReport(generateWhereClauseForLeaders(selectForm.Barangay, selectForm.Purok, selectForm.Cluster));
+                int count = 0;
+                foreach (LeaderPrintoutDto dto in dtos)
+                {
+                    LeaderPrintoutReportCouncilor rpt = new LeaderPrintoutReportCouncilor();
+                    rpt.Parameters["barangay"].Value = dto.Barangay;
+                    rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
+                    rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
+                    rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
+                    List<Person> list = leaderPrintoutDtoRepository.getVoters(dto.BarangayID, dto.PurokID, dto.ClusterID);
+                    rpt.Parameters["count"].Value = list.Count;
+                    count += list.Count;
+                    rpt.DataSource = list;
+                    rpt.CreateDocument();
+                    initialReport.ModifyDocument(x => {
+                        x.AddPages(rpt.Pages);
+                    });
+                }
+                ReportPrintTool tool = new ReportPrintTool(initialReport);
+                tool.PreviewForm.MdiParent = this;
+                tool.ShowPreview();
+            }
+        }
+
+        private void barButtonItem20_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            BarangayPurokClusterSelect selectForm = new BarangayPurokClusterSelect();
+            if (selectForm.ShowDialog() == DialogResult.OK)
+            {
+                LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
+                BlankReport initialReport = new BlankReport();
+                initialReport.CreateDocument();
+
+                string whereClause = generateWhereClauseForLeaders(selectForm.Barangay, selectForm.Purok, selectForm.Cluster);
+                if (whereClause == string.Empty)
+                {
+                    whereClause += "WHERE Person.Age >= 30";
+                }
+                else
+                {
+                    whereClause += " AND  Person.Age >= 30";
+                }
+
+                List<LeaderPrintoutDto> dtos = leaderPrintoutDtoRepository.getGroupedReport(whereClause);
+                int count = 0;
+                foreach (LeaderPrintoutDto dto in dtos)
+                {
+                    LeaderPrintoutReportStraight rpt = new LeaderPrintoutReportStraight();
+                    rpt.Parameters["barangay"].Value = dto.Barangay;
+                    rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
+                    rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
+                    rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
+                    rpt.Parameters["ageRange"].Value = "30 and Above";
+                    List<Person> list = leaderPrintoutDtoRepository.getVotersStraightAssessment(dto.BarangayID, dto.PurokID, dto.ClusterID);
+                    rpt.Parameters["count"].Value = list.Count;
+                    count += list.Count;
+                    rpt.DataSource = list;
+                    rpt.CreateDocument();
+
+
+                    if (count > 0)
+                        initialReport.ModifyDocument(x => {
+                            x.AddPages(rpt.Pages);
+                        });
+                }
+                ReportPrintTool tool = new ReportPrintTool(initialReport);
+                tool.PreviewForm.MdiParent = this;
+                tool.PreviewForm.Text = "Straight Voters - 30 and Above";
+                tool.ShowPreview();
+            }
+        }
+
+        private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int i;
+            for (i = 0; i < MdiChildren.Length; i++)
+            {
+                if (MdiChildren[i].GetType().Name == "DatabaseConfigurationPostgresForm")
+                {
+                    MdiChildren[i].Activate();
+                    MdiChildren[i].Refresh();
+                    return;
+                }
+            }
+            DatabaseConfigurationPostgresForm xf = new DatabaseConfigurationPostgresForm();
+            xf.MdiParent = this;
+            xf.Show();
+        }
+
+        private void barButtonItem16_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int i;
+            for (i = 0; i < MdiChildren.Length; i++)
+            {
+                if (MdiChildren[i].GetType().Name == "CouncilorChartsForm")
+                {
+                    MdiChildren[i].Activate();
+                    MdiChildren[i].Refresh();
+                    return;
+                }
+            }
+            CouncilorChartsForm xf = new CouncilorChartsForm();
+            xf.MdiParent = this;
+            xf.Show();
+        }
+
+        private void barButtonItem22_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int i;
+            for (i = 0; i < MdiChildren.Length; i++)
+            {
+                if (MdiChildren[i].GetType().Name == "VotersByLeadersForm")
+                {
+                    MdiChildren[i].Activate();
+                    MdiChildren[i].Refresh();
+                    return;
+                }
+            }
+            VotersByLeadersForm xf = new VotersByLeadersForm();
+            xf.MdiParent = this;
+            xf.Show();
         }
     }
 }

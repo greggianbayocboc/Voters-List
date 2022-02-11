@@ -7,8 +7,12 @@ using Testapp.Models;
 
 namespace Testapp.Repository
 {
-    public class PersonRepository : DatabaseConnect<Person>
+    public class PersonRepository : DatabaseConnectPostgresql<Person>
     {
-    
+        public List<Person> listPersonByBarangayPurokCluster(int barangayID,int purokID, int clusterID)
+        {
+            string customQuery = "Select * from Person where Barangay = " + barangayID + " and Purok = " + purokID +" and Cluster = "+ clusterID + " ORDER BY ID";
+            return this.getListCustomQuery(customQuery);
+        }
     }
 }

@@ -11,11 +11,12 @@ namespace Testapp
 {
     public class DatabaseConnect<T>
     {
-        public OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=testapp.accdb");
+        public OleDbConnection con = new OleDbConnection(gregg.Properties.Settings.Default.ConnectionString);
         public string PendingQuery = "";
         public List<string> PendingQueryList = new List<string>();
         public void ExecuteNonQuery(string query)
         {
+            checkDatabaseConfiguration();
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
             cmd.CommandText = query;
@@ -26,6 +27,7 @@ namespace Testapp
 
         public DataTable ExecuteTabularQuery(string query)
         {
+            checkDatabaseConfiguration();
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
             cmd.CommandText = query;
@@ -47,6 +49,7 @@ namespace Testapp
         }
         public List<T> getAll(string filter)
         {
+            checkDatabaseConfiguration();
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
             cmd.CommandText = "Select * from " + typeof(T).Name+" "+ filter +" order by ID";
@@ -63,6 +66,8 @@ namespace Testapp
 
         public T getOne(int id)
         {
+            checkDatabaseConfiguration();
+                
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
             cmd.CommandText = "Select * from " + typeof(T).Name + " where ID = " + id;
@@ -76,6 +81,7 @@ namespace Testapp
 
         public T getOneBy(string fieldName,object val)
         {
+            checkDatabaseConfiguration();
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
             cmd.CommandText = "Select * from " + typeof(T).Name + " where " + fieldName +" = '"+val+"'";
@@ -89,6 +95,7 @@ namespace Testapp
 
         public T getFirst()
         {
+            checkDatabaseConfiguration();
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
             cmd.CommandText = "Select * from " + typeof(T).Name;
@@ -102,6 +109,7 @@ namespace Testapp
 
         public void Save(Object obj)
         {
+            checkDatabaseConfiguration();
             if ((obj as Model).isSaveable)
             {
                 OleDbCommand cmd = con.CreateCommand();
@@ -131,6 +139,7 @@ namespace Testapp
 
         public void SaveAsTransaction(Object obj)
         {
+            checkDatabaseConfiguration();
             if ((obj as Model).isSaveable)
             {
                 //OleDbCommand cmd = con.CreateCommand();
@@ -163,6 +172,7 @@ namespace Testapp
 
         public void Delete(Object obj)
         {
+            checkDatabaseConfiguration();
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
             int id = DatabaseHelper.getID<T>(obj);
@@ -176,6 +186,7 @@ namespace Testapp
 
         public List<T> getListCustomQuery(string query)
         {
+            checkDatabaseConfiguration();
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
             cmd.CommandText = query;
@@ -192,6 +203,7 @@ namespace Testapp
 
         public void CommitTransaction()
         {
+            checkDatabaseConfiguration();
             if (PendingQueryList.Count>0)
             {
                 con.Open();
@@ -213,7 +225,29 @@ namespace Testapp
                 throw new Exception("No Pending Transaction.");
             }
         }
-
+        public bool checkDatabaseConfiguration()
+        {
+            Console.WriteLine(con.ConnectionString);
+            if (con.ConnectionString == string.Empty)
+            {
+                gregg.Forms.DatabaseConfigurationForm configForm = new gregg.Forms.DatabaseConfigurationForm();
+                configForm.Text = "Database Configuration not found!";
+                configForm.ShowDialog();
+                if (gregg.Properties.Settings.Default.ConnectionString != string.Empty)
+                {
+                    con = new OleDbConnection(gregg.Properties.Settings.Default.ConnectionString);
+                    return true;
+                }
+                else {
+                    throw new Exception("Database Configuration error!");
+                    //System.Windows.Forms.MessageBox.Show("");
+                    return false;
+                }
+                
+            }
+            else
+                return true;
+        }
         
     }
 }

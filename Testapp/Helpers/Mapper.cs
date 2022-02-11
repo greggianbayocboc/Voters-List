@@ -30,10 +30,16 @@ namespace Testapp.Helpers
             {
                 foreach (PropertyInfo pro in temp.GetProperties())
                 {
-                    if (pro.Name == column.ColumnName)
+                    if (pro.Name.ToLower() == column.ColumnName.ToLower())
                     {
-                        if (dr[column.ColumnName] != DBNull.Value)
-                            pro.SetValue(obj, dr[column.ColumnName], null);
+                        if (dr[column.ColumnName] != DBNull.Value) {
+                            if (dr[column.ColumnName].GetType().Name == "Int64")
+                            {
+                                pro.SetValue(obj, Convert.ToInt32(dr[column.ColumnName]), null);
+                            }
+                            else
+                                pro.SetValue(obj, dr[column.ColumnName], null);
+                        }
                         else
                             pro.SetValue(obj, null, null);
                     }

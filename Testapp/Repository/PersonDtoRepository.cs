@@ -7,7 +7,7 @@ using Testapp.Models;
 
 namespace Testapp.Repository
 {
-    public class PersonDtoRepository : DatabaseConnect<PersonDto>
+    public class PersonDtoRepository : DatabaseConnectPostgresql<PersonDto>
     {
         public List<PersonDto> getPrintableVotersAll()
         {

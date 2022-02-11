@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraCharts;
+﻿using DevExpress.XtraBars.Navigation;
+using DevExpress.XtraCharts;
 using gregg.DTOs;
 using System;
 using System.Collections.Generic;
@@ -30,26 +31,37 @@ namespace gregg.Forms
         private void PieChartByBarangayForm_Load(object sender, EventArgs e)
         {
             List<PieChartData> pieChartDataList = pieChartDataRepository.generateData(position);
+
+            Series seriesAto = new Series("ATO", ViewType.StackedBar);
+            Series seriesDile = new Series("DILE ATO", ViewType.StackedBar);
+            Series seriesDuha = new Series("DUHA_DUHA", ViewType.StackedBar);
+            Series seriesInc = new Series("INC", ViewType.StackedBar);
             foreach (PieChartData data in pieChartDataList)
             {
+                seriesAto.Points.Add(new SeriesPoint(data.BarangayName, data.Ato));
+                seriesDile.Points.Add(new SeriesPoint(data.BarangayName, data.DileAto));
+                seriesDuha.Points.Add(new SeriesPoint(data.BarangayName, data.DuhaDuha));
+                seriesInc.Points.Add(new SeriesPoint(data.BarangayName, data.INC));
+
                 List<DataPoint> dps = new List<DataPoint> {
                     new DataPoint { Argument = "ATO",    Value = data.Ato},
                     new DataPoint { Argument = "DILE ATO",    Value = data.DileAto},
-                    new DataPoint { Argument = "DUHA-DUHA",       Value = data.DuhaDuha},
+                    new DataPoint { Argument = "DUHA_DUHA",       Value = data.DuhaDuha},
                     new DataPoint { Argument = "INC",     Value = data.INC}
                 };
                 add(data.BarangayName, dps);
             }
+            add2(seriesAto, seriesDile, seriesDuha, seriesInc);
         }
-
+        
         private void add(string barangayName, List<DataPoint> dataPoints)
         {
             ChartControl pieChart = new ChartControl();
-            pieChart.Height = 200;
+            //pieChart.Height = tabPane1.Size.Height - 50;
             pieChart.Titles.Add(new ChartTitle() { Text = barangayName });
 
             // Create a pie series.
-            Series series1 = new Series("Land Area by Country", ViewType.Pie);
+            Series series1 = new Series(barangayName, ViewType.Pie);
 
             // Bind the series to data.
             series1.DataSource = dataPoints;
@@ -60,7 +72,7 @@ namespace gregg.Forms
             pieChart.Series.Add(series1);
 
             // Format the the series labels.
-            series1.Label.TextPattern = "{VP:p0} ({V:.##} Voters)";
+            series1.Label.TextPattern = "({V:.##} Voters {A}) {VP:p0}";
 
             // Format the series legend items.
             series1.LegendTextPattern = "{A}";
@@ -81,14 +93,56 @@ namespace gregg.Forms
                 DataFilterCondition.NotEqual, "Others"));
             myView.ExplodeMode = PieExplodeMode.UseFilters;
             myView.ExplodedDistancePercentage = 30;
-            myView.RuntimeExploding = true;
+            
 
             // Customize the legend.
             pieChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            
+
+            pieChart.Dock = DockStyle.Fill;
+            TabNavigationPage tb = new TabNavigationPage();
+            tb.PageText = barangayName;
+            tb.Controls.Add(pieChart);
+            
+            navigationPane1.Pages.Add(tb);
+        }
+
+        private void add2(Series seriesAto, Series seriesDile, Series seriesDuha, Series seriesInc)
+        {
+            ChartControl stackedBarChart = new ChartControl();
+
+            // Create two stacked bar series.
+            
+
+            // Add both series to the chart.
+            stackedBarChart.Series.AddRange(new Series[] { seriesAto, seriesDile, seriesDuha, seriesInc });
+
+            // Access the view-type-specific options of the series.
+           // ((StackedBarSeriesView)series1.View).BarWidth = 0.8;
+
+            // Access the type-specific options of the diagram.
+            ((XYDiagram)stackedBarChart.Diagram).EnableAxisXZooming = true;
+
+            // Hide the legend (if necessary).
+            stackedBarChart.Legend.Visible = false;
+
+            // Add a title to the chart (if necessary).
+            stackedBarChart.Titles.Add(new ChartTitle());
+            stackedBarChart.Titles[0].Text = "Overall Assessment Overview";
 
             // Add the chart to the form.
-            pieChart.Dock = DockStyle.Top;
-            xtraScrollableControl1.Controls.Add(pieChart);
+            stackedBarChart.Dock = DockStyle.Fill;
+            TabNavigationPage tb = new TabNavigationPage();
+            tb.PageText = "OVERALL";
+            tb.Controls.Add(stackedBarChart);
+
+            navigationPane1.Pages.Insert(0,tb);
+            navigationPane1.SelectPrevPage();
+        }
+
+        private void xtraScrollableControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

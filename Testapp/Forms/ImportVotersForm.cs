@@ -29,13 +29,13 @@ namespace gregg.Forms
         private void button1_Click(object sender, EventArgs e)
         {
 
-            textBox1.Text = @"C:\Users\Precious\Downloads\PCVL_NLE_POBLACION-2-MABINI (2).xlsx";
+            textBox1.Text = @"C:\Users\Precious\Downloads\registered voters mabini - editing.xlsx";
             
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            List<Purok> puroks = purokRepository.getAll();
+           // List<Purok> puroks = purokRepository.getAll();
             toolStripProgressBar1.Visible = true;
             toolStripProgressBar1.Value = 0;
             
@@ -88,37 +88,50 @@ namespace gregg.Forms
 
 
                 toolStripProgressBar1.Value = 0;
+                dataGridView1.DataSource = dt;
 
-                int brgy = (int)comboBox1.SelectedValue;
-               // this.testAsync(dt, brgy);
+
+                int brgy = -1;
+                //// this.testAsync(dt, brgy);
+                String brgyname = "";
                 foreach (DataRow dtrow in dt.Rows)
                 {
-                    Purok purok = null;
-                    try
+                    if (dtrow["name"].ToString().Trim() == "")
                     {
-                        purok = puroks.Where(item => item.Barangay == brgy && item.PurokName == dtrow["VOTER'S ADDRESS"].ToString().Trim()).First();
+                        if (dtrow["brgy"].ToString().Trim().StartsWith("BARANGAY"))
+                        {
+                            brgyname = dtrow["brgy"].ToString().Split(':')[1].Trim();
+                            brgy = barangayRepository.getIdByName(brgyname);
+                           
+                            toolStripStatusLabel3.Text = brgyname;
+                            
+                        }
                     }
-                    catch (Exception ex)
+                    else
                     {
+                        Purok purok = null;
 
+                        Person person = new Person();
+
+                        person.Fullname = dtrow["name"].ToString();
+
+                        string[] names = person.Fullname.Split(',');
+                        person.Lastname = names[0];
+                        person.Firstname = names[1];
+                        toolStripCell.Text = person.Fullname;
+                       // toolStripCell.Text = person.Fullname;
+                        person.Barangay = brgy;
+                        ////person.Address = dtrow["VOTER'S ADDRESS"].ToString().Trim();
+                        person.Precinct = dtrow["precinct"].ToString();
+
+                        personRepository.SaveAsTransaction(person);
                     }
-                    Person person = new Person();
-
-                    person.Fullname = dtrow["VOTER'S NAME"].ToString();
-
-                    toolStripCell.Text = person.Fullname;
-                    person.Barangay = brgy;
-                    if (purok != null)
-                        person.Purok = purok.ID;
-                    person.Address = dtrow["VOTER'S ADDRESS"].ToString().Trim();
-                    person.Precinct = dtrow["PRECINCT#"].ToString();
-
-                    personRepository.SaveAsTransaction(person);
+                   
                 }
                 personRepository.CommitTransaction();
                 toolStripProgressBar1.Value = 100;
                 toolStripProgressBar1.Visible = false;
-                dataGridView1.DataSource = dt;
+                
                 excelWorkbook.Close();
                 excelApp.Quit();
             }
@@ -210,6 +223,16 @@ namespace gregg.Forms
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
         {
 
         }

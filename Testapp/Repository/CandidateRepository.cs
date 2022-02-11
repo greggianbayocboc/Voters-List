@@ -7,7 +7,7 @@ using Testapp.Models;
 
 namespace Testapp.Repository
 {
-    public class CandidateRepository : DatabaseConnect<Candidate>
+    public class CandidateRepository : DatabaseConnectPostgresql<Candidate>
     {
         
     }

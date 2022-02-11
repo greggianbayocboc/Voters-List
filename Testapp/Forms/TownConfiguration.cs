@@ -221,6 +221,7 @@ namespace Testapp
             if (dialogResult == DialogResult.Yes)
             {
                 purokRepository.Delete(listBoxPurok.SelectedItem as Purok);
+                updatePurokList();
             }
         }
 

@@ -28,24 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.xtraScrollableControl1 = new DevExpress.XtraEditors.XtraScrollableControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelPosition = new DevExpress.XtraEditors.LabelControl();
             this.labelCandidate = new DevExpress.XtraEditors.LabelControl();
+            this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
+            ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // xtraScrollableControl1
-            // 
-            this.xtraScrollableControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.xtraScrollableControl1.Location = new System.Drawing.Point(12, 72);
-            this.xtraScrollableControl1.Name = "xtraScrollableControl1";
-            this.xtraScrollableControl1.Size = new System.Drawing.Size(914, 597);
-            this.xtraScrollableControl1.TabIndex = 0;
             // 
             // labelControl1
             // 
@@ -111,34 +102,49 @@
             this.labelCandidate.TabIndex = 6;
             this.labelCandidate.Text = "_";
             // 
+            // navigationPane1
+            // 
+            this.navigationPane1.AllowResize = false;
+            this.navigationPane1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.navigationPane1.Location = new System.Drawing.Point(12, 87);
+            this.navigationPane1.Name = "navigationPane1";
+            this.navigationPane1.RegularSize = new System.Drawing.Size(914, 597);
+            this.navigationPane1.SelectedPage = null;
+            this.navigationPane1.Size = new System.Drawing.Size(1087, 582);
+            this.navigationPane1.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Expanded;
+            this.navigationPane1.TabIndex = 0;
+            this.navigationPane1.Text = "navigationPane1";
+            // 
             // PieChartByBarangayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(938, 681);
+            this.ClientSize = new System.Drawing.Size(1111, 681);
+            this.Controls.Add(this.navigationPane1);
             this.Controls.Add(this.labelCandidate);
             this.Controls.Add(this.labelPosition);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.xtraScrollableControl1);
             this.Name = "PieChartByBarangayForm";
             this.Text = "PieChartByBarangayForm";
             this.Load += new System.EventHandler(this.PieChartByBarangayForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         public DevExpress.XtraEditors.LabelControl labelPosition;
         public DevExpress.XtraEditors.LabelControl labelCandidate;
+        private DevExpress.XtraBars.Navigation.NavigationPane navigationPane1;
     }
 }

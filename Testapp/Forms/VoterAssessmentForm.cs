@@ -61,18 +61,66 @@ namespace gregg.Forms
             this.hideAllColumns();
             CheckedComboBoxEdit combo = (CheckedComboBoxEdit)sender;
             List<string> selections = combo.Text.Replace(", ",",").Split(',').ToList<string>();
+            int currentColumnIndex = 1;
+
+            if (selections.Contains("MAYOR"))
+            {
+                columnMayor.Visible = true;
+                columnMayor.VisibleIndex = currentColumnIndex++;
+            }
+            else
+            {
+                columnMayor.Visible = false;
+            }
+            if (selections.Contains("VICE-MAYOR"))
+            {
+                columnVice.Visible = true;
+                columnVice.VisibleIndex = currentColumnIndex++;
+            }
+            else
+            {
+                columnVice.Visible = false;
+            }
+
+           
 
             if (selections.Contains("COUNCILORS"))
             {
 
-                columnCouncilor8.Visible = true;
-                columnCouncilor7.Visible = true;
-                columnCouncilor6.Visible = true;
-                columnCouncilor5.Visible = true;
-                columnCouncilor4.Visible = true;
-                columnCouncilor3.Visible = true;
-                columnCouncilor2.Visible = true;
+
                 columnCouncilor1.Visible = true;
+                columnCouncilor1.VisibleIndex = currentColumnIndex++;
+
+                columnCouncilor2.Visible = true;
+                columnCouncilor2.VisibleIndex = currentColumnIndex++;
+
+                columnCouncilor3.Visible = true;
+                columnCouncilor3.VisibleIndex = currentColumnIndex++;
+
+                columnCouncilor4.Visible = true;
+                columnCouncilor4.VisibleIndex = currentColumnIndex++;
+
+                columnCouncilor5.Visible = true;
+                columnCouncilor5.VisibleIndex = currentColumnIndex++;
+
+                columnCouncilor6.Visible = true;
+                columnCouncilor6.VisibleIndex = currentColumnIndex++;
+
+                columnCouncilor7.Visible = true;
+                columnCouncilor7.VisibleIndex = currentColumnIndex++;
+
+                columnCouncilor8.Visible = true;
+                columnCouncilor8.VisibleIndex = currentColumnIndex++;
+
+                //columnCouncilor8.Visible = true;
+                //columnCouncilor7.Visible = true;
+                //columnCouncilor6.Visible = true;
+                //columnCouncilor5.Visible = true;
+                //columnCouncilor4.Visible = true;
+                //columnCouncilor3.Visible = true;
+                //columnCouncilor2.Visible = true;
+                //columnCouncilor1.Visible = true;
+
             }
             else
             {
@@ -86,24 +134,7 @@ namespace gregg.Forms
                 columnCouncilor8.Visible = false;
             }
 
-            if (selections.Contains("VICE-MAYOR"))
-            {
-                columnVice.Visible = true;
-            }
-            else
-            {
-                columnVice.Visible = false;
-            }
-
-            if (selections.Contains("MAYOR"))
-            {
-                columnMayor.Visible = true;
-            }
-            else
-            {
-                columnMayor.Visible = false;
-            }
-            
+           
             
         }
 
@@ -238,7 +269,7 @@ namespace gregg.Forms
                         person.Vice = "ATO";
                         break;
                     case 2:
-                        person.Councilor1 = "DILE ATO";
+                        person.Councilor1 = randomAssessment();
                         person.Councilor2 = "ATO";
                         person.Councilor3 = "ATO";
                         person.Councilor4 = "ATO";
@@ -250,8 +281,8 @@ namespace gregg.Forms
                         person.Vice = "ATO";
                         break;
                     case 3:
-                        person.Councilor1 = "DILE ATO";
-                        person.Councilor2 = "DILE ATO";
+                        person.Councilor1 = randomAssessment();
+                        person.Councilor2 = randomAssessment();
                         person.Councilor3 = "ATO";
                         person.Councilor4 = "ATO";
                         person.Councilor5 = "ATO";
@@ -262,9 +293,9 @@ namespace gregg.Forms
                         person.Vice = "ATO";
                         break;
                     case 4:
-                        person.Councilor1 = "DILE ATO";
-                        person.Councilor2 = "DILE ATO";
-                        person.Councilor3 = "DILE ATO";
+                        person.Councilor1 = randomAssessment();
+                        person.Councilor2 = randomAssessment();
+                        person.Councilor3 = randomAssessment();
                         person.Councilor4 = "ATO";
                         person.Councilor5 = "ATO";
                         person.Councilor6 = "ATO";
@@ -274,10 +305,10 @@ namespace gregg.Forms
                         person.Vice = "ATO";
                         break;
                     case 5:
-                        person.Councilor1 = "DILE ATO";
-                        person.Councilor2 = "DILE ATO";
-                        person.Councilor3 = "DILE ATO";
-                        person.Councilor4 = "DILE ATO";
+                        person.Councilor1 = randomAssessment();
+                        person.Councilor2 = randomAssessment();
+                        person.Councilor3 = randomAssessment();
+                        person.Councilor4 = randomAssessment();
                         person.Councilor5 = "ATO";
                         person.Councilor6 = "ATO";
                         person.Councilor7 = "ATO";
@@ -286,11 +317,11 @@ namespace gregg.Forms
                         person.Vice = "ATO";
                         break;
                     case 6:
-                        person.Councilor1 = "DILE ATO";
-                        person.Councilor2 = "DILE ATO";
-                        person.Councilor3 = "DILE ATO";
-                        person.Councilor4 = "DILE ATO";
-                        person.Councilor5 = "DILE ATO";
+                        person.Councilor1 = randomAssessment();
+                        person.Councilor2 = randomAssessment();
+                        person.Councilor3 = randomAssessment();
+                        person.Councilor4 = randomAssessment();
+                        person.Councilor5 = randomAssessment();
                         person.Councilor6 = "ATO";
                         person.Councilor7 = "ATO";
                         person.Councilor8 = "ATO";
@@ -298,73 +329,102 @@ namespace gregg.Forms
                         person.Vice = "ATO";
                         break;
                     case 7:
-                        person.Councilor1 = "DILE ATO";
-                        person.Councilor2 = "DILE ATO";
-                        person.Councilor3 = "DILE ATO";
-                        person.Councilor4 = "DILE ATO";
-                        person.Councilor5 = "DILE ATO";
-                        person.Councilor6 = "DILE ATO";
+                        person.Councilor1 = randomAssessment();
+                        person.Councilor2 = randomAssessment();
+                        person.Councilor3 = randomAssessment();
+                        person.Councilor4 = randomAssessment();
+                        person.Councilor5 = randomAssessment();
+                        person.Councilor6 = randomAssessment();
                         person.Councilor7 = "ATO";
                         person.Councilor8 = "ATO";
                         person.Mayor = "ATO";
                         person.Vice = "ATO";
                         break;
                     case 8:
-                        person.Councilor1 = "DILE ATO";
-                        person.Councilor2 = "DILE ATO";
-                        person.Councilor3 = "DILE ATO";
-                        person.Councilor4 = "DILE ATO";
-                        person.Councilor5 = "DILE ATO";
-                        person.Councilor6 = "DILE ATO";
-                        person.Councilor7 = "DILE ATO";
+                        person.Councilor1 = randomAssessment();
+                        person.Councilor2 = randomAssessment();
+                        person.Councilor3 = randomAssessment();
+                        person.Councilor4 = randomAssessment();
+                        person.Councilor5 = randomAssessment();
+                        person.Councilor6 = randomAssessment();
+                        person.Councilor7 = randomAssessment();
                         person.Councilor8 = "ATO";
                         person.Mayor = "ATO";
                         person.Vice = "ATO";
                         break;
                     case 9:
-                        person.Councilor1 = "DILE ATO";
-                        person.Councilor2 = "DILE ATO";
-                        person.Councilor3 = "DILE ATO";
-                        person.Councilor4 = "DILE ATO";
-                        person.Councilor5 = "DILE ATO";
-                        person.Councilor6 = "DILE ATO";
-                        person.Councilor7 = "DILE ATO";
-                        person.Councilor8 = "DILE ATO";
+                        person.Councilor1 = randomAssessment();
+                        person.Councilor2 = randomAssessment();
+                        person.Councilor3 = randomAssessment();
+                        person.Councilor4 = randomAssessment();
+                        person.Councilor5 = randomAssessment();
+                        person.Councilor6 = randomAssessment();
+                        person.Councilor7 = randomAssessment();
+                        person.Councilor8 = randomAssessment();
                         person.Mayor = "ATO";
                         person.Vice = "ATO";
                         break;
                     case 10:
-                        person.Councilor1 = "DILE ATO";
-                        person.Councilor2 = "DILE ATO";
-                        person.Councilor3 = "DILE ATO";
-                        person.Councilor4 = "DILE ATO";
-                        person.Councilor5 = "DILE ATO";
-                        person.Councilor6 = "DILE ATO";
-                        person.Councilor7 = "DILE ATO";
-                        person.Councilor8 = "DILE ATO";
-                        person.Mayor = "DILE ATO";
+                        person.Councilor1 = randomAssessment();
+                        person.Councilor2 = randomAssessment();
+                        person.Councilor3 = randomAssessment();
+                        person.Councilor4 = randomAssessment();
+                        person.Councilor5 = randomAssessment();
+                        person.Councilor6 = randomAssessment();
+                        person.Councilor7 = randomAssessment();
+                        person.Councilor8 = randomAssessment();
+                        person.Mayor = randomAssessment();
                         person.Vice = "ATO";
                         break;
                     case 11:
-                        person.Councilor1 = "DILE ATO";
-                        person.Councilor2 = "DILE ATO";
-                        person.Councilor3 = "DILE ATO";
-                        person.Councilor4 = "DILE ATO";
-                        person.Councilor5 = "DILE ATO";
-                        person.Councilor6 = "DILE ATO";
-                        person.Councilor7 = "DILE ATO";
-                        person.Councilor8 = "DILE ATO";
-                        person.Mayor = "DILE ATO";
-                        person.Vice = "DILE ATO";
+                        person.Councilor1 = randomAssessment();
+                        person.Councilor2 = randomAssessment();
+                        person.Councilor3 = randomAssessment();
+                        person.Councilor4 = randomAssessment();
+                        person.Councilor5 = randomAssessment();
+                        person.Councilor6 = randomAssessment();
+                        person.Councilor7 = randomAssessment();
+                        person.Councilor8 = randomAssessment();
+                        person.Mayor = randomAssessment();
+                        person.Vice = randomAssessment();
                         break;
                     default:
                         break;
 
                 }
                 x = (x < 11) ? x + 1 : 1;
+
+                Random r = new Random();
+                int sampleAge = r.Next(18, 90);
+                person.Age = sampleAge;
                 personRepository.SaveAsTransaction(person);
             }
             personRepository.CommitTransaction();
+        }
+
+        string randomAssessment()
+        {
+            Random r = new Random();
+            int x = r.Next(4);
+            switch (x)
+            {
+                case 1:
+                    return "DUHA_DUHA";
+                    break;
+                case 2:
+                    return "DILE ATO";
+                    break;
+                case 3:
+                    return "DUHA_DUHA";
+                    break;
+                case 4:
+                    return "INC";
+                    break;
+                default:
+                    return "INC";
+                    break;
+            }
+            return "INC";
         }
     }
 }

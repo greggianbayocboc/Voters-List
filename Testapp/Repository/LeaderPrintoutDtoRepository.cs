@@ -10,7 +10,7 @@ using Testapp.Models;
 
 namespace gregg.Repository
 {
-    public class LeaderPrintoutDtoRepository : DatabaseConnect<LeaderPrintoutDto>
+    public class LeaderPrintoutDtoRepository : DatabaseConnectPostgresql<LeaderPrintoutDto>
     {
 
 

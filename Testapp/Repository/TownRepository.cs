@@ -7,7 +7,7 @@ using Testapp.Models;
 
 namespace Testapp.Repository
 {
-    public class TownRepository : DatabaseConnect<Town>
+    public class TownRepository : DatabaseConnectPostgresql<Town>
     {
         
     }

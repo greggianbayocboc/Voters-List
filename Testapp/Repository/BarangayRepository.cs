@@ -7,7 +7,7 @@ using Testapp.Models;
 
 namespace Testapp.Repository
 {
-    public class BarangayRepository : DatabaseConnect<Barangay>
+    public class BarangayRepository : DatabaseConnectPostgresql<Barangay>
     {
         PurokRepository purokRepository = new PurokRepository();
         ClusterRepository clusterRepository = new ClusterRepository();
@@ -25,6 +25,26 @@ namespace Testapp.Repository
             }
             this.Delete(this.getOne(barangayId));
             return true;
+        }
+
+        public int getIdByName(string name)
+        {
+            string _name = name.ToUpper();
+            string customQuery = "Select * from Barangay where UPPER(BarangayName) = '" + _name + "' ORDER BY ID";
+            List<Barangay> result = this.getListCustomQuery(customQuery);
+            if (result.Count > 0)
+                return result.First().ID;
+            return -1;
+        }
+
+        public Barangay getByName(string name)
+        {
+            string _name = name.ToUpper();
+            string customQuery = "Select * from Barangay where UPPER(BarangayName) = '" + _name + "' ORDER BY ID";
+            List<Barangay> result = this.getListCustomQuery(customQuery);
+            if (result.Count > 0)
+                return result.First();
+            return null;
         }
     }
 }

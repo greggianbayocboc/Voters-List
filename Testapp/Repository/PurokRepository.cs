@@ -7,12 +7,17 @@ using Testapp.Models;
 
 namespace Testapp.Repository
 {
-    public class PurokRepository : DatabaseConnect<Purok>
+    public class PurokRepository : DatabaseConnectPostgresql<Purok>
     {
         public List<Purok> listPurokByBarangay(int barangayID)
         {
-            string customQuery = "Select * from Purok where Barangay = "+barangayID+" ORDER BY ID";
+            string customQuery = "Select * from Purok where Barangay = " + barangayID + " ORDER BY ID";
             return this.getListCustomQuery(customQuery);
+        }
+        public Purok getPurokByBarangayIdAndPurokName(int barangayID, string purokName)
+        {
+            string customQuery = "Select * from Purok where Barangay = " + barangayID + " AND PurokName = '"+purokName.Trim()+"' ORDER BY ID";
+            return this.getListCustomQuery(customQuery).First();
         }
     }
 }

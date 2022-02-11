@@ -7,7 +7,7 @@ using Testapp.Models;
 
 namespace Testapp.Repository
 {
-    public class PieChartDataRepository : DatabaseConnect<PieChartData>
+    public class PieChartDataRepository : DatabaseConnectPostgresql<PieChartData>
     {
         public List<PieChartData> generateData(string position)
         {
@@ -19,18 +19,18 @@ namespace Testapp.Repository
                             query = @"SELECT  BarangayName,       
                             (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'ATO') as Ato,
                             (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'DILE ATO') AS DileAto, 
-                            (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'DUHA DUHA') as DuhaDuha, 
+                            (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'DUHA_DUHA') as DuhaDuha, 
                             (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'INC') as INC
-                            FROM Barangay order by BarangayName desc";
+                            FROM Barangay order by BarangayName ";
                         
                         break;
                     case "VICE-MAYOR":
                         query = @"SELECT    BarangayName,     
                         (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'ATO') as Ato,
                         (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'DILE ATO') AS DileAto, 
-                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'DUHA DUHA') as DuhaDuha, 
+                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'DUHA_DUHA') as DuhaDuha, 
                         (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'INC') as INC
-                        FROM Barangay order by BarangayName desc";
+                        FROM Barangay order by BarangayName ";
                         break;
                     default:
                         break;

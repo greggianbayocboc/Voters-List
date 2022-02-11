@@ -18,7 +18,7 @@ using Testapp.Repository;
 
 namespace Testapp
 {
-    public partial class Voters_List : Form
+    public partial class Voters_List : DevExpress.XtraEditors.XtraForm
     {
 
         public PersonRepository personRepository = new PersonRepository();
@@ -453,9 +453,9 @@ namespace Testapp
                 foreach (Person p in rows)
                 {
                     p.Barangay = brgy.ID;
-                    personRepository.Save(p);
+                    personRepository.SaveAsTransaction(p);
                 }
-
+                personRepository.CommitTransaction();
                 applyFilter();
                 gridView1.RefreshData();
             }
@@ -481,9 +481,9 @@ namespace Testapp
                 foreach (Person p in rows)
                 {
                     p.Cluster = cluster.ID;
-                    personRepository.Save(p);
+                    personRepository.SaveAsTransaction(p);
                 }
-
+                personRepository.CommitTransaction();
                 applyFilter();
                 gridView1.RefreshData();
             }      
@@ -508,9 +508,9 @@ namespace Testapp
                 foreach (Person p in rows)
                 {
                     p.Purok = purok.ID;
-                    personRepository.Save(p);
+                    personRepository.SaveAsTransaction(p);
                 }
-
+                personRepository.CommitTransaction();
                 applyFilter();
                 gridView1.RefreshData();
             }
@@ -592,6 +592,37 @@ namespace Testapp
             foreach (LeaderPrintoutDto dto in dtos)
             {
                 LeaderPrintoutReportViceMayor rpt = new LeaderPrintoutReportViceMayor();
+                rpt.Parameters["barangay"].Value = dto.Barangay;
+                rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
+                rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
+                rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
+                List<Person> list = leaderPrintoutDtoRepository.getVoters(dto.BarangayID, dto.PurokID, dto.ClusterID);
+                rpt.Parameters["count"].Value = list.Count;
+                count += list.Count;
+                rpt.DataSource = list;
+                rpt.CreateDocument();
+
+
+
+                initialReport.ModifyDocument(x => {
+                    x.AddPages(rpt.Pages);
+                });
+            }
+            ReportPrintTool tool = new ReportPrintTool(initialReport);
+            tool.PreviewForm.MdiParent = this.MdiParent;
+            tool.ShowPreview();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
+            BlankReport initialReport = new BlankReport();
+            initialReport.CreateDocument();
+            List<LeaderPrintoutDto> dtos = leaderPrintoutDtoRepository.getGroupedReport(generateWhereClauseForLeaders());
+            int count = 0;
+            foreach (LeaderPrintoutDto dto in dtos)
+            {
+                LeaderPrintoutReportCouncilor rpt = new LeaderPrintoutReportCouncilor();
                 rpt.Parameters["barangay"].Value = dto.Barangay;
                 rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
                 rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;

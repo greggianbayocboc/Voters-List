@@ -25,7 +25,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>0.1.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -75,6 +75,7 @@
     <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Images.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -90,6 +91,7 @@
     <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDialogs.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -105,6 +107,9 @@
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Npgsql, Version=4.0.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.0.2\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -117,7 +122,16 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -141,11 +155,35 @@
     <Compile Include="Forms\BarangayForm.Designer.cs">
       <DependentUpon>BarangayForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BarangayPurokClusterSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BarangayPurokClusterSelect.Designer.cs">
+      <DependentUpon>BarangayPurokClusterSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ClusterForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ClusterForm.Designer.cs">
       <DependentUpon>ClusterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CouncilorChartsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CouncilorChartsForm.Designer.cs">
+      <DependentUpon>CouncilorChartsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DatabaseConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DatabaseConfigurationForm.Designer.cs">
+      <DependentUpon>DatabaseConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DatabaseConfigurationPostgresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DatabaseConfigurationPostgresForm.Designer.cs">
+      <DependentUpon>DatabaseConfigurationPostgresForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ElectionDataSetting.cs">
       <SubType>Form</SubType>
@@ -201,6 +239,12 @@
     <Compile Include="Forms\VoterForm.Designer.cs">
       <DependentUpon>VoterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\VotersByLeadersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VotersByLeadersForm.Designer.cs">
+      <DependentUpon>VotersByLeadersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\VotersPrintForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +282,7 @@
       <DependentUpon>PieChartPercentageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\AssessmentOption.cs" />
+    <Compile Include="Helpers\DatabaseConnectPostgresql.cs" />
     <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="Helpers\DatabaseConnect.cs" />
     <Compile Include="Helpers\Mapper.cs" />
@@ -330,11 +375,23 @@
     <EmbeddedResource Include="Forms\BarangayForm.resx">
       <DependentUpon>BarangayForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BarangayPurokClusterSelect.resx">
+      <DependentUpon>BarangayPurokClusterSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CandidateForm.resx">
       <DependentUpon>CandidateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClusterForm.resx">
       <DependentUpon>ClusterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CouncilorChartsForm.resx">
+      <DependentUpon>CouncilorChartsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DatabaseConfigurationForm.resx">
+      <DependentUpon>DatabaseConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DatabaseConfigurationPostgresForm.resx">
+      <DependentUpon>DatabaseConfigurationPostgresForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ElectionDataSetting.resx">
       <DependentUpon>ElectionDataSetting.cs</DependentUpon>
@@ -371,6 +428,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VoterForm.resx">
       <DependentUpon>VoterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VotersByLeadersForm.resx">
+      <DependentUpon>VotersByLeadersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VotersPrintForm.resx">
       <DependentUpon>VotersPrintForm.cs</DependentUpon>
@@ -416,7 +476,9 @@
     <EmbeddedResource Include="Reports\VoterEnvelopeLabelReport.resx">
       <DependentUpon>VoterEnvelopeLabelReport.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Testapp.Models.Barangay.datasource" />
@@ -462,6 +524,10 @@
     <None Include="Resources\gregg.png" />
     <None Include="Resources\pngaaa.com-25424.png" />
     <None Include="Resources\mayor.png" />
+    <None Include="Resources\forcetesting_32x32.png" />
+    <None Include="Resources\forcetesting_16x16.png" />
+    <None Include="Resources\forcetesting_32x321.png" />
+    <None Include="Resources\forcetesting_16x161.png" />
     <Content Include="testapp - Copy.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

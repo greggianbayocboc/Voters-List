@@ -197,6 +197,7 @@
             this.barButtonItem1.Caption = "Generate Sample Assessment";
             this.barButtonItem1.Id = 23;
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // ribbonPage1
@@ -255,10 +256,10 @@
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.bsiRecordsCount);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 697);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 693);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1028, 22);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1028, 26);
             // 
             // gridControl1
             // 
@@ -271,7 +272,7 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemRadioGroup1,
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1028, 535);
+            this.gridControl1.Size = new System.Drawing.Size(1028, 531);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -323,11 +324,11 @@
             this.columnMayor.Caption = "(MAYOR) Ongie Bernales-Lim";
             this.columnMayor.ColumnEdit = this.repositoryItemRadioGroup1;
             this.columnMayor.FieldName = "Mayor";
-            this.columnMayor.MinWidth = 250;
+            this.columnMayor.MinWidth = 300;
             this.columnMayor.Name = "columnMayor";
             this.columnMayor.Visible = true;
             this.columnMayor.VisibleIndex = 1;
-            this.columnMayor.Width = 250;
+            this.columnMayor.Width = 300;
             // 
             // repositoryItemRadioGroup1
             // 
@@ -352,11 +353,11 @@
             this.columnVice.Caption = "(VICE-MAYOR) Myra Fostanes-Colis";
             this.columnVice.ColumnEdit = this.repositoryItemRadioGroup1;
             this.columnVice.FieldName = "Vice";
-            this.columnVice.MinWidth = 250;
+            this.columnVice.MinWidth = 300;
             this.columnVice.Name = "columnVice";
             this.columnVice.Visible = true;
             this.columnVice.VisibleIndex = 2;
-            this.columnVice.Width = 250;
+            this.columnVice.Width = 300;
             // 
             // columnCouncilor1
             // 
@@ -367,11 +368,11 @@
             this.columnCouncilor1.Caption = "Anchuelo Ester Elle";
             this.columnCouncilor1.ColumnEdit = this.repositoryItemRadioGroup1;
             this.columnCouncilor1.FieldName = "Councilor1";
-            this.columnCouncilor1.MinWidth = 250;
+            this.columnCouncilor1.MinWidth = 300;
             this.columnCouncilor1.Name = "columnCouncilor1";
             this.columnCouncilor1.Visible = true;
             this.columnCouncilor1.VisibleIndex = 3;
-            this.columnCouncilor1.Width = 250;
+            this.columnCouncilor1.Width = 300;
             // 
             // columnCouncilor2
             // 
@@ -382,11 +383,11 @@
             this.columnCouncilor2.Caption = "Bagabaldo Alexis Talili";
             this.columnCouncilor2.ColumnEdit = this.repositoryItemRadioGroup1;
             this.columnCouncilor2.FieldName = "Councilor2";
-            this.columnCouncilor2.MinWidth = 250;
+            this.columnCouncilor2.MinWidth = 300;
             this.columnCouncilor2.Name = "columnCouncilor2";
             this.columnCouncilor2.Visible = true;
             this.columnCouncilor2.VisibleIndex = 4;
-            this.columnCouncilor2.Width = 250;
+            this.columnCouncilor2.Width = 300;
             // 
             // columnCouncilor3
             // 
@@ -397,11 +398,11 @@
             this.columnCouncilor3.Caption = "Jotojot Vic Doydora";
             this.columnCouncilor3.ColumnEdit = this.repositoryItemRadioGroup1;
             this.columnCouncilor3.FieldName = "Councilor3";
-            this.columnCouncilor3.MinWidth = 250;
+            this.columnCouncilor3.MinWidth = 300;
             this.columnCouncilor3.Name = "columnCouncilor3";
             this.columnCouncilor3.Visible = true;
             this.columnCouncilor3.VisibleIndex = 5;
-            this.columnCouncilor3.Width = 250;
+            this.columnCouncilor3.Width = 300;
             // 
             // columnCouncilor4
             // 
@@ -412,11 +413,11 @@
             this.columnCouncilor4.Caption = "Uy Erwin Vallejos";
             this.columnCouncilor4.ColumnEdit = this.repositoryItemRadioGroup1;
             this.columnCouncilor4.FieldName = "Councilor4";
-            this.columnCouncilor4.MinWidth = 250;
+            this.columnCouncilor4.MinWidth = 300;
             this.columnCouncilor4.Name = "columnCouncilor4";
             this.columnCouncilor4.Visible = true;
             this.columnCouncilor4.VisibleIndex = 6;
-            this.columnCouncilor4.Width = 250;
+            this.columnCouncilor4.Width = 300;
             // 
             // columnCouncilor5
             // 
@@ -427,11 +428,11 @@
             this.columnCouncilor5.Caption = "Wahing Gilbert Rajas";
             this.columnCouncilor5.ColumnEdit = this.repositoryItemRadioGroup1;
             this.columnCouncilor5.FieldName = "Councilor5";
-            this.columnCouncilor5.MinWidth = 250;
+            this.columnCouncilor5.MinWidth = 300;
             this.columnCouncilor5.Name = "columnCouncilor5";
             this.columnCouncilor5.Visible = true;
             this.columnCouncilor5.VisibleIndex = 7;
-            this.columnCouncilor5.Width = 250;
+            this.columnCouncilor5.Width = 300;
             // 
             // columnCouncilor6
             // 
@@ -442,11 +443,11 @@
             this.columnCouncilor6.Caption = "Yana-Bernales Virgil Rey";
             this.columnCouncilor6.ColumnEdit = this.repositoryItemRadioGroup1;
             this.columnCouncilor6.FieldName = "Councilor6";
-            this.columnCouncilor6.MinWidth = 250;
+            this.columnCouncilor6.MinWidth = 300;
             this.columnCouncilor6.Name = "columnCouncilor6";
             this.columnCouncilor6.Visible = true;
             this.columnCouncilor6.VisibleIndex = 8;
-            this.columnCouncilor6.Width = 250;
+            this.columnCouncilor6.Width = 300;
             // 
             // columnCouncilor7
             // 
@@ -457,11 +458,11 @@
             this.columnCouncilor7.Caption = "Ybañez Nemrod Campeciño";
             this.columnCouncilor7.ColumnEdit = this.repositoryItemRadioGroup1;
             this.columnCouncilor7.FieldName = "Councilor7";
-            this.columnCouncilor7.MinWidth = 250;
+            this.columnCouncilor7.MinWidth = 300;
             this.columnCouncilor7.Name = "columnCouncilor7";
             this.columnCouncilor7.Visible = true;
             this.columnCouncilor7.VisibleIndex = 9;
-            this.columnCouncilor7.Width = 250;
+            this.columnCouncilor7.Width = 300;
             // 
             // columnCouncilor8
             // 
@@ -472,11 +473,11 @@
             this.columnCouncilor8.Caption = "Curit Jerson Mendoza";
             this.columnCouncilor8.ColumnEdit = this.repositoryItemRadioGroup1;
             this.columnCouncilor8.FieldName = "Councilor8";
-            this.columnCouncilor8.MinWidth = 250;
+            this.columnCouncilor8.MinWidth = 300;
             this.columnCouncilor8.Name = "columnCouncilor8";
             this.columnCouncilor8.Visible = true;
             this.columnCouncilor8.VisibleIndex = 10;
-            this.columnCouncilor8.Width = 250;
+            this.columnCouncilor8.Width = 300;
             // 
             // repositoryItemCheckEdit1
             // 
