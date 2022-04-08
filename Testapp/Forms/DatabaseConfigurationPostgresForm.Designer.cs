@@ -79,7 +79,7 @@
             // 
             // textServer
             // 
-            this.textServer.EditValue = "localhost";
+            this.textServer.EditValue = "192.168.1.200";
             this.textServer.Location = new System.Drawing.Point(98, 18);
             this.textServer.Name = "textServer";
             this.textServer.Size = new System.Drawing.Size(238, 20);
@@ -107,6 +107,7 @@
             // 
             // textPassword
             // 
+            this.textPassword.EditValue = "password";
             this.textPassword.Location = new System.Drawing.Point(98, 96);
             this.textPassword.Name = "textPassword";
             this.textPassword.Properties.PasswordChar = '*';

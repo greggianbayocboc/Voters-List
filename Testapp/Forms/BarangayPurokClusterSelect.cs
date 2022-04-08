@@ -115,5 +115,14 @@ namespace gregg.Forms
         {
 
         }
+
+        private void checkEdit1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkEdit1.Checked)
+            {
+                comboBoxEditCluster.Enabled = false;
+                comboBoxEditPurok.Enabled = false;
+            }
+        }
     }
 }

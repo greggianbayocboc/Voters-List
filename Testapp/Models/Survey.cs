@@ -9,11 +9,26 @@ namespace Testapp.Models
     public class Survey : Model
     {
         DateTime startDate;
+
+        public DateTime StartDate
+        {
+            get { return startDate; }
+            set { startDate = value; }
+        }
         DateTime endDate;
+
+        public DateTime EndDate
+        {
+            get { return endDate; }
+            set { endDate = value; }
+        }
         string status;
 
-        public DateTime StartDate { get => startDate; set => startDate = value; }
-        public DateTime EndDate { get => endDate; set => endDate = value; }
-        public string Status { get => status; set => status = value; }
+        public string Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
+
     }
 }

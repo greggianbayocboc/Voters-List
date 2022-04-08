@@ -14,5 +14,11 @@ namespace Testapp.Repository
             string customQuery = "Select * from Person where Barangay = " + barangayID + " and Purok = " + purokID +" and Cluster = "+ clusterID + " ORDER BY ID";
             return this.getListCustomQuery(customQuery);
         }
+
+        public List<Person> search(string filter)
+        {
+            string customQuery = "Select * from Person where Fullname like '%" + filter + "%'";
+            return this.getListCustomQuery(customQuery);
+        }
     }
 }

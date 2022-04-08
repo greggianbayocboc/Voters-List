@@ -53,7 +53,7 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.bandedGridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.columnMayor = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemRadioGroup1 = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
+            this.repositoryItemRadioGroupMayor = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
             this.columnVice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.columnCouncilor1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.columnCouncilor2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -64,6 +64,7 @@
             this.columnCouncilor7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.columnCouncilor8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.repositoryItemRadioGroupVice = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -74,8 +75,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroupMayor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroupVice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -270,8 +272,9 @@
             this.gridControl1.MenuManager = this.ribbonControl;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemRadioGroup1,
-            this.repositoryItemCheckEdit1});
+            this.repositoryItemRadioGroupMayor,
+            this.repositoryItemCheckEdit1,
+            this.repositoryItemRadioGroupVice});
             this.gridControl1.Size = new System.Drawing.Size(1028, 531);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -322,7 +325,7 @@
             this.columnMayor.AppearanceHeader.Options.UseTextOptions = true;
             this.columnMayor.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.columnMayor.Caption = "(MAYOR) Ongie Bernales-Lim";
-            this.columnMayor.ColumnEdit = this.repositoryItemRadioGroup1;
+            this.columnMayor.ColumnEdit = this.repositoryItemRadioGroupMayor;
             this.columnMayor.FieldName = "Mayor";
             this.columnMayor.MinWidth = 300;
             this.columnMayor.Name = "columnMayor";
@@ -330,19 +333,19 @@
             this.columnMayor.VisibleIndex = 1;
             this.columnMayor.Width = 300;
             // 
-            // repositoryItemRadioGroup1
+            // repositoryItemRadioGroupMayor
             // 
-            this.repositoryItemRadioGroup1.ColumnIndent = 2;
-            this.repositoryItemRadioGroup1.Columns = 4;
-            this.repositoryItemRadioGroup1.ItemHorzAlignment = DevExpress.XtraEditors.RadioItemHorzAlignment.Center;
-            this.repositoryItemRadioGroup1.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("ATO", "ATO"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("DILE ATO", "DILE ATO"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("DUHA_DUHA", "DUHA DUHA"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("INC", "INC")});
-            this.repositoryItemRadioGroup1.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
-            this.repositoryItemRadioGroup1.Name = "repositoryItemRadioGroup1";
-            this.repositoryItemRadioGroup1.SelectedIndexChanged += new System.EventHandler(this.repositoryItemRadioGroup1_SelectedIndexChanged);
+            this.repositoryItemRadioGroupMayor.ColumnIndent = 2;
+            this.repositoryItemRadioGroupMayor.Columns = 4;
+            this.repositoryItemRadioGroupMayor.ItemHorzAlignment = DevExpress.XtraEditors.RadioItemHorzAlignment.Center;
+            this.repositoryItemRadioGroupMayor.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("ONGIE-BERNALES-LIM", "ONGIE-BERNALES-LIM"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("JUN JAYOMA", "JUN JAYOMA"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("HELEN JAYOMA", "HELEN JAYOMA"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("DUHA-DUHA", "DUHA-DUHA")});
+            this.repositoryItemRadioGroupMayor.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
+            this.repositoryItemRadioGroupMayor.Name = "repositoryItemRadioGroupMayor";
+            this.repositoryItemRadioGroupMayor.SelectedIndexChanged += new System.EventHandler(this.repositoryItemRadioGroup1_SelectedIndexChanged);
             // 
             // columnVice
             // 
@@ -351,7 +354,7 @@
             this.columnVice.AppearanceHeader.Options.UseTextOptions = true;
             this.columnVice.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.columnVice.Caption = "(VICE-MAYOR) Myra Fostanes-Colis";
-            this.columnVice.ColumnEdit = this.repositoryItemRadioGroup1;
+            this.columnVice.ColumnEdit = this.repositoryItemRadioGroupVice;
             this.columnVice.FieldName = "Vice";
             this.columnVice.MinWidth = 300;
             this.columnVice.Name = "columnVice";
@@ -366,12 +369,10 @@
             this.columnCouncilor1.AppearanceHeader.Options.UseTextOptions = true;
             this.columnCouncilor1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.columnCouncilor1.Caption = "Anchuelo Ester Elle";
-            this.columnCouncilor1.ColumnEdit = this.repositoryItemRadioGroup1;
+            this.columnCouncilor1.ColumnEdit = this.repositoryItemRadioGroupMayor;
             this.columnCouncilor1.FieldName = "Councilor1";
             this.columnCouncilor1.MinWidth = 300;
             this.columnCouncilor1.Name = "columnCouncilor1";
-            this.columnCouncilor1.Visible = true;
-            this.columnCouncilor1.VisibleIndex = 3;
             this.columnCouncilor1.Width = 300;
             // 
             // columnCouncilor2
@@ -381,12 +382,10 @@
             this.columnCouncilor2.AppearanceHeader.Options.UseTextOptions = true;
             this.columnCouncilor2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.columnCouncilor2.Caption = "Bagabaldo Alexis Talili";
-            this.columnCouncilor2.ColumnEdit = this.repositoryItemRadioGroup1;
+            this.columnCouncilor2.ColumnEdit = this.repositoryItemRadioGroupMayor;
             this.columnCouncilor2.FieldName = "Councilor2";
             this.columnCouncilor2.MinWidth = 300;
             this.columnCouncilor2.Name = "columnCouncilor2";
-            this.columnCouncilor2.Visible = true;
-            this.columnCouncilor2.VisibleIndex = 4;
             this.columnCouncilor2.Width = 300;
             // 
             // columnCouncilor3
@@ -396,12 +395,10 @@
             this.columnCouncilor3.AppearanceHeader.Options.UseTextOptions = true;
             this.columnCouncilor3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.columnCouncilor3.Caption = "Jotojot Vic Doydora";
-            this.columnCouncilor3.ColumnEdit = this.repositoryItemRadioGroup1;
+            this.columnCouncilor3.ColumnEdit = this.repositoryItemRadioGroupMayor;
             this.columnCouncilor3.FieldName = "Councilor3";
             this.columnCouncilor3.MinWidth = 300;
             this.columnCouncilor3.Name = "columnCouncilor3";
-            this.columnCouncilor3.Visible = true;
-            this.columnCouncilor3.VisibleIndex = 5;
             this.columnCouncilor3.Width = 300;
             // 
             // columnCouncilor4
@@ -411,12 +408,10 @@
             this.columnCouncilor4.AppearanceHeader.Options.UseTextOptions = true;
             this.columnCouncilor4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.columnCouncilor4.Caption = "Uy Erwin Vallejos";
-            this.columnCouncilor4.ColumnEdit = this.repositoryItemRadioGroup1;
+            this.columnCouncilor4.ColumnEdit = this.repositoryItemRadioGroupMayor;
             this.columnCouncilor4.FieldName = "Councilor4";
             this.columnCouncilor4.MinWidth = 300;
             this.columnCouncilor4.Name = "columnCouncilor4";
-            this.columnCouncilor4.Visible = true;
-            this.columnCouncilor4.VisibleIndex = 6;
             this.columnCouncilor4.Width = 300;
             // 
             // columnCouncilor5
@@ -426,12 +421,10 @@
             this.columnCouncilor5.AppearanceHeader.Options.UseTextOptions = true;
             this.columnCouncilor5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.columnCouncilor5.Caption = "Wahing Gilbert Rajas";
-            this.columnCouncilor5.ColumnEdit = this.repositoryItemRadioGroup1;
+            this.columnCouncilor5.ColumnEdit = this.repositoryItemRadioGroupMayor;
             this.columnCouncilor5.FieldName = "Councilor5";
             this.columnCouncilor5.MinWidth = 300;
             this.columnCouncilor5.Name = "columnCouncilor5";
-            this.columnCouncilor5.Visible = true;
-            this.columnCouncilor5.VisibleIndex = 7;
             this.columnCouncilor5.Width = 300;
             // 
             // columnCouncilor6
@@ -441,12 +434,10 @@
             this.columnCouncilor6.AppearanceHeader.Options.UseTextOptions = true;
             this.columnCouncilor6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.columnCouncilor6.Caption = "Yana-Bernales Virgil Rey";
-            this.columnCouncilor6.ColumnEdit = this.repositoryItemRadioGroup1;
+            this.columnCouncilor6.ColumnEdit = this.repositoryItemRadioGroupMayor;
             this.columnCouncilor6.FieldName = "Councilor6";
             this.columnCouncilor6.MinWidth = 300;
             this.columnCouncilor6.Name = "columnCouncilor6";
-            this.columnCouncilor6.Visible = true;
-            this.columnCouncilor6.VisibleIndex = 8;
             this.columnCouncilor6.Width = 300;
             // 
             // columnCouncilor7
@@ -456,12 +447,10 @@
             this.columnCouncilor7.AppearanceHeader.Options.UseTextOptions = true;
             this.columnCouncilor7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.columnCouncilor7.Caption = "Ybañez Nemrod Campeciño";
-            this.columnCouncilor7.ColumnEdit = this.repositoryItemRadioGroup1;
+            this.columnCouncilor7.ColumnEdit = this.repositoryItemRadioGroupMayor;
             this.columnCouncilor7.FieldName = "Councilor7";
             this.columnCouncilor7.MinWidth = 300;
             this.columnCouncilor7.Name = "columnCouncilor7";
-            this.columnCouncilor7.Visible = true;
-            this.columnCouncilor7.VisibleIndex = 9;
             this.columnCouncilor7.Width = 300;
             // 
             // columnCouncilor8
@@ -471,18 +460,28 @@
             this.columnCouncilor8.AppearanceHeader.Options.UseTextOptions = true;
             this.columnCouncilor8.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.columnCouncilor8.Caption = "Curit Jerson Mendoza";
-            this.columnCouncilor8.ColumnEdit = this.repositoryItemRadioGroup1;
+            this.columnCouncilor8.ColumnEdit = this.repositoryItemRadioGroupMayor;
             this.columnCouncilor8.FieldName = "Councilor8";
             this.columnCouncilor8.MinWidth = 300;
             this.columnCouncilor8.Name = "columnCouncilor8";
-            this.columnCouncilor8.Visible = true;
-            this.columnCouncilor8.VisibleIndex = 10;
             this.columnCouncilor8.Width = 300;
             // 
             // repositoryItemCheckEdit1
             // 
             this.repositoryItemCheckEdit1.AutoHeight = false;
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            // 
+            // repositoryItemRadioGroupVice
+            // 
+            this.repositoryItemRadioGroupVice.ItemHorzAlignment = DevExpress.XtraEditors.RadioItemHorzAlignment.Center;
+            this.repositoryItemRadioGroupVice.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("MYRA FOSTANES- COLIS", "MYRA FOSTANES- COLIS"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("RENATO TUTOR", "RENATO TUTOR"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("BOY DATAHAN", "BOY DATAHAN"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("DUHA-DUHA", "DUHA-DUHA")});
+            this.repositoryItemRadioGroupVice.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
+            this.repositoryItemRadioGroupVice.Name = "repositoryItemRadioGroupVice";
+            this.repositoryItemRadioGroupVice.SelectedIndexChanged += new System.EventHandler(this.repositoryItemRadioGroupVice_SelectedIndexChanged);
             // 
             // ribbonPage3
             // 
@@ -514,8 +513,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroupMayor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroupVice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -536,7 +536,7 @@
         private DevExpress.XtraBars.BarButtonItem bbiRefresh;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup repositoryItemRadioGroup1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup repositoryItemRadioGroupMayor;
         private System.Windows.Forms.BindingSource bindingSource1;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
@@ -561,5 +561,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup repositoryItemRadioGroupVice;
     }
 }

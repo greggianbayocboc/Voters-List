@@ -42,7 +42,7 @@ namespace Testapp
             List<Purok> puroks = purokRepository.getAll();
 
             var listBinding = new BindingList<Person>(personRepository.getAll());
-            totalVotersValue.Text = listBinding.Count.ToString(); ;
+            totalVotersValue.Text = listBinding.Count.ToString();
             bindingSourcePerson.DataSource = listBinding;
             bindingSourceBarangay.DataSource = barangays;
             bindingSourceBarangay.Insert(0,new Barangay(false));
@@ -529,7 +529,7 @@ namespace Testapp
                 rpt.Parameters["barangay"].Value = dto.Barangay;
                 rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
                 rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
-                rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
+                rpt.Parameters["purokLeader"].Value = dto.PurokName+" - "+dto.PurokLeader;
                 List<Person> list = leaderPrintoutDtoRepository.getVoters(dto.BarangayID, dto.PurokID, dto.ClusterID);
                 rpt.Parameters["count"].Value = list.Count;
                 count += list.Count;
@@ -595,7 +595,7 @@ namespace Testapp
                 rpt.Parameters["barangay"].Value = dto.Barangay;
                 rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
                 rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
-                rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
+                rpt.Parameters["purokLeader"].Value = dto.PurokName+" - "+dto.PurokLeader;
                 List<Person> list = leaderPrintoutDtoRepository.getVoters(dto.BarangayID, dto.PurokID, dto.ClusterID);
                 rpt.Parameters["count"].Value = list.Count;
                 count += list.Count;
@@ -626,7 +626,7 @@ namespace Testapp
                 rpt.Parameters["barangay"].Value = dto.Barangay;
                 rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
                 rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
-                rpt.Parameters["purokLeader"].Value = $"{dto.PurokName} - {dto.PurokLeader}";
+                rpt.Parameters["purokLeader"].Value = dto.PurokName+" - "+dto.PurokLeader;
                 List<Person> list = leaderPrintoutDtoRepository.getVoters(dto.BarangayID, dto.PurokID, dto.ClusterID);
                 rpt.Parameters["count"].Value = list.Count;
                 count += list.Count;

@@ -36,9 +36,11 @@
             this.comboBoxEditCluster = new DevExpress.XtraEditors.ComboBoxEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditBarangay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditPurok.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditCluster.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxEditBarangay
@@ -62,7 +64,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(12, 38);
+            this.labelControl2.Location = new System.Drawing.Point(12, 64);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(27, 13);
             this.labelControl2.TabIndex = 3;
@@ -70,7 +72,7 @@
             // 
             // comboBoxEditPurok
             // 
-            this.comboBoxEditPurok.Location = new System.Drawing.Point(64, 35);
+            this.comboBoxEditPurok.Location = new System.Drawing.Point(64, 61);
             this.comboBoxEditPurok.Name = "comboBoxEditPurok";
             this.comboBoxEditPurok.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -80,7 +82,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(12, 64);
+            this.labelControl3.Location = new System.Drawing.Point(12, 90);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(34, 13);
             this.labelControl3.TabIndex = 5;
@@ -88,7 +90,7 @@
             // 
             // comboBoxEditCluster
             // 
-            this.comboBoxEditCluster.Location = new System.Drawing.Point(64, 61);
+            this.comboBoxEditCluster.Location = new System.Drawing.Point(64, 87);
             this.comboBoxEditCluster.Name = "comboBoxEditCluster";
             this.comboBoxEditCluster.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -97,7 +99,7 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(151, 87);
+            this.simpleButton1.Location = new System.Drawing.Point(151, 123);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 6;
@@ -106,20 +108,30 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(64, 87);
+            this.simpleButton2.Location = new System.Drawing.Point(64, 123);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 7;
             this.simpleButton2.Text = "Cancel";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
+            // checkEdit1
+            // 
+            this.checkEdit1.Location = new System.Drawing.Point(64, 35);
+            this.checkEdit1.Name = "checkEdit1";
+            this.checkEdit1.Properties.Caption = "Unassigned";
+            this.checkEdit1.Size = new System.Drawing.Size(75, 20);
+            this.checkEdit1.TabIndex = 8;
+            this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
+            // 
             // BarangayPurokClusterSelect
             // 
             this.AcceptButton = this.simpleButton1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(241, 123);
+            this.ClientSize = new System.Drawing.Size(239, 158);
             this.ControlBox = false;
+            this.Controls.Add(this.checkEdit1);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.labelControl3);
@@ -135,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditBarangay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditPurok.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditCluster.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,5 +163,6 @@
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditCluster;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        public DevExpress.XtraEditors.CheckEdit checkEdit1;
     }
 }

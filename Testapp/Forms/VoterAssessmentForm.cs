@@ -426,5 +426,53 @@ namespace gregg.Forms
             }
             return "INC";
         }
+
+        private void repositoryItemRadioGroupVice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                RadioGroup rg = ((RadioGroup)sender);
+                string selected = rg.EditValue.ToString();
+                Person va = (Person)gridView1.GetFocusedRow();
+                switch (gridView1.FocusedColumn.FieldName)
+                {
+                    case "Mayor":
+                        va.Mayor = selected;
+                        break;
+                    case "Vice":
+                        va.Vice = selected;
+                        break;
+                    case "Councilor1":
+                        va.Councilor1 = selected;
+                        break;
+                    case "Councilor2":
+                        va.Councilor3 = selected;
+                        break;
+                    case "Councilor3":
+                        va.Councilor4 = selected;
+                        break;
+                    case "Councilor4":
+                        va.Councilor4 = selected;
+                        break;
+                    case "Councilor5":
+                        va.Councilor5 = selected;
+                        break;
+                    case "Councilor6":
+                        va.Councilor6 = selected;
+                        break;
+                    case "Councilor7":
+                        va.Councilor7 = selected;
+                        break;
+                    case "Councilor8":
+                        va.Councilor8 = selected;
+                        break;
+                    default:
+                        break;
+                }
+                personRepository.Save(va);
+            }
+            catch (Exception ex)
+            { }
+        }
     }
 }

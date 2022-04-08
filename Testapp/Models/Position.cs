@@ -8,12 +8,22 @@ namespace Testapp.Models
 {
     public class Position : Model
     {
-       
+
         string positionName;
+
+        public string PositionName
+        {
+            get { return positionName; }
+            set { positionName = value; }
+        }
 
         int positionOrder;
 
-        public string PositionName { get => positionName; set => positionName = value; }
-        public int PositionOrder { get => positionOrder; set => positionOrder = value; }
+        public int PositionOrder
+        {
+            get { return positionOrder; }
+            set { positionOrder = value; }
+        }
+
     }
 }

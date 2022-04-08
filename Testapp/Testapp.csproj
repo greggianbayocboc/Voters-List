@@ -16,16 +16,18 @@
     <TargetFrameworkProfile />
     <PublishUrl>D:\Installers\Voters\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\LAPTOP-J6CPGADT\Voters Installer\Voters\</InstallUrl>
+    <UpdateUrl>\\LAPTOP-J6CPGADT\Voters Installer\Voters\</UpdateUrl>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>34</ApplicationRevision>
     <ApplicationVersion>0.1.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -71,6 +73,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -109,12 +114,6 @@
     </Reference>
     <Reference Include="Npgsql, Version=4.0.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.4.0.2\lib\net451\Npgsql.dll</HintPath>
-    </Reference>
-    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>..\packages\MSOffice.Object.Library.15.0.4420.1018\lib\net20\Office.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
     <Reference Include="System" />
@@ -167,6 +166,12 @@
     <Compile Include="Forms\ClusterForm.Designer.cs">
       <DependentUpon>ClusterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FindVoter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FindVoter.Designer.cs">
+      <DependentUpon>FindVoter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CouncilorChartsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +214,12 @@
     <Compile Include="Forms\MainRibbonForm.Designer.cs">
       <DependentUpon>MainRibbonForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MultipleVoterSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MultipleVoterSelect.Designer.cs">
+      <DependentUpon>MultipleVoterSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PieChartByBarangayForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +244,12 @@
     <Compile Include="Forms\Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TestChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestChart.Designer.cs">
+      <DependentUpon>TestChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\VoterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +261,12 @@
     </Compile>
     <Compile Include="Forms\VotersByLeadersForm.Designer.cs">
       <DependentUpon>VotersByLeadersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VotersOriginalBarangayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VotersOriginalBarangayForm.Designer.cs">
+      <DependentUpon>VotersOriginalBarangayForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\VotersPrintForm.cs">
       <SubType>Form</SubType>
@@ -287,6 +310,7 @@
     <Compile Include="Helpers\DatabaseConnect.cs" />
     <Compile Include="Helpers\Mapper.cs" />
     <Compile Include="Helpers\Model.cs" />
+    <Compile Include="Helpers\Utils.cs" />
     <Compile Include="Models\Barangay.cs" />
     <Compile Include="Models\SurveyItem.cs" />
     <Compile Include="Models\Survey.cs" />
@@ -311,6 +335,12 @@
     </Compile>
     <Compile Include="Reports\BlankReport.Designer.cs">
       <DependentUpon>BlankReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportSelectedCandidate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportSelectedCandidate.Designer.cs">
+      <DependentUpon>LeaderPrintoutReportSelectedCandidate.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\LeaderPrintoutReportCouncilor.cs">
       <SubType>Component</SubType>
@@ -384,6 +414,9 @@
     <EmbeddedResource Include="Forms\ClusterForm.resx">
       <DependentUpon>ClusterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindVoter.resx">
+      <DependentUpon>FindVoter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CouncilorChartsForm.resx">
       <DependentUpon>CouncilorChartsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -405,6 +438,9 @@
     <EmbeddedResource Include="Forms\MainRibbonForm.resx">
       <DependentUpon>MainRibbonForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MultipleVoterSelect.resx">
+      <DependentUpon>MultipleVoterSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PartyForm.resx">
       <DependentUpon>PartyForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -423,6 +459,9 @@
     <EmbeddedResource Include="Forms\Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TestChart.resx">
+      <DependentUpon>TestChart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\VoterAssessmentForm.resx">
       <DependentUpon>VoterAssessmentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -431,6 +470,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VotersByLeadersForm.resx">
       <DependentUpon>VotersByLeadersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VotersOriginalBarangayForm.resx">
+      <DependentUpon>VotersOriginalBarangayForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VotersPrintForm.resx">
       <DependentUpon>VotersPrintForm.cs</DependentUpon>
@@ -461,6 +503,9 @@
     <EmbeddedResource Include="Reports\BlankReport.resx">
       <DependentUpon>BlankReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LeaderPrintoutReportSelectedCandidate.resx">
+      <DependentUpon>LeaderPrintoutReportSelectedCandidate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\LeaderPrintoutReportCouncilor.resx">
       <DependentUpon>LeaderPrintoutReportCouncilor.cs</DependentUpon>
     </EmbeddedResource>
@@ -488,6 +533,7 @@
     <None Include="Properties\DataSources\Testapp.Models.Party.datasource" />
     <None Include="Properties\DataSources\Testapp.Models.Person.datasource" />
     <None Include="Properties\DataSources\Testapp.Models.PersonDto.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.PieChartData.datasource" />
     <None Include="Properties\DataSources\Testapp.Models.Position.datasource" />
     <None Include="Properties\DataSources\Testapp.Models.Purok.datasource" />
     <None Include="Properties\DataSources\Testapp.Models.Survey.datasource" />
@@ -597,7 +643,18 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <PublishFile Include="DevExpress.XtraNavBar.v18.2">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -18,11 +18,20 @@ namespace Testapp.Models
             set { fullname = value; }
         }
 
-        public string Position_ { get => position_; set => position_ = value; }
-        public string Party { get => party; set => party = value; }
-
         string position_;
 
+        public string Position_
+        {
+            get { return position_; }
+            set { position_ = value; }
+        }
+
         string party;
+
+        public string Party
+        {
+            get { return party; }
+            set { party = value; }
+        }
     }
 }

@@ -8,30 +8,71 @@ namespace Testapp.Models
 {
     public class PersonDto : Model
     {
-       
+
         string firstname;
-        
+
+        public string Firstname
+        {
+            get { return firstname; }
+            set { firstname = value; }
+        }
+
         string lastname;
 
+        public string Lastname
+        {
+            get { return lastname; }
+            set { lastname = value; }
+        }
+
         string fullname;
-       
+
+        public string Fullname
+        {
+            get { return fullname; }
+            set { fullname = value; }
+        }
+
         string precinct;
+
+        public string Precinct
+        {
+            get { return precinct; }
+            set { precinct = value; }
+        }
 
         string address;
 
+        public string Address
+        {
+            get { return address; }
+            set { address = value; }
+        }
+
         string barangay;
+
+        public string Barangay
+        {
+            get { return barangay; }
+            set { barangay = value; }
+        }
 
         string purok;
 
+        public string Purok
+        {
+            get { return purok; }
+            set { purok = value; }
+        }
+
         string cluster;
 
-        public string Firstname { get => firstname; set => firstname = value; }
-        public string Lastname { get => lastname; set => lastname = value; }
-        public string Fullname { get => fullname; set => fullname = value; }
-        public string Precinct { get => precinct; set => precinct = value; }
-        public string Address { get => address; set => address = value; }
-        public string Barangay { get => barangay; set => barangay = value; }
-        public string Purok { get => purok; set => purok = value; }
-        public string Cluster { get => cluster; set => cluster = value; }
+        public string Cluster
+        {
+            get { return cluster; }
+            set { cluster = value; }
+        }
+
+       
     }
 }

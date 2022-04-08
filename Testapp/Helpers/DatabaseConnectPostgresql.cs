@@ -12,12 +12,14 @@ namespace Testapp
 {
     public class DatabaseConnectPostgresql<T>
     {
-        NpgsqlConnection conn = new NpgsqlConnection(String.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
+     
+            NpgsqlConnection conn = new NpgsqlConnection(String.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
                     gregg.Properties.Settings.Default.server, 
                     gregg.Properties.Settings.Default.port, 
                     gregg.Properties.Settings.Default.username,
                     gregg.Properties.Settings.Default.password, "voters"));
-        
+      
+
         public string PendingQuery = "";
         public List<string> PendingQueryList = new List<string>();
         public void ExecuteNonQuery(string query)
@@ -103,6 +105,21 @@ namespace Testapp
             dt = ds.Tables[0];
             conn.Close();
             return Mapper.GetItem<T>(dt.Rows[0]);
+        }
+
+
+        public bool doExist(string fieldName, object val)
+        {
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            conn.Open();
+            string query = "Select * from " + typeof(T).Name + " where " + fieldName + " = '" + val + "'";
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, conn);
+            ds.Reset();
+            da.Fill(ds);
+            dt = ds.Tables[0];
+            conn.Close();
+            return dt.Rows.Count>0;
         }
 
         public T getFirst()
@@ -233,7 +250,7 @@ namespace Testapp
             }
             else
             {
-                throw new Exception("No Pending Transaction.");
+                //throw new Exception("No Pending Transaction.");
             }
         }
         public bool checkDatabaseConfiguration()

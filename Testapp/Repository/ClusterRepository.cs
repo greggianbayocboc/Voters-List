@@ -17,7 +17,7 @@ namespace Testapp.Repository
 
         public Cluster getClusterByPurokIdAndClusterName(int purokID, string clusterLeader)
         {
-            string customQuery = "Select * from Cluster where Purok = " + purokID + " AND Leader = '" + clusterLeader.Trim() + "' ORDER BY ID";
+            string customQuery = "Select * from Cluster where Purok = " + purokID + " AND Leader = '" + clusterLeader + "' ORDER BY ID";
             return this.getListCustomQuery(customQuery).First();
         }
     }

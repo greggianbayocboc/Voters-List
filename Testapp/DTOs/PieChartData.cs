@@ -8,20 +8,60 @@ namespace Testapp.Models
 {
     public class PieChartData 
     {
-       
+        int iD;
+
+        public int ID
+        {
+            get { return iD; }
+            set { iD = value; }
+        }
+
         string barangayName;
-        
+
+        public string BarangayName
+        {
+            get { return barangayName; }
+            set { barangayName = value; }
+        }
+
         int ato;
+
+        public int Ato
+        {
+            get { return ato; }
+            set { ato = value; }
+        }
 
         int dileAto;
 
+        public int DileAto
+        {
+            get { return dileAto; }
+            set { dileAto = value; }
+        }
+
         int duhaDuha;
+
+        public int DuhaDuha
+        {
+            get { return duhaDuha; }
+            set { duhaDuha = value; }
+        }
         int iNC;
 
-        public string BarangayName { get => barangayName; set => barangayName = value; }
-        public int Ato { get => ato; set => ato = value; }
-        public int DileAto { get => dileAto; set => dileAto = value; }
-        public int DuhaDuha { get => duhaDuha; set => duhaDuha = value; }
-        public int INC { get => iNC; set => iNC = value; }
+        public int INC
+        {
+            get { return iNC; }
+            set { iNC = value; }
+        }
+        int unassigned;
+
+        public int Unassigned
+        {
+          get { return unassigned; }
+          set { unassigned = value; }
+        }
+
+        
     }
 }

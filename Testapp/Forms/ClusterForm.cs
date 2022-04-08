@@ -33,24 +33,28 @@ namespace Testapp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cluster.Purok = purok.ID;
-            clusterRepository.Save(cluster);
-            this.Close();
+            if (textBoxClusterLeader.Text.Trim() != "")
+            {
+                cluster.Purok = purok.ID;
+                clusterRepository.Save(cluster);
+                this.Close();
+            }
+            
         }
 
         private void textBoxPurokName_TextChanged(object sender, EventArgs e)
         {
-            purok.PurokName = textBoxPurokName.Text;
+            purok.PurokName = textBoxPurokName.Text.Trim();
         }
 
         private void textBoxPurokLeader_TextChanged(object sender, EventArgs e)
         {
-            purok.Leader = textBoxPurokLeader.Text;
+            purok.Leader = textBoxPurokLeader.Text.Trim();
         }
 
         private void textBoxClusterLeader_TextChanged(object sender, EventArgs e)
         {
-            cluster.Leader = textBoxClusterLeader.Text;
+            cluster.Leader = textBoxClusterLeader.Text.Trim();
         }
     }
 }

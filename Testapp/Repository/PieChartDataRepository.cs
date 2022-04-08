@@ -16,20 +16,22 @@ namespace Testapp.Repository
                 switch (position)
                 {
                     case "MAYOR":
-                            query = @"SELECT  BarangayName,       
-                            (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'ATO') as Ato,
-                            (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'DILE ATO') AS DileAto, 
-                            (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'DUHA_DUHA') as DuhaDuha, 
-                            (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'INC') as INC
+                            query = @"SELECT  ID, BarangayName,       
+                            (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'ONGIE-BERNALES-LIM') as Ato,
+                            (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'JUN JAYOMA') AS DileAto, 
+                            (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'HELEN JAYOMA') as INC, 
+                            (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'DUHA-DUHA') as DuhaDuha, 
+                            (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor IS null) as Unassigned
                             FROM Barangay order by BarangayName ";
                         
                         break;
                     case "VICE-MAYOR":
-                        query = @"SELECT    BarangayName,     
-                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'ATO') as Ato,
-                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'DILE ATO') AS DileAto, 
-                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'DUHA_DUHA') as DuhaDuha, 
-                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'INC') as INC
+                        query = @"SELECT    ID, BarangayName,     
+                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'MYRA FOSTANES- COLIS') as Ato,
+                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'RENATO TUTOR') AS DileAto, 
+                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'BOY DATAHAN') as INC, 
+                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'DUHA-DUHA') as DuhaDuha, 
+                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice IS null) as Unassigned
                         FROM Barangay order by BarangayName ";
                         break;
                     default:

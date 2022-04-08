@@ -37,12 +37,12 @@ namespace Testapp
 
         private void textBoxPurokName_TextChanged(object sender, EventArgs e)
         {
-            purok.PurokName = textBoxPurokName.Text;
+            purok.PurokName = textBoxPurokName.Text.Trim();
         }
 
         private void textBoxPurokLeader_TextChanged(object sender, EventArgs e)
         {
-            purok.Leader = textBoxPurokLeader.Text;
+            purok.Leader = textBoxPurokLeader.Text.Trim();
         }
     }
 }

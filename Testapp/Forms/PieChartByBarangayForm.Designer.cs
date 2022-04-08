@@ -104,18 +104,15 @@
             // 
             // navigationPane1
             // 
-            this.navigationPane1.AllowResize = false;
-            this.navigationPane1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.navigationPane1.Location = new System.Drawing.Point(12, 87);
             this.navigationPane1.Name = "navigationPane1";
             this.navigationPane1.RegularSize = new System.Drawing.Size(914, 597);
             this.navigationPane1.SelectedPage = null;
-            this.navigationPane1.Size = new System.Drawing.Size(1087, 582);
+            this.navigationPane1.Size = new System.Drawing.Size(1111, 597);
             this.navigationPane1.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Expanded;
             this.navigationPane1.TabIndex = 0;
             this.navigationPane1.Text = "navigationPane1";
+            this.navigationPane1.TransitionType = DevExpress.Utils.Animation.Transitions.Push;
             // 
             // PieChartByBarangayForm
             // 

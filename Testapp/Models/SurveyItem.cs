@@ -9,15 +9,40 @@ namespace Testapp.Models
     public class SurveyItem : Model
     {
         int survey;
+
+        public int Survey
+        {
+            get { return survey; }
+            set { survey = value; }
+        }
         int person;
+
+        public int Person
+        {
+            get { return person; }
+            set { person = value; }
+        }
         int candidate;
+
+        public int Candidate
+        {
+            get { return candidate; }
+            set { candidate = value; }
+        }
         string assessment;
+
+        public string Assessment
+        {
+            get { return assessment; }
+            set { assessment = value; }
+        }
         int points;
 
-        public int Survey { get => survey; set => survey = value; }
-        public int Person { get => person; set => person = value; }
-        public int Candidate { get => candidate; set => candidate = value; }
-        public string Assessment { get => assessment; set => assessment = value; }
-        public int Points { get => points; set => points = value; }
+        public int Points
+        {
+            get { return points; }
+            set { points = value; }
+        }
+
     }
 }

@@ -10,6 +10,11 @@ namespace Testapp.Models
     {
         string partyName;
 
-        public string PartyName { get => partyName; set => partyName = value; }
+        public string PartyName
+        {
+            get { return partyName; }
+            set { partyName = value; }
+        }
+
     }
 }
