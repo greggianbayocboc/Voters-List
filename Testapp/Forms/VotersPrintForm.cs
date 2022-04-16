@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraReports.UI;
+using gregg.Helpers;
 using gregg.Reports;
 using gregg.Repository;
 using System;
@@ -67,6 +68,19 @@ namespace gregg.Forms
             ReportPrintTool tool = new ReportPrintTool(initialReport);
             tool.PreviewForm.MdiParent = this.MdiParent;
             tool.ShowPreview();
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            BarangayPurokClusterSelect selectForm = new BarangayPurokClusterSelect();
+
+            if (selectForm.ShowDialog() == DialogResult.OK)
+            {
+                VoterEnvelopeLabelReport rpt = new VoterEnvelopeLabelReport();
+                rpt.DataSource = personDtoRepository.getPrintableVoters(selectForm.Barangay, selectForm.Purok, selectForm.Cluster);
+                ReportPrintTool tool = new ReportPrintTool(rpt);
+                tool.ShowPreviewDialog();
+            }
         }
     }
 }

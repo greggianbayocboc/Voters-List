@@ -27,7 +27,7 @@
     <InstallUrl>\\LAPTOP-J6CPGADT\Voters Installer\Voters\</InstallUrl>
     <UpdateUrl>\\LAPTOP-J6CPGADT\Voters Installer\Voters\</UpdateUrl>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>34</ApplicationRevision>
+    <ApplicationRevision>37</ApplicationRevision>
     <ApplicationVersion>0.1.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -646,12 +646,12 @@
   <ItemGroup>
     <PublishFile Include="DevExpress.XtraNavBar.v18.2">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

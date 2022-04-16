@@ -147,9 +147,9 @@ namespace gregg.Forms
                 int totalz = 0;
                 List<DataPoint> dpz = new List<DataPoint> 
                     {
-                        new DataPoint { Argument = "ONGIE-BERNALES-LIM",    Value = ato_total},
-                        new DataPoint { Argument = "JUN JAYOMA",    Value = dile_ato_total},
-                        new DataPoint { Argument = "HELEN JAYOMA",    Value = inc_total},
+                        new DataPoint { Argument = "MYRA FOSTANES- COLIS",    Value = ato_total},
+                        new DataPoint { Argument = "RENATO TUTOR",    Value = dile_ato_total},
+                        new DataPoint { Argument = "BOY DATAHAN",    Value = inc_total},
                         new DataPoint { Argument = "DUHA-DUHA",   Value = duha_total},
                         new DataPoint { Argument = "UNASSIGNED",   Value = unassigned_total}
                     };
