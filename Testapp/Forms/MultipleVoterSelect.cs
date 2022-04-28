@@ -17,7 +17,14 @@ namespace gregg.Forms
         public delegate void reloadListDelegate();
 
         public PersonRepository personRepository = new PersonRepository();
+        public BarangayRepository barangayRepository = new BarangayRepository();
+        public PurokRepository purokRepository = new PurokRepository();
+        public ClusterRepository clusterRepository = new ClusterRepository();
         public List<Person> persons = new List<Person>();
+
+        //List<Barangay> barangays = new List<Barangay>();
+        //List<Purok> puroks = new List<Purok>();
+        //List<Cluster> clusters = new List<Cluster>();
         public int barangayId = -1;
         public int purokId = -1;
         public int clusterId = -1;
@@ -30,6 +37,7 @@ namespace gregg.Forms
 
         private void MultipleVoterSelect_Load(object sender, EventArgs e)
         {
+            
             persons = personRepository.getAll();
             gridControl1.DataSource = persons;
         }
@@ -58,10 +66,32 @@ namespace gregg.Forms
             foreach (int x in gridView1.GetSelectedRows())
             {
                 Person person = persons[x];
-                person.Barangay = barangayId;
-                person.Purok = purokId;
-                person.Cluster = clusterId;
-                personRepository.SaveAsTransaction(person);
+                if (person.Purok > 0 || person.Cluster > 0)
+                {
+                    Barangay brgy = barangayRepository.getOne(person.Barangay);
+                    Purok purok = purokRepository.getOne(person.Purok);
+                    Cluster cluster = clusterRepository.getOne(person.Cluster);
+                    DialogResult result = MessageBox.Show( "Voter " + person.Fullname + " is already assigned to " + cluster.Leader + ", " + purok.Leader + " - " + brgy.BarangayName, "Voter Already Assigned!", MessageBoxButtons.OKCancel);
+                    if (result == DialogResult.OK)
+                    {
+                        person.Barangay = barangayId;
+                        person.Purok = purokId;
+                        person.Cluster = clusterId;
+                        personRepository.SaveAsTransaction(person);
+                    }
+                    else if (result == DialogResult.Cancel)
+                    {
+
+                    }
+                }
+                else
+                {
+                    person.Barangay = barangayId;
+                    person.Purok = purokId;
+                    person.Cluster = clusterId;
+                    personRepository.SaveAsTransaction(person);
+                }
+                
             }
             personRepository.CommitTransaction();
             reloadListCallback();

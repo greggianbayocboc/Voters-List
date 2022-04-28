@@ -1,5 +1,3 @@
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\testapp - Copy.accdb
-C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\testapp.accdb
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\VotersList.exe.config
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\VotersList.exe.manifest
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\bin\Debug\VotersList.application
@@ -60,3 +58,4 @@ C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\VotersList.application
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\VotersList.exe
 C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\VotersList.pdb
+C:\Users\Precious\Documents\Visual Studio 2012\Projects\Testapp\Testapp\Testapp\obj\Debug\Testapp.csprojResolveAssemblyReference.cache

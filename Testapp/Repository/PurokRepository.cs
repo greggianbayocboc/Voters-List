@@ -16,7 +16,7 @@ namespace Testapp.Repository
         }
         public Purok getPurokByBarangayIdAndPurokName(int barangayID, string purokName)
         {
-            string customQuery = "Select * from Purok where Barangay = " + barangayID + " AND PurokName = '"+purokName.Trim()+"' ORDER BY ID";
+            string customQuery = "Select * from Purok where Barangay = " + barangayID + " AND PurokName = '"+purokName+"' ORDER BY ID";
             return this.getListCustomQuery(customQuery).First();
         }
     }

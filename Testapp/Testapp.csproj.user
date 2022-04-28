@@ -2,9 +2,9 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PublishUrlHistory>D:\Installers\Voters\|publish\</PublishUrlHistory>
-    <InstallUrlHistory>\\LAPTOP-J6CPGADT\Voters Installer\Voters\|\\SERVER\back-up files\ELECTION FILES\Voters\</InstallUrlHistory>
+    <InstallUrlHistory>\\SERVER01\Voters Installer\Voters\|\\LAPTOP-J6CPGADT\Voters Installer\Voters\|\\SERVER\back-up files\ELECTION FILES\Voters\</InstallUrlHistory>
     <SupportUrlHistory />
-    <UpdateUrlHistory>\\SERVER\back-up files\ELECTION FILES\Voters\</UpdateUrlHistory>
+    <UpdateUrlHistory>\\LAPTOP-J6CPGADT\Voters Installer\Voters\|\\SERVER\back-up files\ELECTION FILES\Voters\</UpdateUrlHistory>
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>

@@ -300,9 +300,13 @@ namespace gregg.Forms
             if (point != null)
             {
                 string selectedCandidate = point.Argument.ToString();
-
-                this.printSelectedCandidate(barangay, labelPosition.Text.ToLower().Trim(), selectedCandidate);
-
+                DialogResult result = MessageBox.Show("Group Result", "Do you want to group by Purok?", MessageBoxButtons.YesNoCancel);
+                if (result == DialogResult.Yes)
+                    this.printSelectedCandidateGrouped(barangay, labelPosition.Text.ToLower().Trim().Split('-').First(), selectedCandidate);
+                else if (result == DialogResult.No)
+                    this.printSelectedCandidate(barangay, labelPosition.Text.ToLower().Trim().Split('-').First(), selectedCandidate);
+                else
+                    return;
             }
             else 
             {
@@ -321,9 +325,10 @@ namespace gregg.Forms
             }
         }
 
-        void printSelectedCandidate(String barangay,String selection, String candidate)
+        void printSelectedCandidateGrouped(String barangay,String selection, String candidate)
         {
 
+           
             int barangayId = barangayRepository.getIdByName(barangay);
 
             LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
@@ -353,6 +358,46 @@ namespace gregg.Forms
                     });
                 
             }
+            ReportPrintTool tool = new ReportPrintTool(initialReport);
+            tool.PreviewForm.MdiParent = this.MdiParent;
+            tool.ShowPreview();
+        }
+
+
+        void printSelectedCandidate(String barangay, String selection, String candidate)
+        {
+
+            int barangayId = barangayRepository.getIdByName(barangay);
+
+            LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
+            BlankReport initialReport = new BlankReport();
+            initialReport.CreateDocument();
+            List<LeaderPrintoutDto> dtos = leaderPrintoutDtoRepository.getGroupedReport(Utils.generateWhereClauseForLeaders(barangayId, -1, -1));
+            List<Person> masterList = new List<Person>();
+            int count = 0;
+            LeaderPrintoutReportSelectedCandidate rpt = new LeaderPrintoutReportSelectedCandidate();
+            foreach (LeaderPrintoutDto dto in dtos)
+            {
+                
+                rpt.selectedCandidateLabel.Text = candidate;
+                rpt.Parameters["barangay"].Value = dto.Barangay;
+                List<Person> list = leaderPrintoutDtoRepository.getVotersWithSelection(dto.BarangayID, dto.PurokID, dto.ClusterID, selection, candidate);
+                
+                count += list.Count;
+                masterList.AddRange(list);
+
+            }
+            masterList.Sort((a, b) => a.Fullname.CompareTo(b.Fullname));
+            rpt.Parameters["count"].Value = masterList.Count;
+            rpt.DataSource = masterList;
+            rpt.CreateDocument();
+
+
+            if (masterList.Count > 0)
+                initialReport.ModifyDocument(x =>
+                {
+                    x.AddPages(rpt.Pages);
+                });
             ReportPrintTool tool = new ReportPrintTool(initialReport);
             tool.PreviewForm.MdiParent = this.MdiParent;
             tool.ShowPreview();

@@ -18,7 +18,8 @@ namespace gregg.Forms
 {
     public partial class VotersPrintForm : Form
     {
-
+        List<string> mayors = new List<string> { "ONGIE-BERNALES-LIM", "JUN JAYOMA", "HELEN JAYOMA", "DUHA-DUHA" };
+        List<string> vices = new List<string> { "MYRA FOSTANES- COLIS", "RENATO TUTOR", "BOY DATAHAN", "DUHA-DUHA" };
         public PersonDtoRepository personDtoRepository = new PersonDtoRepository();
         public LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
         public VotersPrintForm()
@@ -77,9 +78,60 @@ namespace gregg.Forms
             if (selectForm.ShowDialog() == DialogResult.OK)
             {
                 VoterEnvelopeLabelReport rpt = new VoterEnvelopeLabelReport();
+                if (comboBox1.SelectedItem==null) 
+                    rpt.DataSource = personDtoRepository.getPrintableVoters(selectForm.Barangay, selectForm.Purok, selectForm.Cluster);
+                else
+                {
+                    if ((string)comboBox1.SelectedItem == "MAYOR")
+                       rpt.DataSource = personDtoRepository.getPrintableVotersMayor(selectForm.Barangay, selectForm.Purok, selectForm.Cluster, (string)comboBox2.SelectedItem);
+                   else
+                       rpt.DataSource = personDtoRepository.getPrintableVotersVice(selectForm.Barangay, selectForm.Purok, selectForm.Cluster, (string)comboBox2.SelectedItem);
+                   
+                }
+                ReportPrintTool tool = new ReportPrintTool(rpt);
+                tool.ShowPreviewDialog();
+            }
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            BarangayPurokClusterSelect selectForm = new BarangayPurokClusterSelect();
+
+            if (selectForm.ShowDialog() == DialogResult.OK)
+            {
+                VoterEnvelopeLabelReport rpt = new VoterEnvelopeLabelReport();
                 rpt.DataSource = personDtoRepository.getPrintableVoters(selectForm.Barangay, selectForm.Purok, selectForm.Cluster);
                 ReportPrintTool tool = new ReportPrintTool(rpt);
                 tool.ShowPreviewDialog();
+            }
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem == "MAYOR")
+            {
+                comboBox2.DataSource = mayors;
+            }
+            else if (comboBox1.SelectedItem == "VICE")
+            {
+                comboBox2.DataSource = vices;
+            }
+        }
+
+        private void comboBox1_TextUpdate(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedText == "MAYOR")
+            {
+                comboBox2.DataSource = mayors;
+            }
+            else if (comboBox1.SelectedText == "VICE")
+            {
+                comboBox2.DataSource = vices;
             }
         }
     }
