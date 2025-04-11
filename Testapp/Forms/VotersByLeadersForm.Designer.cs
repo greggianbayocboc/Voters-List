@@ -255,7 +255,6 @@
             this.repositoryItemRadioGroupMayor.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("ONGIE-BERNALES-LIM", "ONGIE-BERNALES-LIM"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("JUN JAYOMA", "JUN JAYOMA"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("HELEN JAYOMA", "HELEN JAYOMA"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("DUHA-DUHA", "DUHA-DUHA")});
             this.repositoryItemRadioGroupMayor.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
             this.repositoryItemRadioGroupMayor.Name = "repositoryItemRadioGroupMayor";
@@ -283,8 +282,7 @@
             this.repositoryItemRadioGroupVice.ItemHorzAlignment = DevExpress.XtraEditors.RadioItemHorzAlignment.Center;
             this.repositoryItemRadioGroupVice.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("MYRA FOSTANES- COLIS", "MYRA FOSTANES- COLIS"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("RENATO TUTOR", "RENATO TUTOR"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("BOY DATAHAN", "BOY DATAHAN"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("HELEN JAYOMA", "HELEN JAYOMA"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("DUHA-DUHA", "DUHA-DUHA")});
             this.repositoryItemRadioGroupVice.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
             this.repositoryItemRadioGroupVice.Name = "repositoryItemRadioGroupVice";

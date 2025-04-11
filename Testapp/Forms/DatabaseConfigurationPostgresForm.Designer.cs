@@ -39,10 +39,13 @@
             this.textPassword = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.textDatabase = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.textServer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPort.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textDatabase.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -63,7 +66,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(23, 73);
+            this.labelControl3.Location = new System.Drawing.Point(23, 101);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(48, 13);
             this.labelControl3.TabIndex = 2;
@@ -71,7 +74,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(23, 99);
+            this.labelControl4.Location = new System.Drawing.Point(23, 127);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(46, 13);
             this.labelControl4.TabIndex = 3;
@@ -99,7 +102,7 @@
             // textUsername
             // 
             this.textUsername.EditValue = "postgres";
-            this.textUsername.Location = new System.Drawing.Point(98, 70);
+            this.textUsername.Location = new System.Drawing.Point(98, 98);
             this.textUsername.Name = "textUsername";
             this.textUsername.Size = new System.Drawing.Size(238, 20);
             this.textUsername.TabIndex = 6;
@@ -108,7 +111,7 @@
             // textPassword
             // 
             this.textPassword.EditValue = "password";
-            this.textPassword.Location = new System.Drawing.Point(98, 96);
+            this.textPassword.Location = new System.Drawing.Point(98, 124);
             this.textPassword.Name = "textPassword";
             this.textPassword.Properties.PasswordChar = '*';
             this.textPassword.Size = new System.Drawing.Size(238, 20);
@@ -119,7 +122,7 @@
             // 
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
             this.simpleButton4.ImageOptions.ImageUri.Uri = "Apply";
-            this.simpleButton4.Location = new System.Drawing.Point(145, 122);
+            this.simpleButton4.Location = new System.Drawing.Point(145, 150);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(93, 38);
             this.simpleButton4.TabIndex = 9;
@@ -128,18 +131,36 @@
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.ImageUri.Uri = "Apply";
-            this.simpleButton3.Location = new System.Drawing.Point(244, 122);
+            this.simpleButton3.Location = new System.Drawing.Point(244, 150);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(92, 38);
             this.simpleButton3.TabIndex = 8;
             this.simpleButton3.Text = "OK";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
+            // textDatabase
+            // 
+            this.textDatabase.EditValue = "voters2025";
+            this.textDatabase.Location = new System.Drawing.Point(98, 72);
+            this.textDatabase.Name = "textDatabase";
+            this.textDatabase.Size = new System.Drawing.Size(238, 20);
+            this.textDatabase.TabIndex = 10;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(23, 75);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(46, 13);
+            this.labelControl5.TabIndex = 11;
+            this.labelControl5.Text = "Database";
+            // 
             // DatabaseConfigurationPostgresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 184);
+            this.ClientSize = new System.Drawing.Size(350, 203);
+            this.Controls.Add(this.labelControl5);
+            this.Controls.Add(this.textDatabase);
             this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.textPassword);
@@ -157,6 +178,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textPort.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textDatabase.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +196,7 @@
         private DevExpress.XtraEditors.TextEdit textPassword;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.TextEdit textDatabase;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
     }
 }

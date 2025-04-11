@@ -1,0 +1,692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A87ACB5-7451-4C29-9786-DAED0F849B5B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gregg</RootNamespace>
+    <AssemblyName>VotersList</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>D:\Installers\Voters\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\SERVER01\Voters Installer\Voters\</InstallUrl>
+    <UpdateUrl>\\LAPTOP-J6CPGADT\Voters Installer\Voters\</UpdateUrl>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>44</ApplicationRevision>
+    <ApplicationVersion>0.1.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>overicon - Copy.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0797C11672B22C287052C5F37CEDC2F7F55A4189</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Testapp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.Charts.v18.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.Data.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>D:\dlls\DevExpress.DataAccess.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dialogs.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>D:\dlls\DevExpress.Dialogs.v18.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.Images.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.Office.v18.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.Pdf.v18.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.PivotGrid.v18.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.Printing.v18.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.RichEdit.v18.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.RichEdit.v18.2.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.Sparkline.v18.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.Utils.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>D:\dlls\DevExpress.Utils.v18.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>D:\dlls\DevExpress.Xpo.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.XtraBars.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.XtraCharts.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.XtraCharts.v18.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>D:\dlls\DevExpress.XtraCharts.v18.2.Wizard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraDialogs.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.XtraDialogs.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.XtraEditors.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.XtraGauges.v18.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.XtraGrid.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>D:\dlls\DevExpress.XtraLayout.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.XtraPivotGrid.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>D:\dlls\DevExpress.XtraPrinting.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.XtraReports.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>D:\dlls\DevExpress.XtraReports.v18.2.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>D:\dlls\DevExpress.XtraTreeList.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.0.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.0.2\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTOs\DataPoint.cs" />
+    <Compile Include="DTOs\LeaderPrintoutDto.cs" />
+    <Compile Include="DTOs\PieChartData.cs" />
+    <Compile Include="DTOs\PersonDto.cs" />
+    <Compile Include="Forms\BarangayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BarangayForm.Designer.cs">
+      <DependentUpon>BarangayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BarangayPurokClusterSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BarangayPurokClusterSelect.Designer.cs">
+      <DependentUpon>BarangayPurokClusterSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClusterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClusterForm.Designer.cs">
+      <DependentUpon>ClusterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FindVoter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FindVoter.Designer.cs">
+      <DependentUpon>FindVoter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CouncilorChartsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CouncilorChartsForm.Designer.cs">
+      <DependentUpon>CouncilorChartsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DatabaseConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DatabaseConfigurationForm.Designer.cs">
+      <DependentUpon>DatabaseConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DatabaseConfigurationPostgresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DatabaseConfigurationPostgresForm.Designer.cs">
+      <DependentUpon>DatabaseConfigurationPostgresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ElectionDataSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ElectionDataSetting.Designer.cs">
+      <DependentUpon>ElectionDataSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportVotersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportVotersForm.Designer.cs">
+      <DependentUpon>ImportVotersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainRibbonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainRibbonForm.Designer.cs">
+      <DependentUpon>MainRibbonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MultipleVoterSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MultipleVoterSelect.Designer.cs">
+      <DependentUpon>MultipleVoterSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PieChartByBarangayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PieChartByBarangayForm.Designer.cs">
+      <DependentUpon>PieChartByBarangayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PurokForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PurokForm.Designer.cs">
+      <DependentUpon>PurokForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen1.Designer.cs">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TestChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestChart.Designer.cs">
+      <DependentUpon>TestChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VoterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VoterForm.Designer.cs">
+      <DependentUpon>VoterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VotersByLeadersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VotersByLeadersForm.Designer.cs">
+      <DependentUpon>VotersByLeadersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VotersOriginalBarangayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VotersOriginalBarangayForm.Designer.cs">
+      <DependentUpon>VotersOriginalBarangayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VotersPrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VotersPrintForm.Designer.cs">
+      <DependentUpon>VotersPrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CandidateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CandidateForm.Designer.cs">
+      <DependentUpon>CandidateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PartyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PartyForm.Designer.cs">
+      <DependentUpon>PartyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SurveyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SurveyList.Designer.cs">
+      <DependentUpon>SurveyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VoterAssessmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VoterAssessmentForm.Designer.cs">
+      <DependentUpon>VoterAssessmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PieChartPercentageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PieChartPercentageForm.Designer.cs">
+      <DependentUpon>PieChartPercentageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AssessmentOption.cs" />
+    <Compile Include="Helpers\DatabaseConnectPostgresql.cs" />
+    <Compile Include="Helpers\DatabaseHelper.cs" />
+    <Compile Include="Helpers\DatabaseConnect.cs" />
+    <Compile Include="Helpers\Mapper.cs" />
+    <Compile Include="Helpers\Model.cs" />
+    <Compile Include="Helpers\Utils.cs" />
+    <Compile Include="Models\Barangay.cs" />
+    <Compile Include="Models\SurveyItem.cs" />
+    <Compile Include="Models\Survey.cs" />
+    <Compile Include="Models\Party.cs" />
+    <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\Cluster.cs" />
+    <Compile Include="Models\Candidate.cs" />
+    <Compile Include="Models\VoterAssessment.cs" />
+    <Compile Include="Models\Town.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Purok.cs" />
+    <Compile Include="PopupControl\CustomSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupControl\CustomSelect.Designer.cs">
+      <DependentUpon>CustomSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\BlankReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BlankReport.Designer.cs">
+      <DependentUpon>BlankReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportSelectedCandidate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportSelectedCandidate.Designer.cs">
+      <DependentUpon>LeaderPrintoutReportSelectedCandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportCouncilor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportCouncilor.Designer.cs">
+      <DependentUpon>LeaderPrintoutReportCouncilor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportStraight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportStraight.Designer.cs">
+      <DependentUpon>LeaderPrintoutReportStraight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportViceMayor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportViceMayor.Designer.cs">
+      <DependentUpon>LeaderPrintoutReportViceMayor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportMayor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LeaderPrintoutReportMayor.Designer.cs">
+      <DependentUpon>LeaderPrintoutReportMayor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\VoterEnvelopeLabelReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\VoterEnvelopeLabelReport.Designer.cs">
+      <DependentUpon>VoterEnvelopeLabelReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\BarangayRepository.cs" />
+    <Compile Include="Repository\ClusterRepository.cs" />
+    <Compile Include="Repository\LeaderPrintoutDtoRepository.cs" />
+    <Compile Include="Repository\PersonDtoRepository.cs" />
+    <Compile Include="Repository\PersonRepository.cs" />
+    <Compile Include="Repository\PurokRepository.cs" />
+    <Compile Include="Repository\CandidateRepository.cs" />
+    <Compile Include="Repository\PartyRepository.cs" />
+    <Compile Include="Repository\SurveyItemRepository.cs" />
+    <Compile Include="Repository\SurveyRepository.cs" />
+    <Compile Include="Repository\PieChartDataRepository.cs" />
+    <Compile Include="Repository\VoterAssessmentRepository.cs" />
+    <Compile Include="Repository\TownRepository.cs" />
+    <Compile Include="Forms\TownConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TownConfiguration.Designer.cs">
+      <DependentUpon>TownConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Voters List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Voters List.Designer.cs">
+      <DependentUpon>Voters List.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\BarangayForm.resx">
+      <DependentUpon>BarangayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BarangayPurokClusterSelect.resx">
+      <DependentUpon>BarangayPurokClusterSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CandidateForm.resx">
+      <DependentUpon>CandidateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClusterForm.resx">
+      <DependentUpon>ClusterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindVoter.resx">
+      <DependentUpon>FindVoter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CouncilorChartsForm.resx">
+      <DependentUpon>CouncilorChartsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DatabaseConfigurationForm.resx">
+      <DependentUpon>DatabaseConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DatabaseConfigurationPostgresForm.resx">
+      <DependentUpon>DatabaseConfigurationPostgresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ElectionDataSetting.resx">
+      <DependentUpon>ElectionDataSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportVotersForm.resx">
+      <DependentUpon>ImportVotersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainRibbonForm.resx">
+      <DependentUpon>MainRibbonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MultipleVoterSelect.resx">
+      <DependentUpon>MultipleVoterSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PartyForm.resx">
+      <DependentUpon>PartyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PieChartByBarangayForm.resx">
+      <DependentUpon>PieChartByBarangayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PieChartPercentageForm.resx">
+      <DependentUpon>PieChartPercentageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SurveyList.resx">
+      <DependentUpon>SurveyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TestChart.resx">
+      <DependentUpon>TestChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VoterAssessmentForm.resx">
+      <DependentUpon>VoterAssessmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VoterForm.resx">
+      <DependentUpon>VoterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VotersByLeadersForm.resx">
+      <DependentUpon>VotersByLeadersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VotersOriginalBarangayForm.resx">
+      <DependentUpon>VotersOriginalBarangayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VotersPrintForm.resx">
+      <DependentUpon>VotersPrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupControl\CustomSelect.resx">
+      <DependentUpon>CustomSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Forms\PurokForm.resx">
+      <DependentUpon>PurokForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\TownConfiguration.resx">
+      <DependentUpon>TownConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Voters List.resx">
+      <DependentUpon>Voters List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BlankReport.resx">
+      <DependentUpon>BlankReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LeaderPrintoutReportSelectedCandidate.resx">
+      <DependentUpon>LeaderPrintoutReportSelectedCandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LeaderPrintoutReportCouncilor.resx">
+      <DependentUpon>LeaderPrintoutReportCouncilor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LeaderPrintoutReportStraight.resx">
+      <DependentUpon>LeaderPrintoutReportStraight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LeaderPrintoutReportViceMayor.resx">
+      <DependentUpon>LeaderPrintoutReportViceMayor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LeaderPrintoutReportMayor.resx">
+      <DependentUpon>LeaderPrintoutReportMayor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\VoterEnvelopeLabelReport.resx">
+      <DependentUpon>VoterEnvelopeLabelReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Testapp.Models.Barangay.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.Candidate.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.Cluster.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.LeaderPrintoutDto.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.Party.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.Person.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.PersonDto.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.PieChartData.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.Position.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.Purok.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.Survey.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.SurveyItem.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.Town.datasource" />
+    <None Include="Properties\DataSources\Testapp.Models.VoterAssessment.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Testapp_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="overicon - Copy.ico" />
+    <Content Include="overicon.ico" />
+    <None Include="Resources\voters.png" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\city-map.png" />
+    <None Include="Resources\gregg.png" />
+    <None Include="Resources\pngaaa.com-25424.png" />
+    <None Include="Resources\mayor.png" />
+    <None Include="Resources\forcetesting_32x32.png" />
+    <None Include="Resources\forcetesting_16x16.png" />
+    <None Include="Resources\forcetesting_32x321.png" />
+    <None Include="Resources\forcetesting_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,KB2468871">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29 and Update for .NET Framework 4 %28KB2468871%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client,KB2468871">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29 and Update for .NET Framework 4 %28KB2468871%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSDAOSP">
+      <Guid>{E0E270C2-C0BE-11D0-8FE4-00A0C90A6341}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>1033</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

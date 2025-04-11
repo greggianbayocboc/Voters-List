@@ -17,7 +17,8 @@ namespace Testapp
                     gregg.Properties.Settings.Default.server, 
                     gregg.Properties.Settings.Default.port, 
                     gregg.Properties.Settings.Default.username,
-                    gregg.Properties.Settings.Default.password, "voters"));
+                    gregg.Properties.Settings.Default.password, 
+                    gregg.Properties.Settings.Default.database));
       
 
         public string PendingQuery = "";

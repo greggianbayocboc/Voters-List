@@ -17,5 +17,8 @@
     <Setting Name="password" Type="System.String" Scope="User">
       <Value Profile="(Default)">password</Value>
     </Setting>
+    <Setting Name="database" Type="System.String" Scope="User">
+      <Value Profile="(Default)">voters2025</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -23,6 +23,7 @@ namespace gregg.Forms
             textPort.Text = Properties.Settings.Default.port.ToString();
             textUsername.Text = Properties.Settings.Default.username;
             textPassword.Text = Properties.Settings.Default.password;
+            textDatabase.Text = Properties.Settings.Default.database;
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)

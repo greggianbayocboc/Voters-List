@@ -98,7 +98,7 @@ namespace gregg.Forms
 
         private void MainRibbonForm_Load(object sender, EventArgs e)
         {
-        
+            
         }
 
         private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
