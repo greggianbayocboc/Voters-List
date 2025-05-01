@@ -11,11 +11,11 @@ namespace gregg.Helpers
         public static string generateWhereClauseForLeaders(int? barangayId, int? purokId, int? clusterId)
         {
             string filter = string.Empty;
-            if (barangayId != -1)
+            if (barangayId != 0)
             {
                 filter += "Barangay.ID = " + barangayId;
             }
-            if (purokId != -1)
+            if (purokId != 0)
             {
                 if (filter != string.Empty)
                 {
@@ -26,7 +26,7 @@ namespace gregg.Helpers
                     filter += "Purok.ID = " + purokId;
                 }
             }
-            if (clusterId != -1)
+            if (clusterId != 0)
             {
                 if (filter != string.Empty)
                 {

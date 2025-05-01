@@ -145,6 +145,7 @@
             this.textDatabase.Name = "textDatabase";
             this.textDatabase.Size = new System.Drawing.Size(238, 20);
             this.textDatabase.TabIndex = 10;
+            this.textDatabase.EditValueChanged += new System.EventHandler(this.textDatabase_EditValueChanged);
             // 
             // labelControl5
             // 

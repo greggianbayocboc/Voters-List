@@ -55,6 +55,7 @@
             this.columnMayor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemRadioGroupMayor = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
             this.columnVice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemRadioGroupVice = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
             this.columnCouncilor1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.columnCouncilor2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.columnCouncilor3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -64,7 +65,6 @@
             this.columnCouncilor7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.columnCouncilor8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.repositoryItemRadioGroupVice = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -76,8 +76,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroupMayor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroupVice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +94,8 @@
             this.bbiRefresh,
             this.barEditItem1,
             this.barEditItem2,
-            this.barButtonItem1});
+            this.barButtonItem1,
+            this.ribbonControl.SearchEditItem});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.MaxItemId = 24;
             this.ribbonControl.Name = "ribbonControl";
@@ -172,7 +173,7 @@
             this.repositoryItemCheckedComboBoxEdit1.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(" MAYOR", "MAYOR"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("VICE-MAYOR", "VICE-MAYOR"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("COUNCILOR", "COUNCILORS")});
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("COUNCILOR", "COUNCILORS", System.Windows.Forms.CheckState.Unchecked, false)});
             this.repositoryItemCheckedComboBoxEdit1.Name = "repositoryItemCheckedComboBoxEdit1";
             this.repositoryItemCheckedComboBoxEdit1.EditValueChanged += new System.EventHandler(this.repositoryItemCheckedComboBoxEdit1_EditValueChanged);
             // 
@@ -216,18 +217,18 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.AllowTextClipping = false;
+            this.ribbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiRefresh);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "Tasks";
             // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.AllowTextClipping = false;
+            this.ribbonPageGroup2.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup2.ItemLinks.Add(this.bbiPrintPreview);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Print and Export";
             // 
             // ribbonPageGroup3
@@ -362,6 +363,18 @@
             this.columnVice.VisibleIndex = 2;
             this.columnVice.Width = 300;
             // 
+            // repositoryItemRadioGroupVice
+            // 
+            this.repositoryItemRadioGroupVice.ItemHorzAlignment = DevExpress.XtraEditors.RadioItemHorzAlignment.Center;
+            this.repositoryItemRadioGroupVice.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("MYRA FOSTANES- COLIS", "MYRA FOSTANES- COLIS"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("RENATO TUTOR", "RENATO TUTOR"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("BOY DATAHAN", "BOY DATAHAN"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("DUHA-DUHA", "DUHA-DUHA")});
+            this.repositoryItemRadioGroupVice.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
+            this.repositoryItemRadioGroupVice.Name = "repositoryItemRadioGroupVice";
+            this.repositoryItemRadioGroupVice.SelectedIndexChanged += new System.EventHandler(this.repositoryItemRadioGroupVice_SelectedIndexChanged);
+            // 
             // columnCouncilor1
             // 
             this.columnCouncilor1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
@@ -471,18 +484,6 @@
             this.repositoryItemCheckEdit1.AutoHeight = false;
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
             // 
-            // repositoryItemRadioGroupVice
-            // 
-            this.repositoryItemRadioGroupVice.ItemHorzAlignment = DevExpress.XtraEditors.RadioItemHorzAlignment.Center;
-            this.repositoryItemRadioGroupVice.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("MYRA FOSTANES- COLIS", "MYRA FOSTANES- COLIS"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("RENATO TUTOR", "RENATO TUTOR"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("BOY DATAHAN", "BOY DATAHAN"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("DUHA-DUHA", "DUHA-DUHA")});
-            this.repositoryItemRadioGroupVice.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
-            this.repositoryItemRadioGroupVice.Name = "repositoryItemRadioGroupVice";
-            this.repositoryItemRadioGroupVice.SelectedIndexChanged += new System.EventHandler(this.repositoryItemRadioGroupVice_SelectedIndexChanged);
-            // 
             // ribbonPage3
             // 
             this.ribbonPage3.Name = "ribbonPage3";
@@ -514,8 +515,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroupMayor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroupVice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

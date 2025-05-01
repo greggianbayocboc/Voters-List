@@ -189,7 +189,6 @@ C:\Users\gregg\Source\Repos\Voters-List3\Testapp\obj\Release\gregg.Reports.Leade
 C:\Users\gregg\Source\Repos\Voters-List3\Testapp\obj\Release\gregg.Reports.LeaderPrintoutReportMayor.resources
 C:\Users\gregg\Source\Repos\Voters-List3\Testapp\obj\Release\gregg.Reports.VoterEnvelopeLabelReport.resources
 C:\Users\gregg\Source\Repos\Voters-List3\Testapp\obj\Release\Testapp.csproj.GenerateResource.cache
-C:\Users\gregg\Source\Repos\Voters-List3\Testapp\obj\Release\VotersList.exe.licenses
 C:\Users\gregg\Source\Repos\Voters-List3\Testapp\obj\Release\Testapp.csproj.CoreCompileInputs.cache
 C:\Users\gregg\Source\Repos\Voters-List3\Testapp\obj\Release\VotersList.TrustInfo.xml
 C:\Users\gregg\Source\Repos\Voters-List3\Testapp\obj\Release\VotersList.exe.manifest
@@ -197,3 +196,4 @@ C:\Users\gregg\Source\Repos\Voters-List3\Testapp\obj\Release\VotersList.applicat
 C:\Users\gregg\Source\Repos\Voters-List3\Testapp\obj\Release\Testapp.csproj.Up2Date
 C:\Users\gregg\Source\Repos\Voters-List3\Testapp\obj\Release\VotersList.exe
 C:\Users\gregg\Source\Repos\Voters-List3\Testapp\obj\Release\VotersList.pdb
+C:\Users\gregg\Source\Repos\Voters-List3\Testapp\obj\Release\VotersList.exe.licenses

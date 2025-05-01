@@ -14,9 +14,9 @@ namespace gregg.Forms
 {
     public partial class BarangayPurokClusterSelect : DevExpress.XtraEditors.XtraForm
     {
-        public int Barangay = -1;
-        public int Purok = -1;
-        public int Cluster = -1;
+        public int Barangay = 0;
+        public int Purok = 0;
+        public int Cluster = 0;
         public BarangayRepository barangayRepository = new BarangayRepository();
         public PurokRepository purokRepository = new PurokRepository();
         public ClusterRepository clusterRepository = new ClusterRepository();
@@ -122,6 +122,11 @@ namespace gregg.Forms
             {
                 comboBoxEditCluster.Enabled = false;
                 comboBoxEditPurok.Enabled = false;
+            }
+            else
+            {
+                comboBoxEditCluster.Enabled = true;
+                comboBoxEditPurok.Enabled = true;
             }
         }
     }

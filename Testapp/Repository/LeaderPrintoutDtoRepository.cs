@@ -61,18 +61,50 @@ FROM            (((Person LEFT OUTER JOIN
 
 
             string whereClause = "WHERE (Barangay.ID " + barangayID_ + ") AND (Purok.ID " + purokID_ + ") AND (Cluster.ID " + clusterID_ + ")";
-            whereClause += @" AND Person.Mayor = 'ATO' 
-                              AND Person.Vice = 'ATO' 
-                              AND Person.Councilor1 = 'ATO'
-                              AND Person.Councilor2 = 'ATO'
-                              AND Person.Councilor3 = 'ATO'
-                              AND Person.Councilor4 = 'ATO'
-                              AND Person.Councilor5 = 'ATO'
-                              AND Person.Councilor6 = 'ATO'
-                              AND Person.Councilor7 = 'ATO'
-                              AND Person.Councilor8 = 'ATO'
+            whereClause += @" AND Person.Mayor = 'ONGIE-BERNALES-LIM' 
+                              AND Person.Vice = 'MYRA FOSTANES- COLIS'
 ";
 
+
+            return Mapper.ConvertDataTable<Person>(this.ExecuteTabularQuery(query + whereClause));
+        }
+
+        public List<Person> getVotersMayorAssessment(int barangayID, int purokID, int clusterID)
+        {
+            string query = @"SELECT        Person.Fullname, Person.Precinct
+FROM            (((Person LEFT OUTER JOIN
+                         Barangay ON Barangay.ID = Person.Barangay) LEFT OUTER JOIN
+                         Purok ON Purok.ID = Person.Purok) LEFT OUTER JOIN
+                         Cluster ON Cluster.ID = Person.Cluster) ";
+
+            string barangayID_ = barangayID != 0 ? " = " + barangayID.ToString() : "IS NULL";
+            string purokID_ = purokID != 0 ? " = " + purokID.ToString() : "IS NULL";
+            string clusterID_ = clusterID != 0 ? " = " + clusterID.ToString() : "IS NULL";
+
+
+            string whereClause = "WHERE (Barangay.ID " + barangayID_ + ") AND (Purok.ID " + purokID_ + ") AND (Cluster.ID " + clusterID_ + ")";
+            whereClause += @" AND Person.Mayor = 'ONGIE-BERNALES-LIM' 
+";
+
+            return Mapper.ConvertDataTable<Person>(this.ExecuteTabularQuery(query + whereClause));
+        }
+        public List<Person> getVotersViceMayorAssessment(int barangayID, int purokID, int clusterID)
+        {
+            string query = @"SELECT        Person.Fullname, Person.Precinct
+FROM            (((Person LEFT OUTER JOIN
+                         Barangay ON Barangay.ID = Person.Barangay) LEFT OUTER JOIN
+                         Purok ON Purok.ID = Person.Purok) LEFT OUTER JOIN
+                         Cluster ON Cluster.ID = Person.Cluster) ";
+
+            string barangayID_ = barangayID != 0 ? " = " + barangayID.ToString() : "IS NULL";
+            string purokID_ = purokID != 0 ? " = " + purokID.ToString() : "IS NULL";
+            string clusterID_ = clusterID != 0 ? " = " + clusterID.ToString() : "IS NULL";
+
+
+            string whereClause = "WHERE (Barangay.ID " + barangayID_ + ") AND (Purok.ID " + purokID_ + ") AND (Cluster.ID " + clusterID_ + ")";
+            whereClause += @"
+                              AND Person.Vice = 'MYRA FOSTANES- COLIS'
+";
 
             return Mapper.ConvertDataTable<Person>(this.ExecuteTabularQuery(query + whereClause));
         }

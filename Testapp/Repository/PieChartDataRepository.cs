@@ -19,7 +19,6 @@ namespace Testapp.Repository
                             query = @"SELECT  ID, BarangayName,       
                             (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'ONGIE-BERNALES-LIM') as Ato,
                             (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'JUN JAYOMA') AS DileAto, 
-                            (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'HELEN JAYOMA') as INC, 
                             (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor = 'DUHA-DUHA') as DuhaDuha, 
                             (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Mayor IS null) as Unassigned
                             FROM Barangay order by BarangayName ";
@@ -28,8 +27,7 @@ namespace Testapp.Repository
                     case "VICE-MAYOR":
                         query = @"SELECT    ID, BarangayName,     
                         (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'MYRA FOSTANES- COLIS') as Ato,
-                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'RENATO TUTOR') AS DileAto, 
-                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'BOY DATAHAN') as INC, 
+                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'HELEN JAYOMA') AS DileAto, 
                         (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'DUHA-DUHA') as DuhaDuha, 
                         (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice IS null) as Unassigned
                         FROM Barangay order by BarangayName ";

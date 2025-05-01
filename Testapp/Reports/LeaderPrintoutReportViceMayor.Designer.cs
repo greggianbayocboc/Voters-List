@@ -32,7 +32,6 @@
             DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle1 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
             DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle2 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
             DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle3 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
-            DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle4 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
             this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.Title = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DetailCaption1 = new DevExpress.XtraReports.UI.XRControlStyle();
@@ -66,13 +65,11 @@
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrShape3 = new DevExpress.XtraReports.UI.XRShape();
-            this.xrShape4 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape2 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape1 = new DevExpress.XtraReports.UI.XRShape();
             this.table2 = new DevExpress.XtraReports.UI.XRTable();
@@ -471,7 +468,6 @@
             // 
             this.xrTableCell3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrTableCell3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel14,
             this.xrLabel13,
             this.xrLabel12,
             this.xrLabel11});
@@ -486,17 +482,6 @@
             this.xrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell3.Weight = 0.918769394850474D;
             // 
-            // xrLabel14
-            // 
-            this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(273.2548F, 2.479553E-05F);
-            this.xrLabel14.Multiline = true;
-            this.xrLabel14.Name = "xrLabel14";
-            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel14.SizeF = new System.Drawing.SizeF(83.00037F, 27.99999F);
-            this.xrLabel14.StylePriority.UseFont = false;
-            this.xrLabel14.Text = "DUHA-DUHA";
-            // 
             // xrLabel13
             // 
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(171F, 0F);
@@ -504,7 +489,7 @@
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel13.SizeF = new System.Drawing.SizeF(102.2549F, 27.99999F);
-            this.xrLabel13.Text = "BOY";
+            this.xrLabel13.Text = "DUHA-DUHA";
             // 
             // xrLabel12
             // 
@@ -513,7 +498,7 @@
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(85.09314F, 27.99999F);
-            this.xrLabel12.Text = "RENATO";
+            this.xrLabel12.Text = "HELEN";
             // 
             // xrLabel11
             // 
@@ -528,7 +513,6 @@
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrShape3,
-            this.xrShape4,
             this.xrShape2,
             this.xrShape1,
             this.table2});
@@ -543,28 +527,20 @@
             this.xrShape3.Shape = shapeRectangle1;
             this.xrShape3.SizeF = new System.Drawing.SizeF(18F, 18F);
             // 
-            // xrShape4
-            // 
-            this.xrShape4.LocationFloat = new DevExpress.Utils.PointFloat(605F, 3F);
-            this.xrShape4.Name = "xrShape4";
-            shapeRectangle2.Fillet = 1;
-            this.xrShape4.Shape = shapeRectangle2;
-            this.xrShape4.SizeF = new System.Drawing.SizeF(18F, 18F);
-            // 
             // xrShape2
             // 
             this.xrShape2.LocationFloat = new DevExpress.Utils.PointFloat(425F, 3F);
             this.xrShape2.Name = "xrShape2";
-            shapeRectangle3.Fillet = 1;
-            this.xrShape2.Shape = shapeRectangle3;
+            shapeRectangle2.Fillet = 1;
+            this.xrShape2.Shape = shapeRectangle2;
             this.xrShape2.SizeF = new System.Drawing.SizeF(18F, 18F);
             // 
             // xrShape1
             // 
             this.xrShape1.LocationFloat = new DevExpress.Utils.PointFloat(336F, 3F);
             this.xrShape1.Name = "xrShape1";
-            shapeRectangle4.Fillet = 1;
-            this.xrShape1.Shape = shapeRectangle4;
+            shapeRectangle3.Fillet = 1;
+            this.xrShape1.Shape = shapeRectangle3;
             this.xrShape1.SizeF = new System.Drawing.SizeF(18F, 18F);
             // 
             // table2
@@ -647,7 +623,7 @@
             this.DataSource = this.objectDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Landscape = true;
-            this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 26, 29);
+            this.Margins = new DevExpress.Drawing.DXMargins(100F, 100F, 25.56818F, 29.00001F);
             this.PageHeight = 850;
             this.PageWidth = 1100;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
@@ -662,7 +638,7 @@
             this.DetailData1,
             this.DetailData3_Odd,
             this.PageInfo});
-            this.Version = "18.2";
+            this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table2)).EndInit();
@@ -709,7 +685,6 @@
         private DevExpress.XtraReports.Parameters.Parameter clusterLeader;
         private DevExpress.XtraReports.Parameters.Parameter count;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
-        private DevExpress.XtraReports.UI.XRShape xrShape4;
         private DevExpress.XtraReports.UI.XRShape xrShape3;
         private DevExpress.XtraReports.UI.XRShape xrShape2;
         private DevExpress.XtraReports.UI.XRShape xrShape1;
@@ -717,7 +692,6 @@
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell3;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DevExpress.XtraReports.UI.XRLabel xrLabel13;
         private DevExpress.XtraReports.UI.XRLabel xrLabel12;
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;

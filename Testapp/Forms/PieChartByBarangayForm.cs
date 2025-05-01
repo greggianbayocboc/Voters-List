@@ -43,7 +43,7 @@ namespace gregg.Forms
 
                 Series seriesAto = new Series("ONGIE-BERNALES-LIM", ViewType.StackedBar);
                 Series seriesDile = new Series("JUN JAYOMA", ViewType.StackedBar);
-                Series seriesInc = new Series("HELEN JAYOMA", ViewType.StackedBar);
+                //Series seriesInc = new Series("HELEN JAYOMA", ViewType.StackedBar);
                 Series seriesDuha = new Series("DUHA-DUHA", ViewType.StackedBar);
                 Series seriesUnassigned = new Series("UNASSIGNED", ViewType.StackedBar);
                 int ato_total = 0;
@@ -57,7 +57,7 @@ namespace gregg.Forms
                     int total = 0;
                     seriesAto.Points.Add(new SeriesPoint(data.BarangayName, data.Ato));
                     seriesDile.Points.Add(new SeriesPoint(data.BarangayName, data.DileAto));
-                    seriesInc.Points.Add(new SeriesPoint(data.BarangayName, data.INC));
+                    //seriesInc.Points.Add(new SeriesPoint(data.BarangayName, data.INC));
                     seriesDuha.Points.Add(new SeriesPoint(data.BarangayName, data.DuhaDuha));
                     seriesUnassigned.Points.Add(new SeriesPoint(data.BarangayName, data.Unassigned));
 
@@ -71,7 +71,7 @@ namespace gregg.Forms
                     {
                         new DataPoint { Argument = "ONGIE-BERNALES-LIM",    Value = data.Ato},
                         new DataPoint { Argument = "JUN JAYOMA",    Value = data.DileAto},
-                        new DataPoint { Argument = "HELEN JAYOMA",    Value = data.INC},
+                        //new DataPoint { Argument = "HELEN JAYOMA",    Value = data.INC},
                         new DataPoint { Argument = "DUHA-DUHA",   Value = data.DuhaDuha},
                         new DataPoint { Argument = "UNASSIGNED",   Value = data.Unassigned}
                     };
@@ -81,14 +81,15 @@ namespace gregg.Forms
                     }
                     add(data.BarangayName, dps, total);
                 }
-                add2(seriesAto, seriesDile, seriesDuha, seriesInc, seriesUnassigned);
+                //add2(seriesAto, seriesDile, seriesDuha, seriesInc, seriesUnassigned);
+                add2(seriesAto, seriesDile, seriesDuha, seriesUnassigned);
 
                 int totalz = 0;
                 List<DataPoint> dpz = new List<DataPoint> 
                     {
                         new DataPoint { Argument = "ONGIE-BERNALES-LIM",    Value = ato_total},
                         new DataPoint { Argument = "JUN JAYOMA",    Value = dile_ato_total},
-                        new DataPoint { Argument = "HELEN JAYOMA",    Value = inc_total},
+                        //new DataPoint { Argument = "HELEN JAYOMA",    Value = inc_total},
                         new DataPoint { Argument = "DUHA-DUHA",   Value = duha_total},
                         new DataPoint { Argument = "UNASSIGNED",   Value = unassigned_total}
                     };
@@ -102,8 +103,7 @@ namespace gregg.Forms
             else
             {
                 Series seriesAto = new Series("MYRA FOSTANES- COLIS", ViewType.StackedBar);
-                Series seriesDile = new Series("RENATO TUTOR", ViewType.StackedBar);
-                Series seriesInc = new Series("BOY DATAHAN", ViewType.StackedBar);
+                Series seriesDile = new Series("HELEN JAYOMA", ViewType.StackedBar);
                 Series seriesDuha = new Series("DUHA-DUHA", ViewType.StackedBar);
                 Series seriesUnassigned = new Series("UNASSIGNED", ViewType.StackedBar);
 
@@ -118,7 +118,6 @@ namespace gregg.Forms
                     int total = 0;
                     seriesAto.Points.Add(new SeriesPoint(data.BarangayName, data.Ato));
                     seriesDile.Points.Add(new SeriesPoint(data.BarangayName, data.DileAto));
-                    seriesInc.Points.Add(new SeriesPoint(data.BarangayName, data.INC));
                     seriesDuha.Points.Add(new SeriesPoint(data.BarangayName, data.DuhaDuha));
                     seriesUnassigned.Points.Add(new SeriesPoint(data.BarangayName, data.Unassigned));
 
@@ -131,8 +130,7 @@ namespace gregg.Forms
                     List<DataPoint> dps = new List<DataPoint> 
                     {
                         new DataPoint { Argument = "MYRA FOSTANES- COLIS",    Value = data.Ato},
-                        new DataPoint { Argument = "RENATO TUTOR",    Value = data.DileAto},
-                        new DataPoint { Argument = "BOY DATAHAN",    Value = data.INC     },
+                        new DataPoint { Argument = "HELEN JAYOMA",    Value = data.DileAto},
                         new DataPoint { Argument = "DUHA-DUHA",   Value = data.DuhaDuha},
                         new DataPoint { Argument = "UNASSIGNED",   Value = data.Unassigned}
                     };
@@ -142,14 +140,13 @@ namespace gregg.Forms
                     }
                     add(data.BarangayName, dps, total);
                 }
-                add2(seriesAto, seriesDile, seriesDuha, seriesInc, seriesUnassigned);
+                add2(seriesAto, seriesDile, seriesDuha, seriesUnassigned);
 
                 int totalz = 0;
                 List<DataPoint> dpz = new List<DataPoint> 
                     {
                         new DataPoint { Argument = "MYRA FOSTANES- COLIS",    Value = ato_total},
-                        new DataPoint { Argument = "RENATO TUTOR",    Value = dile_ato_total},
-                        new DataPoint { Argument = "BOY DATAHAN",    Value = inc_total},
+                        new DataPoint { Argument = "HELEN JAYOMA",    Value = dile_ato_total},
                         new DataPoint { Argument = "DUHA-DUHA",   Value = duha_total},
                         new DataPoint { Argument = "UNASSIGNED",   Value = unassigned_total}
                     };
@@ -236,7 +233,7 @@ namespace gregg.Forms
                 navigationPane1.Pages.Add(tb);
         }
 
-        private void add2(Series seriesAto, Series seriesDile, Series seriesDuha, Series seriesInc, Series seriesUnassigned)
+        private void add2(Series seriesAto, Series seriesDile, Series seriesDuha, Series seriesUnassigned)
         {
             ChartControl stackedBarChart = new ChartControl();
 
@@ -255,7 +252,7 @@ namespace gregg.Forms
             stackedBarChart.PaletteName = "Custom Palette2";
 
             // Add both series to the chart.
-            stackedBarChart.Series.AddRange(new Series[] { seriesAto, seriesDile, seriesInc, seriesDuha, seriesUnassigned });
+            stackedBarChart.Series.AddRange(new Series[] { seriesAto, seriesDile, seriesDuha, seriesUnassigned });
 
             // Access the view-type-specific options of the series.
            // ((StackedBarSeriesView)series1.View).BarWidth = 0.8;

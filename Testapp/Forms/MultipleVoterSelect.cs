@@ -68,21 +68,35 @@ namespace gregg.Forms
                 Person person = persons[x];
                 if (person.Purok > 0 || person.Cluster > 0)
                 {
-                    Barangay brgy = barangayRepository.getOne(person.Barangay);
-                    Purok purok = purokRepository.getOne(person.Purok);
-                    Cluster cluster = clusterRepository.getOne(person.Cluster);
-                    DialogResult result = MessageBox.Show( "Voter " + person.Fullname + " is already assigned to " + cluster.Leader + ", " + purok.Leader + " - " + brgy.BarangayName, "Voter Already Assigned!", MessageBoxButtons.OKCancel);
-                    if (result == DialogResult.OK)
+                    Barangay brgy = null;
+                    Purok purok = null;
+                    Cluster cluster = null;
+                    try
                     {
+                        brgy = barangayRepository.getOne(person.Barangay);
+                        purok = purokRepository.getOne(person.Purok);
+                        cluster = clusterRepository.getOne(person.Cluster);
+                        DialogResult result = MessageBox.Show("Voter " + person.Fullname + " is already assigned to " + cluster.Leader + ", " + purok.Leader + " - " + brgy.BarangayName, "Voter Already Assigned!", MessageBoxButtons.OKCancel);
+                        if (result == DialogResult.OK)
+                        {
+                            person.Barangay = barangayId;
+                            person.Purok = purokId;
+                            person.Cluster = clusterId;
+                            personRepository.SaveAsTransaction(person);
+                        }
+                        else if (result == DialogResult.Cancel)
+                        {
+
+                        }
+                    }
+                    catch {
                         person.Barangay = barangayId;
                         person.Purok = purokId;
                         person.Cluster = clusterId;
                         personRepository.SaveAsTransaction(person);
                     }
-                    else if (result == DialogResult.Cancel)
-                    {
-
-                    }
+                    
+                    
                 }
                 else
                 {

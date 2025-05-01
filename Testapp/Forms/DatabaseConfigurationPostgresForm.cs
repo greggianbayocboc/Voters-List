@@ -51,5 +51,10 @@ namespace gregg.Forms
         {
             Properties.Settings.Default.password = textPassword.Text;
         }
+
+        private void textDatabase_EditValueChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.database = textDatabase.Text;
+        }
     }
 }

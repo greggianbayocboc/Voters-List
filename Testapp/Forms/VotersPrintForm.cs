@@ -18,8 +18,8 @@ namespace gregg.Forms
 {
     public partial class VotersPrintForm : Form
     {
-        List<string> mayors = new List<string> { "ONGIE-BERNALES-LIM", "JUN JAYOMA", "HELEN JAYOMA", "DUHA-DUHA" };
-        List<string> vices = new List<string> { "MYRA FOSTANES- COLIS", "RENATO TUTOR", "BOY DATAHAN", "DUHA-DUHA" };
+        List<string> mayors = new List<string> { "ONGIE-BERNALES-LIM", "JUN JAYOMA",  "DUHA-DUHA" };
+        List<string> vices = new List<string> { "MYRA FOSTANES- COLIS", "HELEN JAYOMA", "DUHA-DUHA" };
         public PersonDtoRepository personDtoRepository = new PersonDtoRepository();
         public LeaderPrintoutDtoRepository leaderPrintoutDtoRepository = new LeaderPrintoutDtoRepository();
         public VotersPrintForm()

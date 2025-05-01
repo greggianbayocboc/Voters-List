@@ -508,10 +508,10 @@
     <EmbeddedResource Include="PopupControl\CustomSelect.resx">
       <DependentUpon>CustomSelect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Forms\PurokForm.resx">
       <DependentUpon>PurokForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -582,6 +582,7 @@
   <ItemGroup>
     <Content Include="overicon - Copy.ico" />
     <Content Include="overicon.ico" />
+    <None Include="Resources\mayor1.png" />
     <None Include="Resources\vote.png" />
     <None Include="Resources\voters.png" />
     <None Include="Resources\excel.png" />

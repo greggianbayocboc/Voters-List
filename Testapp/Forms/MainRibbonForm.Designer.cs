@@ -110,6 +110,8 @@
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem28 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -142,6 +144,7 @@
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
+            this.ribbon.SearchEditItem,
             this.barButtonItem1,
             this.barButtonItem2,
             this.barButtonItem3,
@@ -169,9 +172,10 @@
             this.barButtonItem24,
             this.barButtonItem25,
             this.barButtonItem26,
-            this.ribbon.SearchEditItem});
+            this.barButtonItem27,
+            this.barButtonItem28});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 28;
+            this.ribbon.MaxItemId = 30;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.skinDropDownButtonItem1);
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -370,6 +374,7 @@
             superToolTip9.Items.Add(toolTipTitleItem10);
             superToolTip9.Items.Add(toolTipItem9);
             this.barButtonItem11.SuperTip = superToolTip9;
+            this.barButtonItem11.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
             // 
             // barButtonItem12
@@ -448,6 +453,7 @@
             superToolTip12.Items.Add(toolTipTitleItem13);
             superToolTip12.Items.Add(toolTipItem12);
             this.barButtonItem16.SuperTip = superToolTip12;
+            this.barButtonItem16.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barButtonItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
             // 
             // barButtonItem17
@@ -519,6 +525,7 @@
             superToolTip15.Items.Add(toolTipTitleItem16);
             superToolTip15.Items.Add(toolTipItem15);
             this.barButtonItem20.SuperTip = superToolTip15;
+            this.barButtonItem20.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barButtonItem20.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem20_ItemClick);
             // 
             // barButtonItem21
@@ -588,6 +595,26 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.barButtonItem26.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem26_ItemClick);
             // 
+            // barButtonItem27
+            // 
+            this.barButtonItem27.Caption = "Straight Votes Mayor Only";
+            this.barButtonItem27.Id = 28;
+            this.barButtonItem27.ImageOptions.Image = global::gregg.Properties.Resources.mayor;
+            this.barButtonItem27.Name = "barButtonItem27";
+            this.barButtonItem27.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barButtonItem27.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem27_ItemClick);
+            // 
+            // barButtonItem28
+            // 
+            this.barButtonItem28.Caption = "Straight Votes Vice Only";
+            this.barButtonItem28.Id = 29;
+            this.barButtonItem28.ImageOptions.Image = global::gregg.Properties.Resources.mayor1;
+            this.barButtonItem28.Name = "barButtonItem28";
+            this.barButtonItem28.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barButtonItem28.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem28_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -648,6 +675,8 @@
             // ribbonPageGroup7
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem27);
+            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem28);
             this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem11);
             this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem20);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
@@ -780,5 +809,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem24;
         private DevExpress.XtraBars.BarButtonItem barButtonItem25;
         private DevExpress.XtraBars.BarButtonItem barButtonItem26;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem27;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem28;
     }
 }

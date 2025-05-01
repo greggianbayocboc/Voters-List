@@ -14,7 +14,7 @@ namespace gregg.Forms
         public SplashScreen1()
         {
             InitializeComponent();
-            this.labelControl1.Text = "Copyright © 1998-" + DateTime.Now.Year.ToString();
+            this.labelControl1.Text = "Copyright © 2022-" + DateTime.Now.Year.ToString();
         }
 
         #region Overrides

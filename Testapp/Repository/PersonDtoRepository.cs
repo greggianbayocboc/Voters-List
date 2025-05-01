@@ -29,9 +29,9 @@ namespace Testapp.Repository
                          Cluster ON Cluster.ID = Person.Cluster) ";
 
 
-            string barangayID_ = barangayID != 0 ? " = " + barangayID.ToString() : "IS NULL";
-            string purokID_ = purokID != 0 ? " = " + purokID.ToString() : "IS NULL";
-            string clusterID_ = clusterID != 0 ? " = " + clusterID.ToString() : "IS NULL";
+            string barangayID_ = barangayID != 0 ? " = " + barangayID.ToString() : "= Barangay.ID";
+            string purokID_ = purokID != 0 ? " = " + purokID.ToString() : "= Purok.ID";
+            string clusterID_ = clusterID != 0 ? " = " + clusterID.ToString() : "= Cluster.ID";
 
             string whereClause = "WHERE (Barangay.ID " + barangayID_ + ") AND (Purok.ID " + purokID_ + ") AND (Cluster.ID " + clusterID_ + ")";
             string orderByClause = " ORDER BY barangayname, person.fullname";
@@ -47,9 +47,9 @@ namespace Testapp.Repository
                          Cluster ON Cluster.ID = Person.Cluster) ";
 
 
-            string barangayID_ = barangayID != 0 ? " = " + barangayID.ToString() : "IS NULL";
-            string purokID_ = purokID != 0 ? " = " + purokID.ToString() : "IS NULL";
-            string clusterID_ = clusterID != 0 ? " = " + clusterID.ToString() : "IS NULL";
+            string barangayID_ = barangayID != 0 ? " = " + barangayID.ToString() : "= Barangay.ID";
+            string purokID_ = purokID != 0 ? " = " + purokID.ToString() : "= Purok.ID";
+            string clusterID_ = clusterID != 0 ? " = " + clusterID.ToString() : "= Cluster.ID";
 
             string whereClause = "WHERE (Barangay.ID " + barangayID_ + ") AND (Purok.ID " + purokID_ + ") AND (Cluster.ID " + clusterID_ + ") AND (Person.mayor = '" + mayor + "')";
             string orderByClause = " ORDER BY barangayname, person.fullname";
@@ -65,9 +65,9 @@ namespace Testapp.Repository
                          Cluster ON Cluster.ID = Person.Cluster) ";
 
 
-            string barangayID_ = barangayID != 0 ? " = " + barangayID.ToString() : "IS NULL";
-            string purokID_ = purokID != 0 ? " = " + purokID.ToString() : "IS NULL";
-            string clusterID_ = clusterID != 0 ? " = " + clusterID.ToString() : "IS NULL";
+            string barangayID_ = barangayID != 0 ? " = " + barangayID.ToString() : "= Barangay.ID";
+            string purokID_ = purokID != 0 ? " = " + purokID.ToString() : "= Purok.ID";
+            string clusterID_ = clusterID != 0 ? " = " + clusterID.ToString() : "= Cluster.ID";
 
             string whereClause = "WHERE (Barangay.ID " + barangayID_ + ") AND (Purok.ID " + purokID_ + ") AND (Cluster.ID " + clusterID_ + ") AND (Person.vice = '" + vice + "')";
             string orderByClause = " ORDER BY barangayname, person.fullname";
