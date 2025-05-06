@@ -7,58 +7,40 @@
       "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\properties\\licenses.licx||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\forms\\barangaypurokclusterselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\barangaypurokclusterselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|c:\\users\\gregg\\source\\repos\\voters-list3\\testapp\\forms\\piechartbybarangayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\piechartbybarangayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|c:\\users\\gregg\\source\\repos\\voters-list3\\testapp\\forms\\barangaypurokclusterselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\barangaypurokclusterselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\helpers\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\helpers\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\forms\\mainribbonform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\mainribbonform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\forms\\mainribbonform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\mainribbonform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\repository\\leaderprintoutdtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\repository\\leaderprintoutdtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gregg\\AppData\\Local\\SourceServer\\902d8d9caed01e11b5ab8c6855bcea863406b20236744ad06d6fda579c9d7417\\src\\Npgsql\\NpgsqlConnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|c:\\users\\gregg\\source\\repos\\voters-list3\\testapp\\forms\\piechartbybarangayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\piechartbybarangayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\repository\\persondtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\repository\\persondtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\forms\\splashscreen1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\splashscreen1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|c:\\users\\gregg\\source\\repos\\voters-list3\\testapp\\repository\\piechartdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\repository\\piechartdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\forms\\splashscreen1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\splashscreen1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|c:\\users\\gregg\\source\\repos\\voters-list3\\testapp\\forms\\piechartpercentageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\piechartpercentageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\forms\\voterassessmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\voterassessmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|c:\\users\\gregg\\source\\repos\\voters-list3\\testapp\\forms\\piechartpercentageform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\piechartpercentageform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\forms\\mainribbonform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\mainribbonform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Testapp||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\forms\\votersprintform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\votersprintform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\forms\\votersbyleadersform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\votersbyleadersform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|C:\\Users\\gregg\\source\\repos\\Voters-List3\\testapp\\forms\\votersprintform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A87ACB5-7451-4C29-9786-DAED0F849B5B}|Testapp\\Testapp.csproj|solutionrelative:testapp\\forms\\votersprintform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -80,24 +62,113 @@
               "RelativeToolTip": "Testapp\\Properties\\licenses.licx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-01T11:39:05.992Z",
+              "WhenOpened": "2025-05-06T14:43:36.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PieChartPercentageForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\gregg\\Source\\Repos\\Voters-List3\\Testapp\\Forms\\PieChartPercentageForm.Designer.cs",
+              "RelativeDocumentMoniker": "Testapp\\Forms\\PieChartPercentageForm.Designer.cs",
+              "ToolTip": "C:\\Users\\gregg\\Source\\Repos\\Voters-List3\\Testapp\\Forms\\PieChartPercentageForm.Designer.cs",
+              "RelativeToolTip": "Testapp\\Forms\\PieChartPercentageForm.Designer.cs",
+              "ViewState": "AgIAALcAAAAAAAAAAAAAwNEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T14:21:31.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PieChartPercentageForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\PieChartPercentageForm.cs",
+              "RelativeDocumentMoniker": "Testapp\\Forms\\PieChartPercentageForm.cs",
+              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\PieChartPercentageForm.cs [Design]",
+              "RelativeToolTip": "Testapp\\Forms\\PieChartPercentageForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T14:17:56.049Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PieChartByBarangayForm.cs",
+              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\PieChartByBarangayForm.cs",
+              "RelativeDocumentMoniker": "Testapp\\Forms\\PieChartByBarangayForm.cs",
+              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\PieChartByBarangayForm.cs",
+              "RelativeToolTip": "Testapp\\Forms\\PieChartByBarangayForm.cs",
+              "ViewState": "AgIAAH4BAAAAAAAAAAAYwIYBAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T14:09:01.48Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BarangayPurokClusterSelect.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\BarangayPurokClusterSelect.cs",
-              "RelativeDocumentMoniker": "Testapp\\Forms\\BarangayPurokClusterSelect.cs",
-              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\BarangayPurokClusterSelect.cs [Design]",
-              "RelativeToolTip": "Testapp\\Forms\\BarangayPurokClusterSelect.cs [Design]",
+              "Title": "PieChartByBarangayForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\PieChartByBarangayForm.cs",
+              "RelativeDocumentMoniker": "Testapp\\Forms\\PieChartByBarangayForm.cs",
+              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\PieChartByBarangayForm.cs [Design]",
+              "RelativeToolTip": "Testapp\\Forms\\PieChartByBarangayForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T11:29:02.86Z",
+              "WhenOpened": "2025-05-06T14:08:48.707Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
+              "Title": "PieChartDataRepository.cs",
+              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Repository\\PieChartDataRepository.cs",
+              "RelativeDocumentMoniker": "Testapp\\Repository\\PieChartDataRepository.cs",
+              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Repository\\PieChartDataRepository.cs",
+              "RelativeToolTip": "Testapp\\Repository\\PieChartDataRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACUAAAD7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T13:37:16.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PersonDtoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Repository\\PersonDtoRepository.cs",
+              "RelativeDocumentMoniker": "Testapp\\Repository\\PersonDtoRepository.cs",
+              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Repository\\PersonDtoRepository.cs",
+              "RelativeToolTip": "Testapp\\Repository\\PersonDtoRepository.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAuwFoAAAC7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T08:17:52.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VotersPrintForm.cs",
+              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\VotersPrintForm.cs",
+              "RelativeDocumentMoniker": "Testapp\\Forms\\VotersPrintForm.cs",
+              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\VotersPrintForm.cs",
+              "RelativeToolTip": "Testapp\\Forms\\VotersPrintForm.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAIwFkAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T08:16:52.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VotersPrintForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\VotersPrintForm.cs",
+              "RelativeDocumentMoniker": "Testapp\\Forms\\VotersPrintForm.cs",
+              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\VotersPrintForm.cs [Design]",
+              "RelativeToolTip": "Testapp\\Forms\\VotersPrintForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T08:16:51.385Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "MainRibbonForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\MainRibbonForm.cs",
               "RelativeDocumentMoniker": "Testapp\\Forms\\MainRibbonForm.cs",
@@ -106,153 +177,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-24T04:32:17.589Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LeaderPrintoutDtoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Repository\\LeaderPrintoutDtoRepository.cs",
-              "RelativeDocumentMoniker": "Testapp\\Repository\\LeaderPrintoutDtoRepository.cs",
-              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Repository\\LeaderPrintoutDtoRepository.cs",
-              "RelativeToolTip": "Testapp\\Repository\\LeaderPrintoutDtoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T08:00:47.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Utils.cs",
-              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Helpers\\Utils.cs",
-              "RelativeDocumentMoniker": "Testapp\\Helpers\\Utils.cs",
-              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Helpers\\Utils.cs",
-              "RelativeToolTip": "Testapp\\Helpers\\Utils.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T07:57:08.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainRibbonForm.cs",
-              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\MainRibbonForm.cs",
-              "RelativeDocumentMoniker": "Testapp\\Forms\\MainRibbonForm.cs",
-              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\MainRibbonForm.cs",
-              "RelativeToolTip": "Testapp\\Forms\\MainRibbonForm.cs",
-              "ViewState": "AgIAABoCAAAAAAAAAAAgwDkCAAB/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T02:29:43.502Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NpgsqlConnector.cs",
-              "DocumentMoniker": "C:\\Users\\gregg\\AppData\\Local\\SourceServer\\902d8d9caed01e11b5ab8c6855bcea863406b20236744ad06d6fda579c9d7417\\src\\Npgsql\\NpgsqlConnector.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\902d8d9caed01e11b5ab8c6855bcea863406b20236744ad06d6fda579c9d7417\\src\\Npgsql\\NpgsqlConnector.cs",
-              "ToolTip": "C:\\Users\\gregg\\AppData\\Local\\SourceServer\\902d8d9caed01e11b5ab8c6855bcea863406b20236744ad06d6fda579c9d7417\\src\\Npgsql\\NpgsqlConnector.cs [Read Only]",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\902d8d9caed01e11b5ab8c6855bcea863406b20236744ad06d6fda579c9d7417\\src\\Npgsql\\NpgsqlConnector.cs [Read Only]",
-              "ViewState": "AgIAAMECAAAAAAAAAAAkwNwCAAAYAAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T11:05:34.628Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PersonDtoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Repository\\PersonDtoRepository.cs",
-              "RelativeDocumentMoniker": "Testapp\\Repository\\PersonDtoRepository.cs",
-              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Repository\\PersonDtoRepository.cs",
-              "RelativeToolTip": "Testapp\\Repository\\PersonDtoRepository.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAD4vyUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T07:42:27.497Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BarangayPurokClusterSelect.cs",
-              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\BarangayPurokClusterSelect.cs",
-              "RelativeDocumentMoniker": "Testapp\\Forms\\BarangayPurokClusterSelect.cs",
-              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\BarangayPurokClusterSelect.cs",
-              "RelativeToolTip": "Testapp\\Forms\\BarangayPurokClusterSelect.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAwwIAAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T07:41:37.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "VoterAssessmentForm.cs",
-              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\VoterAssessmentForm.cs",
-              "RelativeDocumentMoniker": "Testapp\\Forms\\VoterAssessmentForm.cs",
-              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\VoterAssessmentForm.cs",
-              "RelativeToolTip": "Testapp\\Forms\\VoterAssessmentForm.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAIwDoAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T02:53:10.934Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SplashScreen1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\SplashScreen1.cs",
-              "RelativeDocumentMoniker": "Testapp\\Forms\\SplashScreen1.cs",
-              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\SplashScreen1.cs [Design]",
-              "RelativeToolTip": "Testapp\\Forms\\SplashScreen1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T02:57:01.509Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SplashScreen1.cs",
-              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\SplashScreen1.cs",
-              "RelativeDocumentMoniker": "Testapp\\Forms\\SplashScreen1.cs",
-              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\SplashScreen1.cs",
-              "RelativeToolTip": "Testapp\\Forms\\SplashScreen1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T03:12:18.239Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Program.cs",
-              "RelativeDocumentMoniker": "Testapp\\Program.cs",
-              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Program.cs",
-              "RelativeToolTip": "Testapp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T04:12:33.604Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "VotersByLeadersForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\VotersByLeadersForm.Designer.cs",
-              "RelativeDocumentMoniker": "Testapp\\Forms\\VotersByLeadersForm.Designer.cs",
-              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Forms\\VotersByLeadersForm.Designer.cs",
-              "RelativeToolTip": "Testapp\\Forms\\VotersByLeadersForm.Designer.cs",
-              "ViewState": "AgIAAPwAAAAAAAAAAAD4vwwBAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T06:40:06.513Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Testapp",
-              "DocumentMoniker": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Testapp.csproj",
-              "RelativeDocumentMoniker": "Testapp\\Testapp.csproj",
-              "ToolTip": "C:\\Users\\gregg\\source\\repos\\Voters-List3\\Testapp\\Testapp.csproj",
-              "RelativeToolTip": "Testapp\\Testapp.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-09T06:34:47.433Z"
             }
           ]
         }

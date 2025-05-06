@@ -583,14 +583,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VotersList.exe" size="1245184">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VotersList.exe" size="1251840">
       <assemblyIdentity name="VotersList" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>l7KQXK25KQv0Ge7+bgurdz91eN+FPj+B1MpAEKjKibg=</dsig:DigestValue>
+        <dsig:DigestValue>andRLsZJfuYhZAjQx2yySbgkqCxnh0alnB4KgB8urhQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

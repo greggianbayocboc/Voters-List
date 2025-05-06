@@ -90,5 +90,10 @@ namespace gregg.Forms
         {
             removeAll();
         }
+
+        private void chartControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

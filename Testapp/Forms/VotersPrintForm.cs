@@ -84,9 +84,11 @@ namespace gregg.Forms
                 {
                     if ((string)comboBox1.SelectedItem == "MAYOR")
                        rpt.DataSource = personDtoRepository.getPrintableVotersMayor(selectForm.Barangay, selectForm.Purok, selectForm.Cluster, (string)comboBox2.SelectedItem);
-                   else
+                   else if ((string)comboBox1.SelectedItem == "VICE")
                        rpt.DataSource = personDtoRepository.getPrintableVotersVice(selectForm.Barangay, selectForm.Purok, selectForm.Cluster, (string)comboBox2.SelectedItem);
-                   
+                    else if((string)comboBox1.SelectedItem == "STRAIGHT MAYOR AND VICE")
+                        rpt.DataSource = personDtoRepository.getPrintableVotersStraight(selectForm.Barangay, selectForm.Purok, selectForm.Cluster, (string)comboBox2.SelectedItem);
+
                 }
                 ReportPrintTool tool = new ReportPrintTool(rpt);
                 tool.ShowPreviewDialog();
@@ -113,6 +115,7 @@ namespace gregg.Forms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            comboBox2.Enabled = true;
             if (comboBox1.SelectedItem == "MAYOR")
             {
                 comboBox2.DataSource = mayors;
@@ -120,6 +123,10 @@ namespace gregg.Forms
             else if (comboBox1.SelectedItem == "VICE")
             {
                 comboBox2.DataSource = vices;
+            }
+            else if (comboBox1.SelectedItem == "STRAIGHT MAYOR AND VICE")
+            { 
+                comboBox2.Enabled = false;
             }
         }
 

@@ -32,7 +32,13 @@ namespace Testapp.Repository
                         (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice IS null) as Unassigned
                         FROM Barangay order by BarangayName ";
                         break;
-                    default:
+                    case "STRAIGHT":
+                    query = @"SELECT    ID, BarangayName,     
+                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and Person.Vice = 'MYRA FOSTANES- COLIS' and Person.Mayor = 'ONGIE-BERNALES-LIM') as Ato,
+                        (SELECT count(*) from Person where Person.Barangay = Barangay.ID and (Person.Vice = 'HELEN JAYOMA' OR Person.Mayor = 'JUN JAYOMA' OR Person.Vice = 'DUHA-DUHA' OR Person.Mayor = 'DUHA-DUHA' OR Person.Vice IS null OR Person.Mayor IS null)) AS DileAto
+                        FROM Barangay order by BarangayName ";
+                    break;
+                default:
                         break;
                 }
             return this.getListCustomQuery(query);

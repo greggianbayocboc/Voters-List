@@ -55,7 +55,9 @@ namespace gregg.Forms
                 foreach (PieChartData data in pieChartDataList)
                 {
                     int total = 0;
-                    seriesAto.Points.Add(new SeriesPoint(data.BarangayName, data.Ato));
+                    SeriesPoint seriesPointAto = new SeriesPoint(data.BarangayName, data.Ato);
+                    //seriesPointAto.ColorSerializable = "#52D726";
+                    seriesAto.Points.Add(seriesPointAto);
                     seriesDile.Points.Add(new SeriesPoint(data.BarangayName, data.DileAto));
                     //seriesInc.Points.Add(new SeriesPoint(data.BarangayName, data.INC));
                     seriesDuha.Points.Add(new SeriesPoint(data.BarangayName, data.DuhaDuha));
@@ -100,7 +102,7 @@ namespace gregg.Forms
                 add("MABINI BOHOL", dpz, totalz);
 
             }
-            else
+            else if (this.Text == "VICE-MAYOR")
             {
                 Series seriesAto = new Series("MYRA FOSTANES- COLIS", ViewType.StackedBar);
                 Series seriesDile = new Series("HELEN JAYOMA", ViewType.StackedBar);
@@ -116,7 +118,9 @@ namespace gregg.Forms
                 foreach (PieChartData data in pieChartDataList)
                 {
                     int total = 0;
-                    seriesAto.Points.Add(new SeriesPoint(data.BarangayName, data.Ato));
+                    SeriesPoint seriesPointAto = new SeriesPoint(data.BarangayName, data.Ato);
+                    //seriesPointAto.ColorSerializable = "#52D726";
+                    seriesAto.Points.Add(seriesPointAto);
                     seriesDile.Points.Add(new SeriesPoint(data.BarangayName, data.DileAto));
                     seriesDuha.Points.Add(new SeriesPoint(data.BarangayName, data.DuhaDuha));
                     seriesUnassigned.Points.Add(new SeriesPoint(data.BarangayName, data.Unassigned));
@@ -157,8 +161,62 @@ namespace gregg.Forms
                 add("MABINI BOHOL", dpz, totalz);
 
             }
+            else
+            {
+                Series seriesAto = new Series("STRAIGHT", ViewType.StackedBar);
+                Series seriesDile = new Series("DILE STRAIGHT", ViewType.StackedBar);
 
-           
+                int ato_total = 0;
+                int dile_ato_total = 0;
+                int inc_total = 0;
+                int duha_total = 0;
+                int unassigned_total = 0;
+
+                foreach (PieChartData data in pieChartDataList)
+                {
+                    int total = 0;
+                    SeriesPoint seriesPointAto = new SeriesPoint(data.BarangayName, data.Ato);
+                    SeriesPoint seriesPointDile = new SeriesPoint(data.BarangayName, data.DileAto);
+                    //seriesPointAto.ColorSerializable = "#52D726";
+                    //seriesPointDile.ColorSerializable = "#58508D";
+                    seriesAto.Points.Add(seriesPointAto);
+                    seriesDile.Points.Add(seriesPointDile);
+
+                    ato_total += data.Ato;
+                    dile_ato_total += data.DileAto;
+                    inc_total += data.INC;
+                    duha_total += data.DuhaDuha;
+                    unassigned_total += data.Unassigned;
+
+                    List<DataPoint> dps = new List<DataPoint>
+                    {
+                        new DataPoint { Argument = "STRAIGHT",    Value = data.Ato},
+                        new DataPoint { Argument = "DILE STRAIGHT",    Value = data.DileAto}
+                    };
+                    foreach (DataPoint dp in dps)
+                    {
+                        total += (int)dp.Value;
+                    }
+                    add(data.BarangayName, dps, total);
+                }
+                addStraight(seriesAto, seriesDile);
+
+                int totalz = 0;
+                List<DataPoint> dpz = new List<DataPoint>
+                    {
+                        new DataPoint { Argument = "STRAIGHT",    Value = ato_total},
+                        new DataPoint { Argument = "DILE STRAIGHT",    Value = dile_ato_total}
+                    };
+                foreach (DataPoint dp in dpz)
+                {
+                    totalz += (int)dp.Value;
+                }
+                add("MABINI BOHOL", dpz, totalz);
+
+            }
+
+
+
         }
         
         private void add(string barangayName, List<DataPoint> dataPoints, int total)
@@ -276,6 +334,49 @@ namespace gregg.Forms
             navigationPane1.Pages.Insert(0,tb);
             navigationPane1.SelectPrevPage();
         }
+        private void addStraight(Series seriesAto, Series seriesDile)
+        {
+            ChartControl stackedBarChart = new ChartControl();
+
+            // Create two stacked bar series.
+
+            stackedBarChart.MouseClick += new System.Windows.Forms.MouseEventHandler(this.chartControl1_MouseClick);
+            Palette palette = new Palette("Custom Palette2");
+            palette.Add(Color.Purple);
+            palette.Add(Color.Blue);
+            palette.Add(Color.Orange);
+            palette.Add(Color.Yellow);
+            palette.Add(Color.Red);
+            // Register the palette.
+            stackedBarChart.PaletteRepository.RegisterPalette(palette);
+            // Assign the palette to the chart.
+            stackedBarChart.PaletteName = "Custom Palette2";
+
+            // Add both series to the chart.
+            stackedBarChart.Series.AddRange(new Series[] { seriesAto, seriesDile});
+
+            // Access the view-type-specific options of the series.
+            // ((StackedBarSeriesView)series1.View).BarWidth = 0.8;
+
+            // Access the type-specific options of the diagram.
+            ((XYDiagram)stackedBarChart.Diagram).EnableAxisXZooming = true;
+
+            // Hide the legend (if necessary).
+            stackedBarChart.Legend.Visible = false;
+
+            // Add a title to the chart (if necessary).
+            stackedBarChart.Titles.Add(new ChartTitle());
+            stackedBarChart.Titles[0].Text = "Overall Assessment Overview";
+
+            // Add the chart to the form
+            stackedBarChart.Dock = DockStyle.Fill;
+            TabNavigationPage tb = new TabNavigationPage();
+            tb.PageText = "OVERALL";
+            tb.Controls.Add(stackedBarChart);
+
+            navigationPane1.Pages.Insert(0, tb);
+            navigationPane1.SelectPrevPage();
+        }
 
         private void xtraScrollableControl1_Click(object sender, EventArgs e)
         {
@@ -287,7 +388,7 @@ namespace gregg.Forms
             ChartControl pieChart = ((ChartControl)sender);
             // Obtain the object being clicked.
             ChartHitInfo hi = pieChart.CalcHitInfo(e.X, e.Y);
-            String barangay = pieChart.Titles[1].Text;
+            //String barangay = pieChart.Titles[1].Text;
 
 
             // Check whether it was a series point, and if so - 
@@ -296,14 +397,14 @@ namespace gregg.Forms
 
             if (point != null)
             {
-                string selectedCandidate = point.Argument.ToString();
-                DialogResult result = MessageBox.Show("Group Result", "Do you want to group by Purok?", MessageBoxButtons.YesNoCancel);
-                if (result == DialogResult.Yes)
-                    this.printSelectedCandidateGrouped(barangay, labelPosition.Text.ToLower().Trim().Split('-').First(), selectedCandidate);
-                else if (result == DialogResult.No)
-                    this.printSelectedCandidate(barangay, labelPosition.Text.ToLower().Trim().Split('-').First(), selectedCandidate);
-                else
-                    return;
+                //string selectedCandidate = point.Argument.ToString();
+                //DialogResult result = MessageBox.Show("Group Result", "Do you want to group by Purok?", MessageBoxButtons.YesNoCancel);
+                //if (result == DialogResult.Yes)
+                //    this.printSelectedCandidateGrouped(barangay, labelPosition.Text.ToLower().Trim().Split('-').First(), selectedCandidate);
+                //else if (result == DialogResult.No)
+                //    this.printSelectedCandidate(barangay, labelPosition.Text.ToLower().Trim().Split('-').First(), selectedCandidate);
+               // else
+                //    return;
             }
             else 
             {

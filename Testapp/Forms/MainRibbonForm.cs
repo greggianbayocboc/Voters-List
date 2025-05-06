@@ -572,6 +572,7 @@ namespace gregg.Forms
                 foreach (LeaderPrintoutDto dto in dtos)
                 {
                     LeaderPrintoutReportStraight rpt = new LeaderPrintoutReportStraight();
+                    rpt.Parameters["votesFor"].Value = "MAYOR ONLY";
                     rpt.Parameters["barangay"].Value = dto.Barangay;
                     rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
                     rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
@@ -607,6 +608,7 @@ namespace gregg.Forms
                 foreach (LeaderPrintoutDto dto in dtos)
                 {
                     LeaderPrintoutReportStraight rpt = new LeaderPrintoutReportStraight();
+                    rpt.Parameters["votesFor"].Value = "VICE MAYOR ONLY";
                     rpt.Parameters["barangay"].Value = dto.Barangay;
                     rpt.Parameters["barangayCoordinator"].Value = dto.BarangayCoordinator;
                     rpt.Parameters["clusterLeader"].Value = dto.ClusterLeader;
@@ -627,6 +629,33 @@ namespace gregg.Forms
                 tool.PreviewForm.MdiParent = this;
                 tool.ShowPreview();
             }
+        }
+
+        private void barButtonItem29_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem30_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int i;
+            for (i = 0; i < MdiChildren.Length; i++)
+            {
+                if (MdiChildren[i].GetType().Name == "PieChartByBarangayForm" && MdiChildren[i].Text == "STRAIGHT")
+                {
+                    MdiChildren[i].Activate();
+                    MdiChildren[i].Refresh();
+                    return;
+                }
+            }
+            PieChartByBarangayForm form = new PieChartByBarangayForm();
+            form.labelCandidate.Text = "STRAIGHT";
+            form.labelPosition.Text = "STRAIGHT";
+            form.Text = "STRAIGHT";
+            form.position = "STRAIGHT";
+            form.candidate = "STRAIGHT";
+            form.MdiParent = this;
+            form.Show();
         }
     }
 }
